@@ -43,7 +43,9 @@
 
 \section{Introduction}\label{sec:intro}
 
-The basic computational tasks associated with magnetic-equilibrium reconstructions -- namely, the handling of derived quantities (\eg calculated plasma current, safety-factor profiles) and the mapping between real-space and flux coordinate systems for experimental data -- are universal among tokamak experiments.  Despite this commonality, experiments typically utilize in-house solutions developed for the particulars of that experiment's data storage and usage.  This ad-hoc development of base-level functionality inhibits the mobility of higher-level codes to other devices (as the code may require substantial modification to address the particulars of the new data storage design).  Moreover, such development is often quite static, such that the implementation is difficult to extend to new data formats (for example, to handle both a primary MDSplus-based data storage system \note{cite?} and the \emph{eqdsk} storage files produced directly by the EFIT reconstruction code \note{cite}), necessitating parallel workflows for functionally identical tasks depending on the data source.  Best design practices call for the vagaries of data source and storage implementation to be placed in the back end, presenting a consistent, straightforward interface common between machines and code implementations to the research scientist.
+The basic computational tasks associated with magnetic-equilibrium reconstructions -- namely, the handling of derived quantities (\eg calculated plasma current, safety-factor profiles) and the mapping between real-space and flux coordinate systems for experimental data -- are universal among tokamak experiments.  Despite this commonality, experiments typically utilize in-house solutions developed for the particulars of that experiment's data storage and usage.  This ad-hoc development of base-level functionality inhibits the mobility of higher-level codes to other devices (as the code may require substantial modification to address the particulars of the new data storage design).  Moreover, such development is often quite static, such that the implementation is difficult to extend to new data formats (for example, to handle both a primary MDSplus-based data storage system \note{cite?} and the \emph{eqdsk} storage files produced directly by the EFIT reconstruction code \cite{Lao1985}), necessitating parallel workflows for functionally identical tasks depending on the data source.  Best design practices call for the vagaries of data source and storage implementation to be placed in the back end, presenting a consistent, straightforward interface common between machines and code implementations to the research scientist.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -51,6 +53,7 @@ The basic computational tasks associated with magnetic-equilibrium reconstructio
  acknowledgements go here.
 \end{acknowledgements}
 
-% bibliography goes here
+\bibliographystyle{aipnum4-1}
+\bibliography{eqtools_paper}
 
 \end{document}
