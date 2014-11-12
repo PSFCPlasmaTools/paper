@@ -2,6 +2,7 @@
 
 \usepackage{amssymb,amsmath,amsfonts}
 \usepackage{graphicx}
+\usepackage{subfig}
 
 \newcommand{\eg}{\emph{e.g., }}
 \newcommand{\ie}{\emph{i.e., }}
@@ -54,6 +55,12 @@ This paper details the design and implementation of the eqtools package, particu
 \section{Tri-Spline Implementation}\label{sec:trispline}
 
 \section{Benchmarking}\label{sec:benchmark}
+
+\begin{figure}
+ \includegraphics[width=13.65cm]{graphics/RZ2psi_rel_diff.pdf}
+ \caption{Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \emph{eqtools} and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of less than half a percent are typical.  \note{source of diff?  EFIT, spline error?}}
+ \label{fig:rz2psi_diff}
+\end{figure}
 
 \section{Summary}\label{sec:summary}
 
