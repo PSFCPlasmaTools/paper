@@ -52,9 +52,9 @@ This paper details the design and implementation of the eqtools package, particu
 
 \section{Package Design and Use}\label{sec:design}
 
-\begin{figure}[ht]
+\begin{figure}[p]
  \includegraphics[width=\textwidth]{graphics/flowchart.pdf}
- \caption{}
+ \caption{Inheritance schematic for the \emph{eqtools} package.  The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \emph{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.}
  \label{fig:flowchart}
 \end{figure}
 
@@ -63,8 +63,8 @@ This paper details the design and implementation of the eqtools package, particu
 \section{Benchmarking}\label{sec:benchmark}
 
 \begin{figure}[ht]
- \includegraphics[width=13.65cm]{graphics/RZ2psi_rel_diff.pdf}
- \caption{Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \emph{eqtools} and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of less than half a percent are typical.  \note{source of diff?  EFIT, spline error?}}
+ \includegraphics[width=0.5\textwidth]{graphics/RZ2psi_rel_diff.pdf}
+ \caption{Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \emph{eqtools} and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of less than half a percent are typical.  \note{source of diff?  EFIT, spline error?  pair with flux map of equilibrium for comparison?}}
  \label{fig:rz2psi_diff}
 \end{figure}
 

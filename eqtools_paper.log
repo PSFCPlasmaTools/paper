@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.5.28)  12 NOV 2014 22:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.5.28)  12 NOV 2014 22:42
 entering extended mode
 **eqtools_paper.tex
 (E:\Libraries\Documents\GitHub\paper\eqtools_paper.tex
@@ -336,40 +336,38 @@ File: graphics/RZ2psi_rel_diff.pdf Graphic file (type pdf)
 
 <use graphics/RZ2psi_rel_diff.pdf>
 Package pdftex.def Info: graphics/RZ2psi_rel_diff.pdf used on input line 66.
-(pdftex.def)             Requested size: 388.37994pt x 577.68018pt.
+(pdftex.def)             Requested size: 234.0pt x 348.0442pt.
 
-
-LaTeX Warning: Float too large for page by 8.18018pt on input line 69.
-
-(E:\Libraries\Documents\GitHub\paper\eqtools_paper.bbl [3 <E:/Libraries/Documen
-ts/GitHub/paper/graphics/flowchart.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 9.
-
-[4 <E:/Libraries/Documents/GitHub/paper/graphics/RZ2psi_rel_diff.pdf>])
+(E:\Libraries\Documents\GitHub\paper\eqtools_paper.bbl)
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
-[5] (E:\Libraries\Documents\GitHub\paper\eqtools_paper.aux) ) 
+[3]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 82.
+
+[4 <E:/Libraries/Documents/GitHub/paper/graphics/flowchart.pdf>] [5 <E:/Librari
+es/Documents/GitHub/paper/graphics/RZ2psi_rel_diff.pdf>]
+(E:\Libraries\Documents\GitHub\paper\eqtools_paper.aux) ) 
 Here is how much of TeX's memory you used:
  5246 strings out of 493921
- 72521 string characters out of 3148889
+ 72519 string characters out of 3148889
  145626 words of memory out of 3000000
  8502 multiletter control sequences out of 15000+200000
  11890 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,8n,42p,1375b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:/Program Files/
-MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Program Files/MikTeX/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><E:/Program Files/MikTeX/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><E:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><E:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:
-/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Program File
-s/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Program Files/MikTeX/font
-s/type1/public/amsfonts/cm/cmti10.pfb><E:/Program Files/MikTeX/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb>
-Output written on eqtools_paper.pdf (5 pages, 406445 bytes).
+ 44i,8n,42p,1375b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
+<E:/Program Files/MikT
+eX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Program Files/MikTeX/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb><E:/Program Files/MikTeX/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><E:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><E:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/Pro
+gram Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Program Files/Mi
+kTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Program Files/MikTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><E:/Program Files/MikTeX/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
+Output written on eqtools_paper.pdf (5 pages, 408486 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
