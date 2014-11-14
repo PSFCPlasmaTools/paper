@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.12)  14 NOV 2014 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.12)  14 NOV 2014 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,20 +373,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
 File: graphics/flowchart.pdf Graphic file (type pdf)
 
 <use graphics/flowchart.pdf>
-Package pdftex.def Info: graphics/flowchart.pdf used on input line 60.
+Package pdftex.def Info: graphics/flowchart.pdf used on input line 62.
 (pdftex.def)             Requested size: 468.0pt x 325.20326pt.
  [3]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 69.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 70.
 
-[4 <./graphics/flowchart.pdf>]
-<graphics/RZ2psi_rel_diff.pdf, id=80, 475.7775pt x 707.64375pt>
+[4 <./graphics/flowchart.pdf>] [5]
+<graphics/RZ2psi_rel_diff.pdf, id=86, 475.7775pt x 707.64375pt>
 File: graphics/RZ2psi_rel_diff.pdf Graphic file (type pdf)
 
 <use graphics/RZ2psi_rel_diff.pdf>
-Package pdftex.def Info: graphics/RZ2psi_rel_diff.pdf used on input line 91.
+Package pdftex.def Info: graphics/RZ2psi_rel_diff.pdf used on input line 93.
 (pdftex.def)             Requested size: 234.0pt x 348.0442pt.
- (./eqtools_paper.bbl [5] [6 <./graphics/RZ2psi_rel_diff.pdf>])
+ (./eqtools_paper.bbl [6 <./graphics/RZ2psi_rel_diff.pdf>])
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
@@ -395,7 +395,7 @@ Use acknowledgments instead.
 Here is how much of TeX's memory you used:
  5629 strings out of 493958
  79497 string characters out of 6158803
- 154180 words of memory out of 5000000
+ 155180 words of memory out of 5000000
  8804 multiletter control sequences out of 15000+600000
  14828 words of font info for 56 fonts, out of 8000000 for 9000
  766 hyphenation exceptions out of 8191
@@ -414,7 +414,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb>
-Output written on eqtools_paper.pdf (7 pages, 433878 bytes).
+Output written on eqtools_paper.pdf (7 pages, 435746 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
