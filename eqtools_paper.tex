@@ -3,6 +3,7 @@
 \usepackage{amssymb,amsmath,amsfonts}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{epstopdf}
 
 \newcommand{\eg}{\emph{e.g., }}
 \newcommand{\ie}{\emph{i.e., }}
@@ -69,6 +70,12 @@ In addition to the already-developed modules inheriting \verb|EFITTree|, the cod
 In addition to the \verb|EqdskReader| module, which handles equilibrium and derived-quantity data from g- and a-file outputs from EFIT, the \emph{eqtools} package provides a \verb|PFileReader| object to handle plasma-profile data from the ``p-files'' associated with EFIT.  While this does not require access to the reconstructed equilibrium (and thus is separate from the \verb|Equilibrium| inheritance structure) profile data is commonly paired with the reconstructed equilibrium -- as such, the \emph{eqtools} package provides a built-in methodology to handle the additional data.  The \emph{eqtools} package also contains a package-level method, \verb|filewriter|\gnote{check naming!} to produce g-files from classes in the \verb|Equilibrium| inheritance tree, allowing easy generation of portable datasets from the main data-storage method.\gnote{reword?}
 
 \section{Tri-Spline Implementation}\label{sec:trispline}
+
+\begin{figure}[ht]
+ \includegraphics[width=\textwidth]{graphics/tspline_merge.eps}
+ \caption{}
+ \label{fig:tspline}
+\end{figure}
 
 Sets of equilibria create time histories which are often generated at different times and at different rates from other plasma measurements. Parameters based off of these sets will suffer from discontinuties introduced by the equilibria when sampled at higher rates than that of the set.  When the set of equilibria achieves the nyquist frequency for variations of interest, an additional interpolation in time can accurately remove aliasing errors induced by the timebase mismatch. The additional temporal dimension requires the use of higher dimensional interpolators, of which a fast tricubic interpolation scheme was developed. 
 
