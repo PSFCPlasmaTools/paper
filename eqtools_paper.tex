@@ -77,7 +77,7 @@ In addition to the \verb|EqdskReader| module, which handles equilibrium and deri
 \section{Details of coordinate mapping routines}\label{sec:algo}
 \eqtools supports transformations between a wide variety of coordinates including real space $(R, Z)$ coordinates, mapped outboard midplane major radius $R_{\text{mid}}$, normalized minor radius $r/a$, unnormalized poloidal flux $\psi$, normalized poloidal flux $\psi_{\text{n}}$, normalized toroidal flux $\phi_{\text{n}}$, normalized flux surface volume $V_{\text{n}}$ and the square roots of these quantities.
 
-The basic transformation is to map a given point $(R, Z)$ at a given time $t$ to the flux $\psi$ at that location as computed with the magnetic reconstruction code.
+The basic transformation is to map a given point $(R, Z)$ at a given time $t$ to the poloidal flux $\psi$ at that location as computed with the magnetic reconstruction code.
 The default implementation uses a nearest neighbor interpolation in time: the code first retrieves the flux reconstruction at the time closest to $t$, then a bivariate interpolating spline [\note{Cite fitpack/scipy.interpolate}] is used to map from $(R, Z)$ to $\psi$.
 The bivariate spline coefficients from each time are stored in memory for each time as they are computed in order to speed up subsequent calculations at that time slice.
 A more advanced method using a tricubic interpolating spline to interpolate smoothly in space \emph{and} time is described in section~\ref{sec:trispline}.
@@ -107,6 +107,7 @@ where $V_{\psi}$ is the volume enclosed by the (closed) flux surface with flux $
 In the case of Alcator C-Mod, the flux surface volume $V(\psi)$ is computed automatically when EFIT is run, but it would be straightforward to override the \verb|getFluxVol| method of the \verb|Equilibrium| class to compute this from the $\psi(R, Z)$ grid when this quantity is not already available in the tree.
 Mapping from $\psi_{\text{n}}$ to $R_{\text{mid}}$ is accomplished by forming a dense radial grid of $R$ points that go from the magnetic axis to the edge of the grid the flux is reconstructed on, finding the vertical location of the magnetic axis at the desired time(s) (called $Z_{0}$), then converting the resulting $(R, Z_{0})$ points to $\psi_{\text{n}}$ with the routines described above.
 This one-to-one mapping between $R_{\text{mid}}$ and $\psi_{\text{n}}$ is then interpolated to give the desired conversion from $\psi_{\text{n}}$ to $R_{\text{mid}}$.
+
 By default, $r/a$ is defined in terms of $R_{\text{mid}}$ as
 \begin{gather}
 	r/a = \frac{R_{\text{mid}} - R_{0}}{R_{a} - R_{0}},

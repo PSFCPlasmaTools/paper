@@ -1,28 +1,26 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.12)  19 DEC 2014 14:05
-entering extended mode
+This is LuaTeX, Version beta-0.76.0-2013061817 (rev 4627)  (format=lualatex 2014.4.12)  22 DEC 2014 19:27
  restricted \write18 enabled.
  file:line:error style messages enabled.
- %&-line parsing enabled.
 **eqtools_paper.tex
 (./eqtools_paper.tex
 LaTeX2e <2011/06/27>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/revtex/revtex4-1.cls
-Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
-ex4/ for documentation)
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revte
+x4/ for documentation)
  Copyright (c) 2009 The American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
  Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
  Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
-ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
-. Baxter web at superscript.com)]
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E.
+ Baxter web at superscript.com)]
 LaTeX Info: Redefining \@centercr on input line 308.
 Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
 \eqncolsep=\skip41
-Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
-note on input line 433.
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootn
+ote on input line 433.
 Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
 \intertabularlinepenalty=\count79
 \@tbpen=\count80
@@ -33,8 +31,8 @@ ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
 \c@affil=\count81
 \c@collab=\count82
 \absbox=\box27
-ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
-. Baxter web at superscript.com)]
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E.
+ Baxter web at superscript.com)]
 \c@linecount=\count83
 \output@latex=\toks14
 \box@size@1=\box28
@@ -47,8 +45,8 @@ ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
 \pagesofar=\box34
 \footsofar=\box35
 \pagegrid@col=\count84
-Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
- \\  on input line 5578.
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and 
+\\  on input line 5578.
 \c@part=\count85
 \c@section=\count86
 \c@subsection=\count87
@@ -70,8 +68,8 @@ Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
 Class revtex4-1 Warning: No Society specified, using default society aps.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/revtex/aps4-1.rtx
-File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
-mentation)
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docum
+entation)
 Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 )
 
@@ -79,8 +77,8 @@ Class revtex4-1 Warning: No journal specified, using default pra.
 
 Class revtex4-1 Info: APS journal PRA selected on input line 7545.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/revtex/aps12pt4-1.rtx
-File: aps12pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
-documentation)
+File: aps12pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for d
+ocumentation)
 Class revtex4-1 Info: RevTeX pointsize 12pt selected on input line 30.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/textcase/textcase.sty
@@ -100,8 +98,8 @@ LaTeX Info: Redefining \cite on input line 694.
 Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/revtex/revsymb4-1.sty
-Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
-or documentation)
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ fo
+r documentation)
 LaTeX Info: Redefining \REV@mathfrak on input line 119.
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -204,6 +202,28 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
+Package: luatex-loader 2010/03/09 v0.4 Lua module loader (HO)
+
+(/usr/local/texlive/2013/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua))
+\pdftexcmds@toks=\toks23
+)
 \Gread@gobject=\count107
 ))
 \Gin@req@height=\dimen111
@@ -233,12 +253,12 @@ Package caption Warning: Unsupported document class (or package) detected,
 (caption)                usage of the caption package is not recommended.
 See the caption package documentation for explanation.
 
-Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecapti
-onskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make
-@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \f
-lushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \en
-dgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil
- }}\endgroup \vskip \belowcaptionskip .
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecaptio
+nskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make@c
+apt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \flus
+hing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \endgro
+up }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil }}\e
+ndgroup \vskip \belowcaptionskip .
 \c@ContinuedFloat=\count108
 )
 \c@KVtest=\count109
@@ -274,37 +294,15 @@ Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
 )))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -319,14 +317,11 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
 Class revtex4-1 Info: Patching LaTeX tabular. on input line 24.
 Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 24.
-
 Class revtex4-1 Info: cite was not loaded (OK!) on input line 24.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 24.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 24.
 
 (./eqtools_paper.aux)
-\openout1 = `eqtools_paper.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
@@ -347,21 +342,19 @@ LaTeX Font Info:    ... okay on input line 24.
 \scratchbox=\box43
 \nofMPsegments=\count117
 \nofMParguments=\count118
-\everyMPshowfont=\toks23
+\everyMPshowfont=\toks24
 \MPscratchCnt=\count119
 \MPscratchDim=\dimen122
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks24
+\everyMPtoPDFconversion=\toks25
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\openout3 = `eqtools_paperNotes.bib'.
-
 
 Underfull \hbox (badness 4096) in paragraph at lines 41--41
-[][]\OT1/cmr/m/n/8 I want to
+[][][]\OT1/cmr/m/n/8 I want to
  []
 
 
@@ -461,7 +454,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
-[][]\OT1/cmr/m/n/8 where to
+[][][]\OT1/cmr/m/n/8 where to
  []
 
 
@@ -471,7 +464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--55
 
 
 Underfull \hbox (badness 7522) in paragraph at lines 55--55
-[][]\OT1/cmr/m/n/8 Should we
+[][][]\OT1/cmr/m/n/8 Should we
  []
 
 
@@ -528,12 +521,12 @@ Package pdftex.def Info: graphics/flowchart.pdf used on input line 66.
 (pdftex.def)             Requested size: 468.0pt x 325.20326pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[][]\OT1/cmr/m/n/8 check line
+[][][]\OT1/cmr/m/n/8 check line
  []
 
 [3] [4 <./graphics/flowchart.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[][]\OT1/cmr/m/n/8 expand?
+[][][]\OT1/cmr/m/n/8 ex-pand?
  []
 
 
@@ -545,61 +538,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--73
 Package epstopdf Info: Source file: <graphics/tspline_merge.eps>
 (epstopdf)                    date: 2014-12-17 12:18:12
 (epstopdf)                    size: 4918294 bytes
-(epstopdf)             Output file: <graphics/tspline_merge-eps-converted-to.pd
-f>
+(epstopdf)             Output file: <graphics/tspline_merge-eps-converted-to.pdf
+>
 (epstopdf)                    date: 2014-12-17 12:18:12
 (epstopdf)                    size: 256868 bytes
-(epstopdf)             Command: <repstopdf --outfile=graphics/tspline_merge-eps
--converted-to.pdf graphics/tspline_merge.eps>
-(epstopdf)             \includegraphics on input line 121.
+(epstopdf)             Command: <repstopdf --outfile=graphics/tspline_merge-eps-
+converted-to.pdf graphics/tspline_merge.eps>
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 
 <graphics/tspline_merge-eps-converted-to.pdf, id=92, 1401.235pt x 774.895pt>
 File: graphics/tspline_merge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use graphics/tspline_merge-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/tspline_merge-eps-converted-to.pdf used on in
-put line 121.
+Package pdftex.def Info: graphics/tspline_merge-eps-converted-to.pdf used on inp
+ut line 122.
 (pdftex.def)             Requested size: 468.0pt x 258.80219pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-[][]\OT1/cmr/m/n/8 I'm not
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[][][]\OT1/cmr/m/n/8 I'm not
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 \OT1/cmr/m/n/8 sure I
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 \OT1/cmr/m/n/8 un-der-stand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 \OT1/cmr/m/n/8 this state-
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 128--128
+Underfull \hbox (badness 7291) in paragraph at lines 129--129
 \OT1/cmr/m/n/8 ment, can
  []
 
 [7] [8 <./graphics/tspline_merge-eps-converted-to.pdf>]
-<graphics/RZ2psi_rel_diff.pdf, id=110, 475.7775pt x 707.64375pt>
+<graphics/RZ2psi_rel_diff.pdf, id=112, 475.7775pt x 707.64375pt>
 File: graphics/RZ2psi_rel_diff.pdf Graphic file (type pdf)
 
 <use graphics/RZ2psi_rel_diff.pdf>
-Package pdftex.def Info: graphics/RZ2psi_rel_diff.pdf used on input line 154.
+Package pdftex.def Info: graphics/RZ2psi_rel_diff.pdf used on input line 155.
 (pdftex.def)             Requested size: 234.0pt x 348.0442pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
-[][]\OT1/cmr/m/n/8 Any more
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[][][]\OT1/cmr/m/n/8 Any more
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 \OT1/cmr/m/n/8 ac-knowl-
  []
 
@@ -608,40 +601,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--172
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
-[10 <./graphics/RZ2psi_rel_diff.pdf>] (./eqtools_paper.aux) ) 
-Here is how much of TeX's memory you used:
- 5677 strings out of 493308
- 81042 string characters out of 6137816
- 158670 words of memory out of 5000000
- 9049 multiletter control sequences out of 15000+600000
- 15165 words of font info for 58 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 44i,12n,42p,1851b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2013/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on eqtools_paper.pdf (10 pages, 743402 bytes).
-PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
+[10 <./graphics/RZ2psi_rel_diff.pdf>] (./eqtools_paper.aux) )
+
+Here is how much of LuaTeX's memory you used:
+ 5940 strings out of 494698
+ 100000,184870 words of node,token memory allocated
+ 411 words of node memory still in use:
+   9 hlist, 4 vlist, 2 rule, 2 glue, 3 kern, 41 glue_spec nodes
+   avail lists: 2:17,3:126,4:1340,5:391,6:6520,7:340,9:307,10:610
+ 9377 multiletter control sequences out of 65536+600000
+ 69 fonts using 2722727 bytes
+ 44i,12n,42p,1850b,357s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on eqtools_paper.pdf (10 pages, 743386 bytes).
+
+PDF statistics: 197 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
