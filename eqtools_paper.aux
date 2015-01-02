@@ -7,7 +7,7 @@
 \newlabel{sec:intro}{{I}{2}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Package Design and Use}{3}{}}
 \newlabel{sec:design}{{II}{3}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Inheritance schematic for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. \leavevmode {\color  {red}add filewriter?}\relax }}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Inheritance schematic for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. \leavevmode {\color {red}add filewriter?}\relax }}{4}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:flowchart}{{1}{4}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Details of coordinate mapping routines}{5}{}}
@@ -17,16 +17,18 @@
 \newlabel{sec:trispline}{{IV}{7}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \relax }}{8}{}}
 \newlabel{fig:tspline}{{2}{8}{}{}{}}
-\bibdata{eqtools_paperNotes,eqtools_paper}
-\bibcite{Lao1985}{{1}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \num {e-4} are typical, and are consistent with the different default precisions of IDL versus Python.\relax }}{9}{}}
+\newlabel{fig:rz2psi_diff}{{3}{9}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Benchmarking}{9}{}}
 \newlabel{sec:benchmark}{{V}{9}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Summary}{9}{}}
-\newlabel{sec:summary}{{VI}{9}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Mean execution times in milliseconds\relax }}{10}{}}
+\newlabel{tab:benchmarkingtests}{{I}{10}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Summary}{10}{}}
+\newlabel{sec:summary}{{VI}{10}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{10}{}}
+\bibdata{eqtools_paperNotes,eqtools_paper}
+\bibcite{Lao1985}{{1}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
 \bibstyle{aipnum4-1}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of less than half a percent are typical. \leavevmode {\color  {red}source of diff? EFIT, spline error? pair with flux map of equilibrium for comparison?}\relax }}{10}{}}
-\newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{10}{}}
-\newlabel{LastBibItem}{{1}{10}{}{}{}}
-\newlabel{LastPage}{{}{10}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{11}{}}
+\newlabel{LastBibItem}{{1}{11}{}{}{}}
+\newlabel{LastPage}{{}{11}{}{}{}}

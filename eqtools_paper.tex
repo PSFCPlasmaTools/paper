@@ -21,6 +21,8 @@
 \usepackage{xspace}
 \newcommand{\eqtools}{\texttt{eqtools}\xspace}
 
+\usepackage{siunitx}
+
 \begin{document}
 
 \title{\eqtools: Modular, Extensible, Open-Source, Cross-Machine Python Tools for Working with Magnetic Equilibria}
@@ -142,20 +144,38 @@ Where
 The code for all of the tricubic spline interpolation was written in C and was integrated into Python using F2PY \note{quote f2py paper here} package. Other programming languages and codes with sufficient C APIs can access the optimized trispline code for use outside of magnetic reconstructions, and is well contained in accepting 3 dimensional data for analysis.
 
 \section{Benchmarking}\label{sec:benchmark}
-
-MAC's work plan/thoughts:
-\begin{enumerate}
-	\item Make better version of the figure.
-	\item Difference is probably primarily due to different numerical precision -- check to see if IDL uses single precision. I know Python uses double, since it fails hard if you try to pass singles...
-	\item Conduct more detailed timing tests to get a good sample.
-	\item Write words and numbers here.
-\end{enumerate}
-
-\begin{figure}[ht]
- \includegraphics[width=0.5\textwidth]{graphics/RZ2psi_rel_diff.pdf}
- \caption{Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of less than half a percent are typical.  \note{source of diff?  EFIT, spline error?  pair with flux map of equilibrium for comparison?}}
- \label{fig:rz2psi_diff}
+\eqtools has been benchmarked against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
+Figure~\ref{fig:rz2psi_diff} shows the discrepancy between IDL and \eqtools for the conversion of $(R, Z)$ to $\psi$.
+The differences are small, and are consistent with the fact that Python defaults to double precision whereas IDL defaults to single precision.
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{graphics/rz2psi}
+	\caption{Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \num{e-4} are typical, and are consistent with the different default precisions of IDL versus Python.}
+	\label{fig:rz2psi_diff}
 \end{figure}
+Timing tests were conducted by converting a $66\times66$ element $(R, Z)$ grid (double the density of the grid EFIT provides the flux on) into each of the coordinates supported.
+This conversion was performed at each of the 90 time slices output by EFIT and nearest-neighbor temporal interpolation was used.
+The conversion was performed twice with the same \verb|Equilibrium| object in \eqtools in order to assess the time savings from storing the spline coefficients.
+The test was repeated 100 times, and the mean execution time to convert the $(R, Z)$ grid at each time slice is given in Table~\ref{tab:benchmarkingtests}.
+\begin{table}
+	\caption{Mean execution times in milliseconds}
+	\label{tab:benchmarkingtests}
+	\begin{tabular}{lS[table-format=2.1]S[table-format=2.1]S[table-format=1.1]}
+		\hline
+		Conversion & {IDL} & \multicolumn{2}{c}{\eqtools}\\
+		\cline{3-4}
+		 & & {first run} & {second run}\\
+		\hline
+		$(R, Z)\to\psi$ & 11.7 & 2.5 & 1.9\\
+		$(R, Z)\to\psi_{\text{n}}$ & 21.8 & 2.0 & 2.0\\
+		$(R, Z)\to\phi_{\text{n}}$ & 30.2 & 3.1 & 2.3\\
+		$(R, Z)\to V_{\text{n}}$ & 28.0 & 3.0 & 2.3\\
+		$(R, Z)\to R_{\text{mid}}$ & 36.1 & 12.1 & 2.4\\
+		\hline
+	\end{tabular}
+\end{table}
+\eqtools provides a considerable speedup over the IDL-based routines even on the first run.
+This improvement is from a combination of the switch to Python and the fact that \eqtools stores the equilibrium data in a persistent object instead of having to fetch it from the MDSplus tree for each call.
+Subsequent runs with the same \verb|Equilibrium| object are faster, particularly for the conversion to $R_{\text{mid}}$, which has considerable overhead on the first call.
 
 \section{Summary}\label{sec:summary}
 
@@ -170,9 +190,8 @@ This material is based upon work conducted using the Alcator C-Mod tokamak, a DO
 This material is based upon work supported by the U.S.\ Department of Energy, Office of Science, Office of Fusion Energy Sciences under Award Number DE-FC02-99ER54512.
 This material is based upon work supported in part by the U.S.\ Department of Energy Office of Science Graduate Research Fellowship Program (DOE SCGF), made possible in part by the American Recovery and Reinvestment Act of 2009, administered by ORISE-ORAU under contract number DE-AC05-06OR23100.
 
-\gnote{Any more acknowledgements?}
-
 \end{acknowledgements}
+
 
 \bibliographystyle{aipnum4-1}
 \bibliography{eqtools_paper}
