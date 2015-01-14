@@ -216,7 +216,17 @@ Subsequent runs with the same \verb|Equilibrium| object are faster, particularly
 
 \section{Summary}\label{sec:summary}
 
-\note{TODOTODOTODO!}
+The \eqtools package provides a modular, extensible framework for handling the basic tasks associated with magnetic-equilibrium reconstructions for tokamaks -- namely, the management of derived quantities, and mapping routines between real-space and flux coordinate systems for experimental data.
+This package, developed in the open-source Python programming language and freely distributed via Github \note{need a way to link!}, presents a consistent, user-friendly interface independent of data source or storage method, replacing machine- and storage-specific methods which are often nonintuitive to use (requiring, for example, manual hooks into data storage for derived quantities) and which often use a static code structure that can be difficult to extend for experimental data from multiple machines, storage methods, or reconstruction codes.\gnote{too harsh?}
+Moreover, the \eqtools package is designed with a modular, object-oriented construction, such that the package is easily extended to include new experiments, reconstruction codes, and data storage methods (in the current distribution version, EFIT reconstructions \cite{Lao1985} in MDSplus-based data storage from NSTX, C-Mod, and DIII-D are implemented, along with a handler for the portable \emph{eqdsk} datafile).  
+This development clears a substantial hurdle to the adoption of Python as a standard scripting language for tokamak research, which offers numerous advantages in terms of development base and support, computational speed, ease of adoption, and cost over common current working languages for fusion research.
+
+The \eqtools package includes a complete set of mapping routines between real-space machine coordinates (that is, the $RZ$ grid defined for the reconstruction), midplane-mapped real-space coordinates (major radius and normalized minor radius), and flux-space coordinate systems (normalized poloidal and toroidal flux and normalized flux-surface volume), as well as their square roots -- in short, coordinate systems customarily used in a broad variety of analysis applications are supported within a single unified user interface.  
+In addition to the standard bivariate analysis mapping the $R$ and $Z$ coordinate with nearest-neighbor interpolation in time (as is used in the preexisting mapping routines used on C-Mod due to code constraints), \eqtools allows for a trivariate spline providing smooth interpolation along the time axis as well.  
+This allows the user to optionally trade computational time for a substantially more accurate treatment of the time variation in cases where experimental data is significantly different from the reconstruction timebase.
+
+The mapping routines in \eqtools have been thoroughly benchmarked against the existing IDL implementations used at Alcator C-Mod.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
