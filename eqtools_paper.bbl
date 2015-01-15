@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{1}%
+\begin{thebibliography}{4}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -62,4 +62,30 @@
   {http://stacks.iop.org/0029-5515/25/i=11/a=007} {\bibfield  {journal}
   {\bibinfo  {journal} {Nuclear Fusion}\ }\textbf {\bibinfo {volume} {25}},\
   \bibinfo {pages} {1611} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{GPL(2007)}]{GPL}%
+  \BibitemOpen
+  \href@noop {} {\enquote {\bibinfo {title} {Gnu general public license,
+  version 3},}\ }\bibinfo {howpublished}
+  {\url{http://www.gnu.org/licenses/gpl.html}} (\bibinfo {year}
+  {2007})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
+  \citenamefont {Walk}(2014{\natexlab{a}})}]{eqtools_git}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
+  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
+  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: {Python} tools
+  for magnetic equilibria in tokamak plasmas (github distribution)},}\
+  }\bibinfo {howpublished} {\url{https://github.com/PSFCPlasmaTools/eqtools}}
+  (\bibinfo {year} {2014}{\natexlab{a}})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
+  \citenamefont {Walk}(2014{\natexlab{b}})}]{eqtools_readthedocs}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
+  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
+  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: tools for
+  interacting with magnetic equilibria (online documentation)},}\ }\bibinfo
+  {howpublished} {\url{eqtools.readthedocs.org/en/latest/}} (\bibinfo {year}
+  {2014}{\natexlab{b}})\BibitemShut {NoStop}%
 \end{thebibliography}%
