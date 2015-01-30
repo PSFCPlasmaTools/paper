@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.14)  30 JAN 2015 15:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.14)  30 JAN 2015 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,10 +821,10 @@ Use acknowledgments instead.
 
 [13] (./eqtools_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 13686 strings out of 495032
- 271226 string characters out of 6181718
+ 13685 strings out of 495032
+ 271219 string characters out of 6181718
  295597 words of memory out of 5000000
- 16698 multiletter control sequences out of 15000+600000
+ 16697 multiletter control sequences out of 15000+600000
  19370 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,13n,42p,10405b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -848,7 +848,7 @@ cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on eqtools_paper.pdf (13 pages, 755838 bytes).
+Output written on eqtools_paper.pdf (13 pages, 756060 bytes).
 PDF statistics:
  1203 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
