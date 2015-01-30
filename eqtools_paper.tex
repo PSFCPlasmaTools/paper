@@ -174,7 +174,7 @@ When the set of equilibria achieves the Nyquist frequency for variations of inte
 The additional temporal dimension requires the use of higher dimensional interpolators, for which a fast tricubic interpolation scheme was developed. 
 
 The additional time dimension and subsequent higher-dimensionality increases the evaluation time of the mapping routines. 
-A tricubic interpolating spline is used to evaluate the three-dimensional flux grid. 
+A tricubic interpolating spline \cite{Lekien2005} is used to evaluate the three-dimensional flux grid. 
 The time dimension is assumed to be like a rectilinear spatial dimension which allows for the use of developed optimized matrix methods for extracting the necessary spline coefficients. 
 The higher dimensionality of the problem scales the necessary computational time due to the increased necessary information ($\times64$ increase in matrix computation). 
 Other non-three-dimensional parameters also require further computation due to the inherent complication of increasing the number of dimensions. 
@@ -193,7 +193,7 @@ Where,
 \boldsymbol{A_{inv}^*} = \boldsymbol{A_{inv}}\boldsymbol{B} 
 \end{equation}
 
-The code for the tricubic spline interpolation was written in C and was integrated into Python using F2PY \note{quote f2py paper here} package. 
+The code for the tricubic spline interpolation was written in C and was integrated into Python using F2PY \cite{Peterson2009} package. 
 Other programming languages and codes with sufficient C APIs can access the optimized trispline code for use outside of magnetic reconstructions, and is well contained in accepting 3 dimensional data for analysis.
 
 \section{Benchmarking}\label{sec:benchmark}
