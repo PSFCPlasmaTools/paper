@@ -169,7 +169,7 @@ Variants on these basic routines are then used to map between other pairs of coo
 Time-dependent interpolation poses a difficult problem with respect to the instantaneous nature of most equilibrium reconstructions. 
 Usually coordinates are often determined via interpolation using the closest equilibrium in time.
 When the sampling rate of equilibria is lower than the desired coordinate sampling rate, this can induce aliasing behaviors (as can be seen in \ref{fig:tspline}). 
-The aliasing-induced discontinuities pose an issue for long timescale behaviors of coordinates.  
+The aliasing-induced discontinuities limit the nearest-neighbor approach for long timescale behaviors of coordinates.  
 When the set of equilibria achieves the Nyquist frequency for variations of interest, an additional interpolation in time can accurately remove aliasing errors induced by this timebase mismatch. 
 The additional temporal dimension requires the use of higher dimensional interpolators, for which a fast tricubic interpolation scheme was developed. 
 
