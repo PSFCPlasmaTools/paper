@@ -5,19 +5,18 @@
 \citation{MDSplus}
 \citation{Lao1985}
 \citation{GPL}
-\citation{eqtools_git,eqtools_readthedocs}
+\citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{2}{}}
 \newlabel{sec:intro}{{I}{2}{}{}{}}
-\citation{MDSobjects}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Package Design and Use}{3}{}}
 \newlabel{sec:design}{{II}{3}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Inheritance schematic for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. \leavevmode {\color {red}add filewriter?}\relax }}{5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Inheritance schematic for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.\relax }}{4}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:flowchart}{{1}{5}{}{}{}}
+\newlabel{fig:flowchart}{{1}{4}{}{}{}}
 \citation{dierckxBook,scipy}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Details of the coordinate mapping routines}{6}{}}
 \newlabel{sec:algo}{{III}{6}{}{}{}}
-\newlabel{eq:phipsi}{{2}{7}{}{}{}}
+\newlabel{eq:phipsi}{{2}{6}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Tri-Spline Implementation}{7}{}}
 \newlabel{sec:trispline}{{IV}{7}{}{}{}}
 \citation{Lekien2005}
@@ -26,27 +25,27 @@
 \citation{Peterson2009}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Benchmarking}{9}{}}
 \newlabel{sec:benchmark}{{V}{9}{}{}{}}
-\citation{eqtools_git,eqtools_readthedocs}
-\citation{Lao1985}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Relative difference between calculations of a mapping between the RZ grid and poloidal flux for the \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \num {e-4} are typical, and are consistent with the different default precisions of IDL versus Python.\relax }}{10}{}}
 \newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Mean execution times in milliseconds\relax }}{11}{}}
-\newlabel{tab:benchmarkingtests}{{I}{11}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Mean execution times in milliseconds\relax }}{10}{}}
+\newlabel{tab:benchmarkingtests}{{I}{10}{}{}{}}
+\citation{eqtools_git,eqtools_readthedocs}
+\citation{Lao1985}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Summary}{11}{}}
 \newlabel{sec:summary}{{VI}{11}{}{}{}}
 \bibdata{eqtools_paperNotes,eqtools_paper}
 \bibcite{MDSplus}{{1}{1997}{{Stillerman\ \emph  {et~al.}}}{{Stillerman, Fredian, Klare,\ and\ Manduchi}}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{12}{}}
 \bibcite{Lao1985}{{2}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
 \bibcite{GPL}{{3}{2007}{{GPL}}{{}}}
+\bibcite{eqtools_pypi}{{4}{2014{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \bibcite{eqtools_git}{{4}{2014{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \bibcite{eqtools_readthedocs}{{4}{2014{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
-\bibcite{MDSobjects}{{5}{2010}{{Fredian, Stillerman,\ and\ Manduchi}}{{}}}
-\bibcite{dierckxBook}{{6}{1993}{{Dierckx}}{{}}}
-\bibcite{scipy}{{7}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
-\bibcite{Lekien2005}{{8}{2005}{{Lekien\ and\ Marsden}}{{}}}
-\bibcite{Peterson2009}{{9}{2009}{{Peterson}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{12}{}}
+\bibcite{dierckxBook}{{5}{1993}{{Dierckx}}{{}}}
+\bibcite{scipy}{{6}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
+\bibcite{Lekien2005}{{7}{2005}{{Lekien\ and\ Marsden}}{{}}}
+\bibcite{Peterson2009}{{8}{2009}{{Peterson}}{{}}}
 \bibstyle{aipnum4-1}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{13}{}}
-\newlabel{LastBibItem}{{9}{13}{}{}{}}
+\newlabel{LastBibItem}{{8}{13}{}{}{}}
 \newlabel{LastPage}{{}{13}{}{}{}}

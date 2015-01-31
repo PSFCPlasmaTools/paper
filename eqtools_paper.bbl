@@ -80,17 +80,27 @@
   {\url{http://www.gnu.org/licenses/gpl.html}} (\bibinfo {year}
   {2007})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
-  \citenamefont {Walk}(2014{\natexlab{a}})}]{eqtools_git}%
+  \citenamefont {Walk}(2014{\natexlab{a}})}]{eqtools_pypi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
+  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
+  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: Python package
+  index ({PyPI} distribution)},}\ }\bibinfo {howpublished}
+  {\url{https://pypi.python.org/pypi/eqtools/1.1}} (\bibinfo {year}
+  {2014}{\natexlab{a}})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
+  \citenamefont {Walk}(2014{\natexlab{b}})}]{eqtools_git}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
   {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
   {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
   {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: {Python} tools
-  for magnetic equilibria in tokamak plasmas (github distribution)},}\
-  }\bibinfo {howpublished} {\url{https://github.com/PSFCPlasmaTools/eqtools}}
-  (\bibinfo {year} {2014}{\natexlab{a}})\BibitemShut {NoStop}%
+  for magnetic equilibria in tokamak plasmas (developer page)},}\ }\bibinfo
+  {howpublished} {\url{https://github.com/PSFCPlasmaTools/eqtools}} (\bibinfo
+  {year} {2014}{\natexlab{b}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
-  \citenamefont {Walk}(2014{\natexlab{b}})}]{eqtools_readthedocs}%
+  \citenamefont {Walk}(2014{\natexlab{c}})}]{eqtools_readthedocs}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
   {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
@@ -98,16 +108,7 @@
   {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: tools for
   interacting with magnetic equilibria (online documentation)},}\ }\bibinfo
   {howpublished} {\url{eqtools.readthedocs.org/en/latest/}} (\bibinfo {year}
-  {2014}{\natexlab{b}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fredian}, \citenamefont {Stillerman},\ and\
-  \citenamefont {Manduchi}(2010)}]{MDSobjects}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Fredian}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Stillerman}},
-  \ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Manduchi}},\
-  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Fusion Engineering
-  and Design}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo {pages} {568}
-  (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+  {2014}{\natexlab{c}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Dierckx}(1993)}]{dierckxBook}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont

@@ -40,16 +40,15 @@
 \date{\today}
 
 \begin{abstract}
-As experimental plasma physics research transitions to be predominantly conducted across institutions and machines, it becomes increasingly important that portable tools be developed to enable data from diverse sources to be analyzed in a consistent manner. 
+As plasma physics research for fusion energy transitions to an increasing emphasis on cross-machine collaboration and numerical simulation, it becomes increasingly important that portable tools be developed to enable data from diverse sources to be analyzed in a consistent manner. 
 This paper presents \eqtools, a modular, extensible, open-source toolkit implemented in the Python programming language for handling magnetic equilibria and associated data from tokamaks. 
 \eqtools provides a single interface for working with magnetic equilibrium data, both for handling derived quantities and mapping between coordinate systems, extensible to function with data from different experiments, data formats, and magnetic reconstruction codes, replacing the diverse, non-portable solutions currently in use.  
 Moreover, implementing these tools in Python removes a substantial barrier to code migration and new development in the open-source Python programming language, which presents a number of advantages.  
 In this paper, we introduce the design of the \eqtools package and detail the workflow for usage and expansion to additional devices.  The implementation of a novel three-dimensional spline solution (in two spatial dimensions and in time) is also detailed.  
 Finally, benchmarking for accuracy and speed against existing tools are detailed. Wider deployment of these tools will enable efficient sharing of data and software between institutions and machines as well as self-consistent analysis of the shared data.
 \end{abstract}
-\gnote{other PACs numbers?}
 
-\pacs{52.55.Fa}
+\pacs{52.55.Fa, 07.05.Kf, 52.70.Ds}
 
 \maketitle
 
@@ -66,58 +65,58 @@ Best design practices call for the vagaries of data source and storage implement
 The new \eqtools package provides a modular, extensible, cross-machine toolkit developed in the Python programming language for handling magnetic equilibrium data.  
 The \eqtools package provides a consistent and straightforward interface to the researcher for both coordinate mapping routines (historically handled in separate standalone routines) and access to derived quantities (often handled with manual hooks into data storage).  
 Moreover, \eqtools is constructed with a modular, object-oriented design, such that the package is easily extensible to handle data from different experiments and reconstruction codes, giving the researcher a single unified interface for data from any machine or code.  
-The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via GitHub \cite{eqtools_git,eqtools_readthedocs}.
+The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via PyPI \cite{eqtools_pypi,*eqtools_git,*eqtools_readthedocs}.
 
 This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), and presents runtime and accuracy benchmarks against the current IDL implementation at Alcator C-Mod (section \ref{sec:benchmark}).
 
 \section{Package Design and Use}\label{sec:design}
 
 The \eqtools package is designed to present a consistent, human-readable interface to the user for both data handling of derived quantities and mapping routines between coordinate systems, all contained within a single persistent object (herein referenced in code snippets as \verb|eq|).
-For example, consider how the poloidal flux on-axis would be accessed using the current system on Alcator C-Mod using the MDSobjects \cite{MDSobjects} Python interface:
-\begin{verbatim}
-import MDSplus
-t = MDSplus.Tree('analysis', shotnum)
-n = t.getNode('efit.results.a_eqdsk:simagx')
-psi0 = n.data()
-\end{verbatim}
-And compare to the approach to access the same data using \eqtools:
-\begin{verbatim}
-import eqtools
-eq = eqtools.CModEFITTree(shotnum)
-psi0 = eq.getFluxAxis()
-\end{verbatim}
-Notice that the \eqtools approach requires fewer lines and that the cryptic six letter EFIT tag name ``simagx'' is replaced with the more descriptive ``getFluxAxis.''
-%For example, accessing the calculated value for the poloidal flux on-axis, $\psi_0$, is simply \verb|eq.getFluxAxis()| -- this replaces arrangements that may involve manual hooks into the data system (as is the case at Alcator C-Mod) and interaction with non-intuitive internal variable names (as is the case with EFIT outputs\gnote{too harsh?}\gnote{Perhaps we could emphasize this with code snippets of the old way?}).  
+%For example, consider how the poloidal flux on-axis would be accessed using the current system on Alcator C-Mod using the MDSobjects \cite{MDSobjects} Python interface:
+%\begin{verbatim}
+%import MDSplus
+%t = MDSplus.Tree('analysis', shotnum)
+%n = t.getNode('efit.results.a_eqdsk:simagx')
+%psi0 = n.data()
+%\end{verbatim}
+%And compare to the approach to access the same data using \eqtools:
+%\begin{verbatim}
+%import eqtools
+%eq = eqtools.CModEFITTree(shotnum)
+%psi0 = eq.getFluxAxis()
+%\end{verbatim}
+%Notice that the \eqtools approach requires fewer lines and that the cryptic six letter EFIT tag name ``simagx'' is replaced with the more descriptive ``getFluxAxis.''
+For example, accessing the calculated value for the poloidal flux on-axis, $\psi_0$, is simply \verb|eq.getFluxAxis()| -- this replaces arrangements that may involve cumbersome manual hooks into the data system and interaction with cryptic internal EFIT variable names.
 Similarly, mapping routines are handled internally in the \verb|eq| object -- mapping from the machine RZ grid to normalized poloidal flux, for example, is simply \verb|eq.rz2psinorm(R,Z,t,...)|.  
 One notable consequence of this is that intermediate spline calculations for the mapping routines are stored in the persistent object -- compared to typical standalone mapping routines (which must start from scratch for each function call) this allows substantial speed gains for subsequent mapping calculations with the same equilibrium object, as is illustrated in section~\ref{sec:benchmark}.
 
-The \eqtools package is structured such that the user-facing methods (for data access and coordinate mapping) are consistent for different machines or reconstruction codes, and moreover adding support for new machines or codes requires minimal new code.  
+The \eqtools package is structured such that the user-facing methods (for data access and coordinate mapping) are consistent for different machines or reconstruction codes, and moreover adding support for new machines or codes requires minimal new code development.  
 The package inheritance structure is depicted in figure \ref{fig:flowchart}.  
 The base level of the inheritance structure (shown in blue in figure \ref{fig:flowchart}) provides the abstract class \verb|Equilibrium| -- this defines the skeleton structure for the data system (ensuring that child classes use a consistent format) and defines the mapping routines, which are inherited and used by each child class.  
 The methods therein are sufficiently general to be used by any grid-based equilibrium reconstruction.
 
 \begin{figure}[p]
  \includegraphics[width=\textwidth]{graphics/flowchart.pdf}
- \caption{Inheritance schematic for the \eqtools package.  The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \texttt{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.  \note{add filewriter?}}
+ \caption{Inheritance schematic for the \eqtools package.  The base abstract class (blue) provides a skeleton structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \texttt{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.}
  \label{fig:flowchart}
 \end{figure}
 
-An intermediate inheritance level (shown in yellow in figure \ref{fig:flowchart}) provides more specific methodology (while still maintaining cross-machine generality) -- for example, the \verb|EFITTree| class provides methods for EFIT reconstructions stored in MDSplus tree structures (as is used on C-Mod, NSTX, and DIII-D\gnote{cites?}).  
+An intermediate inheritance level (shown in yellow in figure \ref{fig:flowchart}) provides more specific methodology (while still maintaining cross-machine generality) -- for example, the \verb|EFITTree| class provides methods for EFIT reconstructions stored in MDSplus tree structures (as is used on C-Mod, NSTX, and DIII-D).  
 This minimizes the need for repeated code in machine-specific versions of common code implementations.  
 The user-facing inheritance level (shown in green in figure \ref{fig:flowchart}) finalizes the specific details of implementation for a given reconstruction code, data-storage methodology, and machine implementation (\eg \verb|CModEFITTree|, \verb|NSTXEFITTree|, \verb|D3DEFITTree|).  
 These user-facing implementations typically require relatively little code (on the order of 100 lines in the case of \verb|CModEFITTree| and \verb|NSTXEFITTree|), and extension modules to the code can be quickly developed in most cases.
 
-In addition to the already-developed modules inheriting \verb|EFITTree|, the code currently contains the \verb|EqdskReader| module, which directly interfaces with the \emph{eqdsk} text files (specifically, the ``g-file'' and ``a-file'' containers, which store equilibrium and scalar derived quantities, respectively) generated by EFIT.\gnote{cite?}  
-This allows a single unified interface for both the tree-based and portable text-file data storage common to US experiments.\gnote{expand?  other countries?}  
+In addition to the already-developed modules inheriting \verb|EFITTree|, the code currently contains the \verb|EqdskReader| module, which directly interfaces with the \emph{eqdsk} text files (specifically, the ``g-file'' and ``a-file'' containers, which store equilibrium and scalar derived quantities, respectively) generated by EFIT.  
+This allows a single unified interface for both the tree-based and portable text-file data storage common to US experiments. 
 Due to the unique structure of the code necessary to read text-file data (which is done directly in \verb|EqdskReader|), \verb|EqdskReader| directly inherits mapping routines and skeletal structure from \verb|Equilibrium|, without an intermediate stage; however, as new text-file-based storage methods are implemented in \eqtools sufficient commonality may be found to necessitate the creation of a intermediate abstraction level for generalized text-file storage systems in subsequent versions of the \eqtools package.
 
 In addition to the \verb|EqdskReader| module, which handles equilibrium and derived-quantity data from g- and a-file outputs from EFIT, the \eqtools package provides a \verb|PFileReader| object to handle plasma-profile data from the ``p-files'' associated with EFIT.  
 While this does not require access to the reconstructed equilibrium (and thus is separate from the \verb|Equilibrium| inheritance structure) profile data is commonly paired with the reconstructed equilibrium -- as such, the \eqtools package provides a built-in methodology to handle the additional data.  
-The \eqtools package also contains a package-level method, \verb|filewriter|\gnote{check naming!} to produce g-files from classes in the \verb|Equilibrium| inheritance tree, allowing easy generation of portable datasets from the main data-storage method.\gnote{reword?}
+The \eqtools package also contains a package-level method, \verb|filewriter|, to produce g-files from classes in the \verb|Equilibrium| inheritance tree, allowing easy generation of portable datasets from the main (for example, MDSplus tree) data-storage method.
 
 \section{Details of the coordinate mapping routines}\label{sec:algo}
 One of the strengths of \eqtools is its support for conversions between the majority of coordinate systems in common use:
-\eqtools supports transformations between a wide variety of coordinates including real space $(R, Z)$ coordinates, mapped outboard midplane major radius $R_{\text{mid}}$, normalized minor radius $r/a$, unnormalized poloidal flux $\psi$, normalized poloidal flux $\psi_{\text{n}}$, normalized toroidal flux $\phi_{\text{n}}$, normalized flux surface volume $V_{\text{n}}$ and the square roots of these quantities.\gnote{John, not sure what more breakdown you want here. Please clarify your comments.}
+\eqtools supports transformations between a wide variety of coordinates including real-space $(R, Z)$ coordinates, mapped outboard midplane major radius $R_{\text{mid}}$, normalized minor radius $r/a$, unnormalized poloidal flux $\psi$, normalized poloidal flux $\psi_{\text{n}}$, normalized toroidal flux $\phi_{\text{n}}$, normalized flux surface volume $V_{\text{n}}$ and the square roots of these quantities.
 
 The basic transformation is to map a given point $(R, Z)$ at a given time $t$ to the poloidal flux $\psi$ at that location as computed with the magnetic reconstruction code.
 The default implementation uses a nearest-neighbor interpolation in time: the code first retrieves the flux reconstruction at the time closest to $t$, then a bivariate interpolating spline \cite{dierckxBook,scipy} is used to map from $(R, Z)$ to $\psi$.
@@ -197,7 +196,7 @@ The code for the tricubic spline interpolation was written in C and was integrat
 Other programming languages and codes with sufficient C APIs can access the optimized trispline code for use outside of magnetic reconstructions, and is well contained in accepting 3 dimensional data for analysis.
 
 \section{Benchmarking}\label{sec:benchmark}
-\eqtools has been benchmarked against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
+\eqtools has been verified against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
 Figure~\ref{fig:rz2psi_diff} shows the discrepancy between IDL and \eqtools for the conversion of $(R, Z)$ to $\psi$.
 The differences are small (of order \num{e-4}), and are consistent with the fact that Python defaults to double precision whereas IDL defaults to single precision.
 \begin{figure}

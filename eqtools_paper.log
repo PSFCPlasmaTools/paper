@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.14)  30 JAN 2015 15:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.12)  31 JAN 2015 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **eqtools_paper.tex
 (./eqtools_paper.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 33 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/revtex/revtex4-1.cls
 Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
 ex4/ for documentation)
@@ -189,8 +189,8 @@ Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
@@ -308,7 +308,7 @@ e
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/etc/texmf/tex/latex/config/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
@@ -737,81 +737,44 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count170
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 54.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-
-pdfTeX warning: pdflatex (file ./graphics/flowchart.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
-<graphics/flowchart.pdf, id=22, 1019.81pt x 708.6475pt>
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 53.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<graphics/flowchart.pdf, id=19, 1019.81pt x 708.6475pt>
 File: graphics/flowchart.pdf Graphic file (type pdf)
 
 <use graphics/flowchart.pdf>
-Package pdftex.def Info: graphics/flowchart.pdf used on input line 100.
+Package pdftex.def Info: graphics/flowchart.pdf used on input line 99.
 (pdftex.def)             Requested size: 468.0pt x 325.20326pt.
+ [3]
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[][]\OT1/cmr/m/n/8 expand?
- []
+LaTeX Warning: A float is stuck (cannot be placed) on input line 108.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-\OT1/cmr/m/n/8 other
- []
-
-[4] [5 <./graphics/flowchart.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-[][]\OT1/cmr/m/n/8 John, not
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/8 sure what
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/8 down you
- []
-
-
-Underfull \hbox (badness 5133) in paragraph at lines 120--120
-\OT1/cmr/m/n/8 want here.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/8 Please
- []
-
-[6]
+[4 <./graphics/flowchart.pdf>] [5] [6]
 Package epstopdf Info: Source file: <graphics/tspline_merge.eps>
-(epstopdf)                    date: 2015-01-09 11:02:53
+(epstopdf)                    date: 2014-11-20 13:52:22
 (epstopdf)                    size: 4918294 bytes
 (epstopdf)             Output file: <graphics/tspline_merge-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2015-01-09 11:02:53
+(epstopdf)                    date: 2014-11-20 15:53:20
 (epstopdf)                    size: 256868 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/tspline_merge-eps
 -converted-to.pdf graphics/tspline_merge.eps>
-(epstopdf)             \includegraphics on input line 164.
+(epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 
-<graphics/tspline_merge-eps-converted-to.pdf, id=88, 1401.235pt x 774.895pt>
+<graphics/tspline_merge-eps-converted-to.pdf, id=94, 1401.235pt x 774.895pt>
 File: graphics/tspline_merge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use graphics/tspline_merge-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/tspline_merge-eps-converted-to.pdf used on in
-put line 164.
+put line 163.
 (pdftex.def)             Requested size: 468.0pt x 258.80219pt.
  [7] [8 <./graphics/tspline_merge-eps-converted-to.pdf>]
-
-pdfTeX warning: pdflatex (file ./graphics/rz2psi.pdf): PDF inclusion: found PDF
- version <1.5>, but at most version <1.4> allowed
-<graphics/rz2psi.pdf, id=106, 519.04474pt x 735.97972pt>
+<graphics/rz2psi.pdf, id=109, 519.04474pt x 735.97972pt>
 File: graphics/rz2psi.pdf Graphic file (type pdf)
 
 <use graphics/rz2psi.pdf>
-Package pdftex.def Info: graphics/rz2psi.pdf used on input line 204.
+Package pdftex.def Info: graphics/rz2psi.pdf used on input line 203.
 (pdftex.def)             Requested size: 234.0pt x 331.80547pt.
  [9] [10 <./graphics/rz2psi.pdf>] [11]
 (./eqtools_paper.bbl [12])
@@ -821,13 +784,13 @@ Use acknowledgments instead.
 
 [13] (./eqtools_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 13685 strings out of 495032
- 271219 string characters out of 6181718
- 295597 words of memory out of 5000000
- 16697 multiletter control sequences out of 15000+600000
+ 13688 strings out of 493958
+ 271354 string characters out of 6158803
+ 297032 words of memory out of 5000000
+ 16744 multiletter control sequences out of 15000+600000
  19370 words of font info for 75 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 44i,13n,42p,10405b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 766 hyphenation exceptions out of 8191
+ 44i,13n,42p,10405b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cmextra/cmbsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
@@ -848,9 +811,10 @@ cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on eqtools_paper.pdf (13 pages, 756060 bytes).
+Output written on eqtools_paper.pdf (13 pages, 683176 bytes).
 PDF statistics:
- 1203 PDF objects out of 1440 (max. 8388607)
+ 1215 PDF objects out of 1440 (max. 8388607)
+ 805 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
