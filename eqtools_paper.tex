@@ -184,20 +184,9 @@ The higher dimensionality of the problem scales the necessary computational time
 Other non-three-dimensional parameters also require further computation due to the inherent complication of increasing the number of dimensions. 
 Persistence of the coefficients allows for similar computational times to previous equilibrium mappings when subject to calculations in the same voxel, but the overall computation is still slower when compared to lower-dimensional mapping.
 
-Significant time savings can be recovered for tricubic interpolation computation when the data grid is regular, which is often the case for sets of magnetic equilibria. 
-Recovering the spline coefficients requires the calculation of a number of derivatives in each dimension, which for a regular grid can be achieved with finite difference matrix $\boldsymbol{B}$. 
-The new \emph{a priori} inclusion of $\boldsymbol{B}$ in the spline calculation matrix $\boldsymbol{A_{inv}}$ removes the necessary derivative generation and reduces total computation by half (denoted $\boldsymbol{A_{inv}^*}$). 
-This calculation requires a collection of the nearest $4\times4\times4$ grid of points to the coordinates of interest $\boldsymbol{x}$ to extract spline coefficients $\boldsymbol{y}$.
-
-\begin{equation}
-\boldsymbol{y} = \boldsymbol{A_{inv}} ( \boldsymbol{B} \boldsymbol{x}) = \boldsymbol{A_{inv}^*}\boldsymbol{x}
-\end{equation}
-Where,
-\begin{equation}
-\boldsymbol{A_{inv}^*} = \boldsymbol{A_{inv}}\boldsymbol{B} 
-\end{equation}
-
-The code for the tricubic spline interpolation was written in C and was integrated into Python using the F2PY package  \cite{Peterson2009}. 
+The code for the tricubic spline interpolation was written in C and was integrated into Python using the F2PY package  \cite{Peterson2009}. Two separate methods are used to calculate and evaluate the spline, dependent on the nature of the grid.  
+In cases which the grid is regular, a novel inclusion of a finite-difference matrix into the spline coefficient matrix reduces computational time (see Appendix \ref{sec:App}).  
+In other cases, the derivatives in the necessary directions and orders are calculated before being used the spline coefficient matrix multiplication.
 The C code is compartmentalized and can accept arbitrary three dimensional data, so other programming languages and codes with sufficient C APIs can access the optimized trispline code for general use.
 
 \section{Verification and Benchmarking}\label{sec:benchmark}
@@ -265,6 +254,24 @@ This material is based upon work supported by the U.S.\ Department of Energy, Of
 This material is based upon work supported in part by the U.S.\ Department of Energy Office of Science Graduate Research Fellowship Program (DOE SCGF), made possible in part by the American Recovery and Reinvestment Act of 2009, administered by ORISE-ORAU under contract number DE-AC05-06OR23100.
 
 \end{acknowledgements}
+
+\appendix
+\section{Generation of tricubic spline coefficents for a regular grid}\label{sec:App}
+
+Significant time savings can be recovered for tricubic interpolation computation when the data grid ($f(x,y,z)$) is regular, which is often the case for sets of magnetic equilibria. 
+Recovering the spline coefficients requires the calculation of a number of derivatives in each dimension, which for a regular grid can be achieved with finite difference matrix $\boldsymbol{B}$. 
+The new \emph{a priori} inclusion of $\boldsymbol{B}$ in the spline calculation matrix $\boldsymbol{A_{inv}}$ removes the necessary derivative generation and reduces total computation by half (denoted $\boldsymbol{A_{inv}^*}$). 
+This calculation requires a collection of the nearest $4\times4\times4$ grid of values $\boldsymbol{y}$ to the coordinates of interest $x,y,z$ to extract spline coefficients $\boldsymbol{x}$.
+
+\begin{equation}
+\boldsymbol{x} = \boldsymbol{A_{inv}} ( \boldsymbol{B} \boldsymbol{y}) = \boldsymbol{A_{inv}^*}\boldsymbol{y}
+\end{equation}
+Where,
+\begin{equation}
+\boldsymbol{A_{inv}^*} = \boldsymbol{A_{inv}}\boldsymbol{B} 
+\end{equation}
+
+ $\boldsymbol{y}$ comprises the values of the grid necessary for calculating the derivatives at the corners of the voxel $f$, and must be made into a from which is appropriate for $A_{inv}$. $A_{inv}$ expects the values of $f$ at each voxel corners then $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}, \frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}, \frac{\partial^3 f}{\partial x \partial y \partial z}$ in the same manner. $\boldsymbol{B}$ converts the points into these derivatives, through first order finite difference matricies for $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}$, second order finite difference matricies for $\frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}$, and a third-order for $\frac{\partial^3 f}{\partial x \partial y \partial z}$. The form of $\boldsymbol{B}$ is dependent on the form of $\boldsymbol{y}$ for the formation of the finite differences.
 
 
 \bibliographystyle{aipnum4-1}
