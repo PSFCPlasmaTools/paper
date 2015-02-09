@@ -128,7 +128,7 @@ A more advanced method using a tricubic interpolating spline to interpolate smoo
 Once the coordinate has been mapped to $\psi$, subsequent calculations are simpler.
 Normalized poloidal flux is defined as
 \begin{gather}
-	\psi_{n} = \frac{\psi - \psi_{0}}{\psi_{a} - \psi_{0}}
+	\psi_{n} = \frac{\psi - \psi_{0}}{\psi_{a} - \psi_{0}},
 \end{gather}
 where $\psi_{0}$ is the poloidal flux at the magnetic axis and $\psi_{a}$ is the poloidal flux at the boundary.
 To ensure self-consistency, the default behavior is to use nearest-neighbor interpolation to get the values of $\psi_{0}$ and $\psi_{a}$ at the desired time.
@@ -138,7 +138,7 @@ Normalized toroidal flux is defined in terms of normalized poloidal flux as
 \begin{equation}
 	\begin{gathered}
 		\phi(\psi) = \int_{\psi_{0}}^{\psi} q(\psi')\,\diff\psi'\label{eq:phipsi}\\
-		\phi_{\text{n}} = \frac{\phi}{\phi_{a}}
+		\phi_{\text{n}} = \frac{\phi}{\phi_{a}},
 	\end{gathered}
 \end{equation}
 where $q(\psi) = \diff\phi/\diff\psi$ is the safety factor profile (typically computed when EFIT is run) and $\phi_{a}=\int_{\psi_{0}}^{\psi_{a}}q(\psi')\,\diff\psi'$ is the toroidal flux at the last closed flux surface.
@@ -146,7 +146,7 @@ The integral in (\ref{eq:phipsi}) is numerically evaluated using the trapezoid r
 
 The normalized flux surface volume is defined as
 \begin{gather}
-	V_{\text{n}}(\psi) = \frac{V(\psi)}{V_{a}}
+	V_{\text{n}}(\psi) = \frac{V(\psi)}{V_{a}},
 \end{gather}
 where $V(\psi)$ is the volume enclosed by the (closed) flux surface with flux $\psi$ and $V_{a}$ is the volume enclosed by the last closed flux surface.
 In the case of Alcator C-Mod, the flux surface volume $V(\psi)$ is computed automatically when EFIT is run, but it would be straightforward to override the \verb|getFluxVol()| method of the \verb|Equilibrium| class to compute this from the $\psi(R, Z)$ grid when this quantity is not already available in the tree.
@@ -185,8 +185,8 @@ Other non-three-dimensional parameters also require further computation due to t
 Persistence of the coefficients allows for similar computational times to previous equilibrium mappings when subject to calculations in the same voxel, but the overall computation is still slower when compared to lower-dimensional mapping.
 
 The code for the tricubic spline interpolation was written in C and was integrated into Python using the F2PY package  \cite{Peterson2009}. Two separate methods are used to calculate and evaluate the spline, dependent on the nature of the grid.  
-In cases which the grid is regular, a novel inclusion of a finite-difference matrix into the spline coefficient matrix reduces computational time (see Appendix \ref{sec:App}).  
-In other cases, the derivatives in the necessary directions and orders are calculated before being used the spline coefficient matrix multiplication.
+In cases which the grid is regular, the novel inclusion of a finite-difference matrix into the spline coefficient matrix reduces computational time (see Appendix \ref{sec:App}).  
+In other cases, the derivatives in the necessary directions and orders are calculated before being used in the spline coefficient matrix multiplication.
 The C code is compartmentalized and can accept arbitrary three dimensional data, so other programming languages and codes with sufficient C APIs can access the optimized trispline code for general use.
 
 \section{Verification and Benchmarking}\label{sec:benchmark}
@@ -262,15 +262,13 @@ Significant time savings can be recovered for tricubic interpolation computation
 Recovering the spline coefficients requires the calculation of a number of derivatives in each dimension, which for a regular grid can be achieved with finite difference matrix $\boldsymbol{B}$. 
 The new \emph{a priori} inclusion of $\boldsymbol{B}$ in the spline calculation matrix $\boldsymbol{A_{inv}}$ removes the necessary derivative generation and reduces total computation by half (denoted $\boldsymbol{A_{inv}^*}$). 
 This calculation requires a collection of the nearest $4\times4\times4$ grid of values $\boldsymbol{y}$ to the coordinates of interest $x,y,z$ to extract spline coefficients $\boldsymbol{x}$.
-
 \begin{equation}
 \boldsymbol{x} = \boldsymbol{A_{inv}} ( \boldsymbol{B} \boldsymbol{y}) = \boldsymbol{A_{inv}^*}\boldsymbol{y}
 \end{equation}
-Where,
+Where
 \begin{equation}
 \boldsymbol{A_{inv}^*} = \boldsymbol{A_{inv}}\boldsymbol{B} 
 \end{equation}
-
  $\boldsymbol{y}$ comprises the values of the grid necessary for calculating the derivatives at the corners of the voxel $f$, and must be made into a from which is appropriate for $A_{inv}$. $A_{inv}$ expects the values of $f$ at each voxel corners then $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}, \frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}, \frac{\partial^3 f}{\partial x \partial y \partial z}$ in the same manner. $\boldsymbol{B}$ converts the points into these derivatives, through first order finite difference matricies for $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}$, second order finite difference matricies for $\frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}$, and a third-order for $\frac{\partial^3 f}{\partial x \partial y \partial z}$. The form of $\boldsymbol{B}$ is dependent on the form of $\boldsymbol{y}$ for the formation of the finite differences.
 
 
