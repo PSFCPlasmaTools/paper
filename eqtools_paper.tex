@@ -43,7 +43,8 @@
 As plasma physics research for fusion energy transitions to an increasing emphasis on cross-machine collaboration and numerical simulation, it becomes increasingly important that portable tools be developed to enable data from diverse sources to be analyzed in a consistent manner. 
 This paper presents \eqtools, a modular, extensible, open-source toolkit implemented in the Python programming language for handling magnetic equilibria and associated data from tokamaks. 
 \eqtools provides a single interface for working with magnetic equilibrium data, both for handling derived quantities and mapping between coordinate systems, extensible to function with data from different experiments, data formats, and magnetic reconstruction codes, replacing the diverse, non-portable solutions currently in use.  
-Moreover, implementing these tools in Python removes a substantial barrier to code migration and new development in the open-source Python programming language, which presents a number of advantages.  
+Moreover, while the open-source Python programming language offers a number of advantages as a scripting language for research purposes, the lack of basic tokamak-specific functionality has impeded the adoption of the language for regular use.
+Implementing equilibrium-mapping tools in Python removes a substantial barrier to new development in and porting legacy code into Python.
 In this paper, we introduce the design of the \eqtools package and detail the workflow for usage and expansion to additional devices.  The implementation of a novel three-dimensional spline solution (in two spatial dimensions and in time) is also detailed.  
 Finally, verification and benchmarking for accuracy and speed against existing tools are detailed. Wider deployment of these tools will enable efficient sharing of data and software between institutions and machines as well as self-consistent analysis of the shared data.
 \end{abstract}
