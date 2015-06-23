@@ -20,6 +20,9 @@
 % Macro to consistently format the package name:
 \usepackage{xspace}
 \newcommand{\eqtools}{\texttt{eqtools}\xspace}
+\newcommand{\profiletools}{\texttt{profiletools}\xspace}
+\newcommand{\TRIPPy}{\texttt{TRIPPy}\xspace}
+\newcommand{\gptools}{\texttt{gptools}\xspace}
 
 \usepackage{siunitx}
 
@@ -223,6 +226,30 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 \eqtools is faster than the IDL routines by as much as a factor of ten even on the first run after instantiation.
 This improvement is from a combination of the switch to Python and the fact that \eqtools stores the equilibrium data in a persistent object instead of having to fetch it from the MDSplus tree for each call.
 Subsequent runs with the same \verb|Equilibrium| object are faster, particularly for the conversion to $R_{\text{mid}}$, which has considerable overhead on the first call.
+
+\section{Example Applications}
+\subsection{TRIPPy GOES HERE!!!}
+
+\subsection{Profile fitting}
+Combining data from multiple diagnostics into a consistent, smooth profile is a fundamental task in experimental plasma physics.
+\profiletools \cite{profiletools_git,*profiletools_readthedocs} is a Python package which aims to simplify this task by presenting a uniform interface to load, time-average, combine and fit data from different diagnostics.
+\eqtools is used internally by \profiletools both to map diagnostics to a consistent grid and to output the smooth fit in the desired coordinates.
+In line with the \eqtools philosophy of shielding the user from obtuse calls to the underlying data system (be it MDSplus or some other system), for each diagnostic supported, \profiletools provides a function to fetch the data (and the accompanying error bars).
+These quantities are returned in a \verb|BivariatePlasmaProfile| object, where ``bivariate'' refers to the fact that the data are, in general, a function of space and time.
+The coordinates the measurement locations are stored in can be converted using the \verb|convert_abscissa(...)| method.
+Multiple \verb|BivariatePlasmaProfile| instances from different diagnostics or even different shots can be combined as necessary using the \verb|add_profile| method.
+The combined data set can then be used to predict a smoothed profile using Gaussian process regression \cite{gpr_nf} through integration with the \gptools Python package \cite{gptools_git,*gptools_readthedocs}.
+An example of this sensor fusion task is shown in Figure~\ref{fig:profiledemo}.
+\begin{figure}
+	\subfloat[equilibrium]{
+            	\includegraphics[width=0.35\textwidth]{graphics/eq}
+        }
+        	\subfloat[data and smoothed profile]{
+            	\includegraphics[width=0.65\textwidth]{graphics/prof}
+        }
+	\caption{Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes was computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.}
+	\label{fig:profiledemo}
+\end{figure}
 
 \section{Summary}\label{sec:summary}
 
