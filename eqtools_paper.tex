@@ -71,7 +71,7 @@ The \eqtools package provides a consistent and straightforward interface to the 
 Moreover, \eqtools is constructed with a modular, object-oriented design, such that the package is easily extensible to handle data from different experiments and reconstruction codes, giving the researcher a single unified interface for data from any machine or code.  
 The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via PyPI \cite{eqtools_pypi,*eqtools_git,*eqtools_readthedocs}.
 
-This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), and presents runtime and accuracy benchmarks against the current IDL \footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}).
+This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), presents runtime and accuracy benchmarks against the current IDL \footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}), and shows examples of the code in use at Alcator C-Mod (section \ref{sec:examples}).
 
 \section{Package Design and Use}\label{sec:design}
 
@@ -228,6 +228,7 @@ This improvement is from a combination of the switch to Python and the fact that
 Subsequent runs with the same \verb|Equilibrium| object are faster, particularly for the conversion to $R_{\text{mid}}$, which has considerable overhead on the first call.
 
 \section{Example Applications}
+\label{sec:examples}
 \subsection{TRIPPy GOES HERE!!!}
 
 \subsection{Profile fitting}
@@ -247,7 +248,7 @@ An example of this sensor fusion task is shown in Figure~\ref{fig:profiledemo}.
         	\subfloat[data and smoothed profile]{
             	\includegraphics[width=0.65\textwidth]{graphics/prof}
         }
-	\caption{Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes was computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.}
+	\caption{Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.}
 	\label{fig:profiledemo}
 \end{figure}
 The use of \eqtools to provide consistent coordinate transformations and a consistent interface for combining data from multiple diagnostics simplifies the task of building automated data analysis workflows.
