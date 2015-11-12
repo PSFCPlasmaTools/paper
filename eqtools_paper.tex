@@ -223,6 +223,27 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 		\hline
 	\end{tabular}
 \end{table}
+
+\begin{table}
+	\caption{}
+	\label{tab:}
+	\begin{tabular}{@{\extracolsep{4pt}}lS[round-mode=figures,round-precision=3,table-format=4.0]cS[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=3.0]S[round-mode=figures,round-precision=3,table-format=3.0]S[round-mode=figures,round-precision=3,table-format=3.0]}
+		\hline
+		Conversion & \multicolumn{4}{c}{IDL} & \multicolumn{4}{c}{\eqtools}\\
+		\cline{2-5}\cline{6-9}
+		 & \multicolumn{2}{c}{all} & \multicolumn{2}{c}{loop} & \multicolumn{2}{c}{all} & \multicolumn{2}{c}{loop}\\
+		 \cline{2-3}\cline{4-5}\cline{6-7}\cline{8-9}
+		 & {first} & {second} & {first} & {second} & {first} & {second} & {first} & {second}\\
+		\hline
+		$(R, Z)\to\psi$ & 177.420 & {---} & 3188.163 & 3036.825 & 494.117 & 467.671 & 237.917 & 215.583\\
+		$(R, Z)\to\psi_{\text{n}}$ & 161.101 & {---} & 3965.898 & 3825.050 & 508.330 & 479.978 & 252.264 & 230.674\\
+		$(R, Z)\to\phi_{\text{n}}$ & 469.779 & {---} & 5314.896 & 5202.752 & 819.894 & 717.531 & 381.473 & 287.836\\
+		$(R, Z)\to V_{\text{n}}$ & 467.013 & {---} & 5364.336 & 5244.328 & 819.033 & 717.476 & 379.488 & 287.689\\
+		$(R, Z)\to R_{\text{mid}}$ & 1414.122 & {---} & 5297.135 & {---} & 1512.505 & 743.980 & 1071.596 & 311.634\\ 
+		\hline
+	\end{tabular}
+\end{table}
+
 \eqtools is faster than the IDL routines by as much as a factor of ten even on the first run after instantiation.
 This improvement is from a combination of the switch to Python and the fact that \eqtools stores the equilibrium data in a persistent object instead of having to fetch it from the MDSplus tree for each call.
 Subsequent runs with the same \verb|Equilibrium| object are faster, particularly for the conversion to $R_{\text{mid}}$, which has considerable overhead on the first call.
