@@ -225,9 +225,9 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 \end{table}
 
 \begin{table}
-	\caption{}
+	\caption{Time to convert all 180 time slices [ms]}
 	\label{tab:}
-	\begin{tabular}{@{\extracolsep{4pt}}lS[round-mode=figures,round-precision=3,table-format=4.0]cS[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=4.0]S[round-mode=figures,round-precision=3,table-format=3.0]S[round-mode=figures,round-precision=3,table-format=3.0]S[round-mode=figures,round-precision=3,table-format=3.0]}
+	\begin{tabular}{@{\extracolsep{4pt}}lS[round-mode=places,round-precision=0,table-format=4.0]cS[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]}
 		\hline
 		Conversion & \multicolumn{4}{c}{IDL} & \multicolumn{4}{c}{\eqtools}\\
 		\cline{2-5}\cline{6-9}
@@ -235,11 +235,11 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 		 \cline{2-3}\cline{4-5}\cline{6-7}\cline{8-9}
 		 & {first} & {second} & {first} & {second} & {first} & {second} & {first} & {second}\\
 		\hline
-		$(R, Z)\to\psi$ & 177.420 & {---} & 3188.163 & 3036.825 & 494.117 & 467.671 & 237.917 & 215.583\\
-		$(R, Z)\to\psi_{\text{n}}$ & 161.101 & {---} & 3965.898 & 3825.050 & 508.330 & 479.978 & 252.264 & 230.674\\
-		$(R, Z)\to\phi_{\text{n}}$ & 469.779 & {---} & 5314.896 & 5202.752 & 819.894 & 717.531 & 381.473 & 287.836\\
-		$(R, Z)\to V_{\text{n}}$ & 467.013 & {---} & 5364.336 & 5244.328 & 819.033 & 717.476 & 379.488 & 287.689\\
-		$(R, Z)\to R_{\text{mid}}$ & 1414.122 & {---} & 5297.135 & {---} & 1512.505 & 743.980 & 1071.596 & 311.634\\ 
+		$(R, Z)\to\psi$ & 148.913 & {---} & 3147.166 & 3051.697 & 493.5 & 471.1 & 235.3 & 216.7\\
+		$(R, Z)\to\psi_{\text{n}}$ & 162.863 & {---} & 4023.811 & 3879.576 & 504.9 & 482.7 & 249.1 & 231.2\\
+		$(R, Z)\to\phi_{\text{n}}$ & 472.517 & {---} & 5307.059 & 5196.169 & 818.6 & 720.1 & 378.0 & 288.1\\
+		$(R, Z)\to V_{\text{n}}$ & 467.648 & {---} & 5325.815 & 5220.426 & 820.0 & 719.4 & 376.6 & 288.0\\
+		$(R, Z)\to R_{\text{mid}}$ & 1399.561 & {---} & 5327.507 & {---} & 1510.1 & 744.4 & 1066.2 & 312.6\\ 
 		\hline
 	\end{tabular}
 \end{table}
