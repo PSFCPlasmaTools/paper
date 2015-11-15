@@ -207,26 +207,8 @@ This conversion was performed at each of the 90 time slices output by EFIT and n
 The conversion was performed twice with the same \verb|Equilibrium| object in \eqtools in order to assess the time savings from storing the spline coefficients.
 The test was repeated 100 times, and the mean execution time to convert the $(R, Z)$ grid at each time slice is given in Table~\ref{tab:benchmarkingtests}.
 \begin{table}
-	\caption{Mean execution times in milliseconds}
-	\label{tab:benchmarkingtests}
-	\begin{tabular}{lS[table-format=2.1]S[table-format=2.1]S[table-format=1.1]}
-		\hline
-		Conversion & {IDL} & \multicolumn{2}{c}{\eqtools}\\
-		\cline{3-4}
-		 & & {first run} & {second run}\\
-		\hline
-		$(R, Z)\to\psi$ & 11.7 & 2.5 & 1.9\\
-		$(R, Z)\to\psi_{\text{n}}$ & 21.8 & 2.0 & 2.0\\
-		$(R, Z)\to\phi_{\text{n}}$ & 30.2 & 3.1 & 2.3\\
-		$(R, Z)\to V_{\text{n}}$ & 28.0 & 3.0 & 2.3\\
-		$(R, Z)\to R_{\text{mid}}$ & 36.1 & 12.1 & 2.4\\
-		\hline
-	\end{tabular}
-\end{table}
-
-\begin{table}
 	\caption{Time to convert all 180 time slices [ms]}
-	\label{tab:}
+	\label{tab:benchmarkingtests}
 	\begin{tabular}{@{\extracolsep{4pt}}lS[round-mode=places,round-precision=0,table-format=4.0]cS[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]}
 		\hline
 		Conversion & \multicolumn{4}{c}{IDL} & \multicolumn{4}{c}{\eqtools}\\
@@ -235,11 +217,11 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 		 \cline{2-3}\cline{4-5}\cline{6-7}\cline{8-9}
 		 & {first} & {second} & {first} & {second} & {first} & {second} & {first} & {second}\\
 		\hline
-		$(R, Z)\to\psi$ & 148.913 & {---} & 3147.166 & 3051.697 & 493.5 & 471.1 & 235.3 & 216.7\\
-		$(R, Z)\to\psi_{\text{n}}$ & 162.863 & {---} & 4023.811 & 3879.576 & 504.9 & 482.7 & 249.1 & 231.2\\
-		$(R, Z)\to\phi_{\text{n}}$ & 472.517 & {---} & 5307.059 & 5196.169 & 818.6 & 720.1 & 378.0 & 288.1\\
-		$(R, Z)\to V_{\text{n}}$ & 467.648 & {---} & 5325.815 & 5220.426 & 820.0 & 719.4 & 376.6 & 288.0\\
-		$(R, Z)\to R_{\text{mid}}$ & 1399.561 & {---} & 5327.507 & {---} & 1510.1 & 744.4 & 1066.2 & 312.6\\ 
+		$(R, Z)\to\psi$ & 148.913 & {---} & 3147.166 & 3051.697 & 133.6 & 116.3 & 178.7 & 160.8\\
+		$(R, Z)\to\psi_{\text{n}}$ & 162.863 & {---} & 4023.811 & 3879.576 & 137.1 & 119.3 & 183.7 & 165.0\\
+		$(R, Z)\to\phi_{\text{n}}$ & 472.517 & {---} & 5307.059 & 5196.169 & 254.4 & 164.5 & 302.9 & 214.7\\
+		$(R, Z)\to V_{\text{n}}$ & 467.648 & {---} & 5325.815 & 5220.426 & 253.1 & 163.6 & 302.0 & 214.5\\
+		$(R, Z)\to R_{\text{mid}}$ & 1399.561 & {---} & 5327.507 & {---} & 941.7 & 186.9 & 992.5 & 238.0\\ 
 		\hline
 	\end{tabular}
 \end{table}
