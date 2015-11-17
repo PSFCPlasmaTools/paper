@@ -11,7 +11,7 @@
 \newlabel{sec:intro}{{I}{2}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Package Design and Use}{3}{}}
 \newlabel{sec:design}{{II}{3}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Package structure for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. Outside the \texttt  {Equilibrium} inheritance structure, the package also provides the \texttt  {PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt  {filewriter} module to produce portable g-files from \texttt  {Equilibrium} objects.\relax }}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \leavevmode {\color {red}FIX TYPO IN NSTXEFITTree!!!} Package structure for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. Outside the \texttt  {Equilibrium} inheritance structure, the package also provides the \texttt  {PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt  {filewriter} module to produce portable g-files from \texttt  {Equilibrium} objects.\relax }}{4}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:flowchart}{{1}{4}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Details of the coordinate mapping routines}{5}{}}
@@ -24,29 +24,31 @@
 \citation{Peterson2009}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{8}{}}
 \newlabel{fig:tspline}{{2}{8}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Relative difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \num {e-4} are typical, and are consistent with the different default precisions of IDL versus Python.\relax }}{9}{}}
-\newlabel{fig:rz2psi_diff}{{3}{9}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Verification and Benchmarking}{9}{}}
 \newlabel{sec:benchmark}{{V}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different default precisions of IDL versus Python.\relax }}{10}{}}
+\newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
 \citation{profiletools_git,profiletools_readthedocs}
 \citation{gpr_nf}
 \citation{gptools_git,gptools_readthedocs}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to convert all 180 time slices [ms]\relax }}{10}{}}
-\newlabel{tab:benchmarkingtests}{{I}{10}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Example Applications}{10}{}}
-\newlabel{sec:examples}{{VI}{10}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}TRIPPy GOES HERE!!!}{10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Profile fitting}{10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{11}{}}
+\newlabel{tab:benchmarkingtests}{{I}{11}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Example Applications}{11}{}}
+\newlabel{sec:examples}{{VI}{11}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}TRIPPy GOES HERE!!!}{11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Profile fitting}{11}{}}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
 \citation{Lao1985}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Summary}{11}{}}
-\newlabel{sec:summary}{{VII}{11}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{12}{}}
 \newlabel{fig:profiledemo}{{4}{12}{}{}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{12}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Summary}{13}{}}
+\newlabel{sec:summary}{{VII}{13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{14}{}}
 \@writefile{toc}{\appendix }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficents for a regular grid}{14}{}}
+\newlabel{sec:App}{{A}{14}{}{}{}}
 \bibdata{eqtools_paperNotes,eqtools_paper}
 \bibcite{MDSplus}{{1}{1997}{{Stillerman\ \emph  {et~al.}}}{{Stillerman, Fredian, Klare,\ and\ Manduchi}}}
 \bibcite{Lao1985}{{2}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
@@ -54,9 +56,6 @@
 \bibcite{eqtools_pypi}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \bibcite{eqtools_git}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \bibcite{eqtools_readthedocs}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficents for a regular grid}{14}{}}
-\newlabel{sec:App}{{A}{14}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{14}{}}
 \bibcite{Note1}{{5}{}{{Note1}}{{}}}
 \bibcite{dierckxBook}{{6}{1993}{{Dierckx}}{{}}}
 \bibcite{scipy}{{7}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
@@ -64,9 +63,10 @@
 \bibcite{Peterson2009}{{9}{2009}{{Peterson}}{{}}}
 \bibcite{profiletools_git}{{10}{2015{}}{{Chilenski}}{{}}}
 \bibcite{profiletools_readthedocs}{{10}{2015{}}{{Chilenski}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{15}{}}
 \bibcite{gpr_nf}{{11}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
 \bibcite{gptools_git}{{12}{2015{}}{{Chilenski}}{{}}}
 \bibcite{gptools_readthedocs}{{12}{2015{}}{{Chilenski}}{{}}}
 \bibstyle{aipnum4-1}
-\newlabel{LastBibItem}{{12}{15}{}{}{}}
-\newlabel{LastPage}{{}{15}{}{}{}}
+\newlabel{LastBibItem}{{12}{16}{}{}{}}
+\newlabel{LastPage}{{}{16}{}{}{}}

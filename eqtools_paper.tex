@@ -71,7 +71,7 @@ The \eqtools package provides a consistent and straightforward interface to the 
 Moreover, \eqtools is constructed with a modular, object-oriented design, such that the package is easily extensible to handle data from different experiments and reconstruction codes, giving the researcher a single unified interface for data from any machine or code.  
 The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via PyPI \cite{eqtools_pypi,*eqtools_git,*eqtools_readthedocs}.
 
-This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), presents runtime and accuracy benchmarks against the current IDL \footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}), and shows examples of the code in use at Alcator C-Mod (section \ref{sec:examples}).
+This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), presents runtime and accuracy benchmarks against the current IDL \footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}), and shows examples of the code in use (section \ref{sec:examples}).
 
 \section{Package Design and Use}\label{sec:design}
 
@@ -102,7 +102,7 @@ The methods therein are sufficiently general to be used by any grid-based equili
 
 \begin{figure}[p]
  \includegraphics[width=\textwidth]{graphics/flowchart.pdf}
- \caption{Package structure for the \eqtools package.  The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \texttt{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.  Outside the \texttt{Equilibrium} inheritance structure, the package also provides the \texttt{PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt{filewriter} module to produce portable g-files from \texttt{Equilibrium} objects.}
+ \caption{\note{FIX TYPO IN NSTXEFITTree!!!} Package structure for the \eqtools package.  The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \texttt{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.  Outside the \texttt{Equilibrium} inheritance structure, the package also provides the \texttt{PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt{filewriter} module to produce portable g-files from \texttt{Equilibrium} objects.}
  \label{fig:flowchart}
 \end{figure}
 
@@ -196,18 +196,20 @@ The C code is compartmentalized and can accept arbitrary three dimensional data,
 \section{Verification and Benchmarking}\label{sec:benchmark}
 \eqtools has been verified against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
 Figure~\ref{fig:rz2psi_diff} shows the discrepancy between the IDL routines and \eqtools for the conversion of $(R, Z)$ to $\psi$.
-The differences are small (of order \num{e-4}), and are consistent with the fact that Python defaults to double precision whereas IDL defaults to single precision.
+The differences are small (of order \SI{e-7}{Wb/rad}, compared to a signal of order $\pm\SI{0.5}{Wb/rad}$), and are consistent with the fact that Python defaults to double precision whereas IDL defaults to single precision.
 \begin{figure}
-	\includegraphics[width=0.5\textwidth]{graphics/rz2psi}
-	\caption{Relative difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux for \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \num{e-4} are typical, and are consistent with the different default precisions of IDL versus Python.}
+	\includegraphics[width=0.6\textwidth]{graphics/absolute_compare}
+	\caption{Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi$ for \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \SI{e-7}{Wb/rad} are typical (the value of $\psi$ is in the range $\pm\SI{0.5}{Wb/rad}$), and are consistent with the different default precisions of IDL versus Python.}
 	\label{fig:rz2psi_diff}
 \end{figure}
 Timing tests were conducted by converting a $66\times66$ element $(R, Z)$ grid (double the density of the grid EFIT provides the flux on) into each of the coordinates supported.
-This conversion was performed at each of the 90 time slices output by EFIT and nearest-neighbor temporal interpolation was used.
+This conversion was performed at 180 time slices (double the temporal resolution output by EFIT) and nearest-neighbor temporal interpolation was used.
+The test was run both with all points being processed at once (denoted ``all'' in Table~\ref{tab:benchmarkingtests}) and with the routine being called inside a loop over all time points (denoted ``loop'' in Table~\ref{tab:benchmarkingtests}).
 The conversion was performed twice with the same \verb|Equilibrium| object in \eqtools in order to assess the time savings from storing the spline coefficients.
-The test was repeated 100 times, and the mean execution time to convert the $(R, Z)$ grid at each time slice is given in Table~\ref{tab:benchmarkingtests}.
+The IDL routines (with the exception of the conversion to $R_{\text{mid}}$) support reuse of the spline coefficients from a single time slice, so a second run of the IDL code with the stored spline coefficients was performed when looping over time slices.
+The test was repeated 100 times, and the mean execution time to convert the $(R, Z)$ grid for all time points is given in Table~\ref{tab:benchmarkingtests}.
 \begin{table}
-	\caption{Time to convert all 180 time slices [ms]}
+	\caption{Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.}
 	\label{tab:benchmarkingtests}
 	\begin{tabular}{@{\extracolsep{4pt}}lS[round-mode=places,round-precision=0,table-format=4.0]cS[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]S[round-mode=places,round-precision=0,table-format=4.0]S[round-mode=places,round-precision=0,table-format=3.0]}
 		\hline
@@ -226,13 +228,21 @@ The test was repeated 100 times, and the mean execution time to convert the $(R,
 	\end{tabular}
 \end{table}
 
-\eqtools is faster than the IDL routines by as much as a factor of ten even on the first run after instantiation.
-This improvement is from a combination of the switch to Python and the fact that \eqtools stores the equilibrium data in a persistent object instead of having to fetch it from the MDSplus tree for each call.
-Subsequent runs with the same \verb|Equilibrium| object are faster, particularly for the conversion to $R_{\text{mid}}$, which has considerable overhead on the first call.
+In all cases \eqtools is faster than the IDL routines.
+Furthermore, the test results highlight the additional flexibility \eqtools provides users.
+For the most efficient case where all of the points are passed at once, \eqtools is only slightly faster for the simple conversions of $(R, Z)$ to $\psi$ and $\psi_{\text{n}}$.
+But, for the more complicated conversions to $\phi_{\text{n}}$, $V_{\text{n}}$ and $R_{\text{mid}}$, \eqtools is anywhere from 1.5 to 1.9 times faster than the IDL routines.
+Furthermore, the caching of intermediate results in \eqtools accelerates the second call to a routine by as much as a factor of 5 (for the conversion to $R_{\text{mid}}$).
+Where \eqtools stands in stark contrast to the IDL routines is the case where the conversions are evaluated in a loop.
+While this case is not something which would be used directly as both codes support the evaluation of multiple time points at once, it is indicative of the performance to be expected should a user write a script which needs to evaluate each time point on a different grid, or otherwise needs the flexibility to split an operation up into steps applied to each time point.
+For this case, \eqtools is anywhere from 5 to 20 times faster than the IDL routines.
+This is believed to be a result of the large overhead associated with function calls in the IDL language.
+These test results highlight the improved performance and extra programming flexibility provided by \eqtools.
 
 \section{Example Applications}
 \label{sec:examples}
 \subsection{TRIPPy GOES HERE!!!}
+\note{Add TRIPPy section!}
 
 \subsection{Profile fitting}
 Combining data from multiple diagnostics into a consistent, smooth profile is a fundamental task in experimental plasma physics.
