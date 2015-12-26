@@ -241,8 +241,28 @@ These test results highlight the improved performance and extra programming flex
 
 \section{Example Applications}
 \label{sec:examples}
-\subsection{TRIPPy GOES HERE!!!}
-\note{Add TRIPPy section!}
+
+\subsection{Tomographic Reconstruction}
+
+Tomography is based taking sets of unique line-integrated measurements and mathematically reducing the data to profiles of chosen basis functions.
+These basis functions are typically radial in nature, with angular dependence represented by a Fourier series.
+When combined, the data is used to reconstruct the characteristics within the volume of interest.
+\eqtools provides a simple and direct interface for taking $(R, Z)$ coordinates and return its position as equilibium-based coordinates.
+A new, Python-based tomography code known as the Toroidal Inversion Radiation Protocol in Python (\TRIPPy) was implented relying on \eqtools.
+The underlying use of \eqtools allows for consistent tomographic reconstruction of various line-integrated data for a number of tokamaks.
+
+\TRIPPy solves for the weighting of a line of sight on a flux-based radial coordinate and a Fourier angluar coordinate.
+Each measured line-integral through the plasma is discretized to small finite length segments.
+Each segment is mapped using \eqtools, and its length is fractionally added a predetermined grid in the basis coordinates.
+Many lines of sight create a linear mapping between the line-integrated measurements and the unknown profiles.
+This inverse problem, as shown by equation 5, can be solved using any number of numerical methods.
+
+\TRIPPy and \eqtools have been implemented for Alcator C-Mod and NSTX-U, and has been used to benchmark tomographics systems on those machines \cite{Faust2014}. 
+The grid size in flux space must chosen to be larger than the length discretization size in order to properly resolve features in the plasma.
+Shown in figure 5 is an example line of sight using the Soft X-ray tomography system on Alcator C-Mod.
+Tomographic reconstruction through \TRIPPy can give insight of the emission of radation and temperature of the plasma, while also determining the character of magnetohydrodynamic modes.
+The consistent and extensible design of both \TRIPPy and \eqtools allows for tomographic reconstruction to be implemented for mulitple diagnostics on multiple tokamaks.
+
 
 \subsection{Profile fitting}
 Combining data from multiple diagnostics into a consistent, smooth profile is a fundamental task in experimental plasma physics.

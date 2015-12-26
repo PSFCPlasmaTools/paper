@@ -28,27 +28,28 @@
 \newlabel{sec:benchmark}{{V}{9}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different default precisions of IDL versus Python.\relax }}{10}{}}
 \newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
-\citation{profiletools_git,profiletools_readthedocs}
-\citation{gpr_nf}
-\citation{gptools_git,gptools_readthedocs}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{11}{}}
 \newlabel{tab:benchmarkingtests}{{I}{11}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Example Applications}{11}{}}
 \newlabel{sec:examples}{{VI}{11}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}TRIPPy GOES HERE!!!}{11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Profile fitting}{11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Tomographic Reconstruction}{11}{}}
+\citation{Faust2014}
+\citation{profiletools_git,profiletools_readthedocs}
+\citation{gpr_nf}
+\citation{gptools_git,gptools_readthedocs}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Profile fitting}{12}{}}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
 \citation{Lao1985}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{12}{}}
-\newlabel{fig:profiledemo}{{4}{12}{}{}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data includes two Thomson scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{13}{}}
+\newlabel{fig:profiledemo}{{4}{13}{}{}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{13}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VII}Summary}{13}{}}
 \newlabel{sec:summary}{{VII}{13}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{15}{}}
 \@writefile{toc}{\appendix }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficents for a regular grid}{14}{}}
-\newlabel{sec:App}{{A}{14}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficents for a regular grid}{15}{}}
+\newlabel{sec:App}{{A}{15}{}{}{}}
 \bibdata{eqtools_paperNotes,eqtools_paper}
 \bibcite{MDSplus}{{1}{1997}{{Stillerman\ \emph  {et~al.}}}{{Stillerman, Fredian, Klare,\ and\ Manduchi}}}
 \bibcite{Lao1985}{{2}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
@@ -61,12 +62,13 @@
 \bibcite{scipy}{{7}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
 \bibcite{Lekien2005}{{8}{2005}{{Lekien\ and\ Marsden}}{{}}}
 \bibcite{Peterson2009}{{9}{2009}{{Peterson}}{{}}}
-\bibcite{profiletools_git}{{10}{2015{}}{{Chilenski}}{{}}}
-\bibcite{profiletools_readthedocs}{{10}{2015{}}{{Chilenski}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{15}{}}
-\bibcite{gpr_nf}{{11}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
-\bibcite{gptools_git}{{12}{2015{}}{{Chilenski}}{{}}}
-\bibcite{gptools_readthedocs}{{12}{2015{}}{{Chilenski}}{{}}}
+\bibcite{Faust2014}{{10}{2014}{{Faust\ \emph  {et~al.}}}{{Faust, Delgado-Aparicio, Bell, Tritz, Diallo, Gerhardt, LeBlanc, Kozub, Parker,\ and\ Stratton}}}
+\bibcite{profiletools_git}{{11}{2015{}}{{Chilenski}}{{}}}
+\bibcite{profiletools_readthedocs}{{11}{2015{}}{{Chilenski}}{{}}}
+\bibcite{gpr_nf}{{12}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
+\bibcite{gptools_git}{{13}{2015{}}{{Chilenski}}{{}}}
+\bibcite{gptools_readthedocs}{{13}{2015{}}{{Chilenski}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{16}{}}
 \bibstyle{aipnum4-1}
-\newlabel{LastBibItem}{{12}{16}{}{}{}}
-\newlabel{LastPage}{{}{16}{}{}{}}
+\newlabel{LastBibItem}{{13}{17}{}{}{}}
+\newlabel{LastPage}{{}{17}{}{}{}}
