@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{17}%
+\begin{thebibliography}{20}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -210,4 +210,78 @@
   processes with arbitrary derivative constraints and predictions},}\ }\bibinfo
   {howpublished} {\url{http://gptools.readthedocs.org/en/latest/}} (\bibinfo
   {year} {2015}{\natexlab{d}})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(2003)\citenamefont {Hughes},
+  \citenamefont {Mossessian}, \citenamefont {Zhurovich}, \citenamefont
+  {DeMaria}, \citenamefont {Jensen},\ and\ \citenamefont
+  {Hubbard}}]{Hughes2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
+  {Hughes}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mossessian}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Zhurovich}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {DeMaria}}, \bibinfo {author}
+  {\bibfnamefont {K.}~\bibnamefont {Jensen}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Hubbard}},\ }\href {\doibase
+  10.1063/1.1532764} {\bibfield  {journal} {\bibinfo  {journal} {Review of
+  Scientific Instruments}\ }\textbf {\bibinfo {volume} {74}},\ \bibinfo {pages}
+  {1667} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(2001)\citenamefont {Hughes},
+  \citenamefont {Mossessian}, \citenamefont {Hubbard}, \citenamefont {Marmar},
+  \citenamefont {Johnson},\ and\ \citenamefont {Simon}}]{Hughes2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
+  {Hughes}}, \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
+  {Mossessian}}, \bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont
+  {Hubbard}}, \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Marmar}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Johnson}}, \ and\
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Simon}},\ }\href
+  {\doibase 10.1063/1.1319367} {\bibfield  {journal} {\bibinfo  {journal}
+  {Review of Scientific Instruments}\ }\textbf {\bibinfo {volume} {72}},\
+  \bibinfo {pages} {1107} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Basse}\ \emph {et~al.}(2007)\citenamefont {Basse},
+  \citenamefont {Dominguez}, \citenamefont {Edlund}, \citenamefont {Fiore},
+  \citenamefont {Granetz}, \citenamefont {Hubbard}, \citenamefont {Hughes},
+  \citenamefont {Hutchinson}, \citenamefont {Irby}, \citenamefont {LaBombard},
+  \citenamefont {Lin}, \citenamefont {Lin}, \citenamefont {Lipschultz},
+  \citenamefont {Liptac}, \citenamefont {Marmar}, \citenamefont {Mossessian},
+  \citenamefont {Parker}, \citenamefont {Porkolab}, \citenamefont {Rice},
+  \citenamefont {Snipes}, \citenamefont {Tang}, \citenamefont {Terry},
+  \citenamefont {Wolfe}, \citenamefont {Wukitch}, \citenamefont {Zhurovich},
+  \citenamefont {Bravenec}, \citenamefont {Phillips}, \citenamefont {Rowan},
+  \citenamefont {Kramer}, \citenamefont {Schilling}, \citenamefont {Scott},\
+  and\ \citenamefont {Zweben}}]{Basse2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Basse}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dominguez}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Edlund}}, \bibinfo
+  {author} {\bibfnamefont {C.}~\bibnamefont {Fiore}}, \bibinfo {author}
+  {\bibfnamefont {R.~S.}\ \bibnamefont {Granetz}}, \bibinfo {author}
+  {\bibfnamefont {A.~E.}\ \bibnamefont {Hubbard}}, \bibinfo {author}
+  {\bibfnamefont {J.~W.}\ \bibnamefont {Hughes}}, \bibinfo {author}
+  {\bibfnamefont {I.~H.}\ \bibnamefont {Hutchinson}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Irby}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {LaBombard}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Lin}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Lin}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Lipschultz}},
+  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Liptac}}, \bibinfo
+  {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Marmar}}, \bibinfo {author}
+  {\bibfnamefont {D.~A.}\ \bibnamefont {Mossessian}}, \bibinfo {author}
+  {\bibfnamefont {R.~R.}\ \bibnamefont {Parker}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Porkolab}}, \bibinfo {author}
+  {\bibfnamefont {J.~E.}\ \bibnamefont {Rice}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Snipes}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Tang}}, \bibinfo {author} {\bibfnamefont
+  {J.~L.}\ \bibnamefont {Terry}}, \bibinfo {author} {\bibfnamefont {S.~M.}\
+  \bibnamefont {Wolfe}}, \bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont
+  {Wukitch}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Zhurovich}},
+  \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Bravenec}}, \bibinfo
+  {author} {\bibfnamefont {P.~E.}\ \bibnamefont {Phillips}}, \bibinfo {author}
+  {\bibfnamefont {W.~L.}\ \bibnamefont {Rowan}}, \bibinfo {author}
+  {\bibfnamefont {G.~J.}\ \bibnamefont {Kramer}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Schilling}}, \bibinfo {author}
+  {\bibfnamefont {S.~D.}\ \bibnamefont {Scott}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.~J.}\ \bibnamefont {Zweben}},\ }\href
+  {http://www.ans.org/pubs/journals/fst/a_1434} {\bibfield  {journal} {\bibinfo
+   {journal} {Fusion Science and Technology}\ }\textbf {\bibinfo {volume}
+  {51}},\ \bibinfo {pages} {476} (\bibinfo {year} {2007})}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%
