@@ -244,11 +244,11 @@ These test results highlight the improved performance and extra programming flex
 
 \subsection{Tomographic Reconstruction}
 
-Tomography is based taking sets of unique line-integrated measurements and mathematically reducing the data to profiles of chosen basis functions.
+Tomography is based on using sets of unique line-integrated measurements and mathematically reducing the data to profiles of chosen basis functions.
 These basis functions are typically radial in nature, with angular dependence represented by a Fourier series.
 When combined, the data is used to reconstruct the characteristics within the volume of interest.
-\eqtools provides a simple and direct interface for taking $(R, Z)$ coordinates and return its position as equilibium-based coordinates.
-A new, Python-based tomography code known as the Toroidal Inversion Radiation Protocol in Python (\TRIPPy) was implented relying on \eqtools.
+\eqtools provides a simple and direct interface for converting $(R, Z)$ coordinates into equilibium-based coordinates.
+A new, Python-based tomography code known as the Toroidal Inversion Radiation Protocol in Python (\TRIPPy) was implented with \eqtools.
 The underlying use of \eqtools allows for consistent tomographic reconstruction of various line-integrated data for a number of tokamaks.
 
 \begin{figure}
@@ -258,7 +258,7 @@ The underlying use of \eqtools allows for consistent tomographic reconstruction 
         	\subfloat[weighting profile versus $\psi_n$]{
             	\includegraphics[trim=.35in .0in .6in .6in,clip,width=0.64\textwidth]{graphics/XTOMO_3_13_weighting_1120824019.pdf}
         }
-	\caption{A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma (a), the weight of of the view at various $\psi_n$ is maximized at the location closest to the center of the plasma. The effects of angular harmonics are shown by sinusoidal component weights which can negative. Example uses 150 bins in $\psi_n$ with a $10 \mu$m step size.}
+	\caption{A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi_n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi_n$ with a $10 \mu$m step size.}
 	\label{fig:TRIPPydemo}
 \end{figure}
 
@@ -269,12 +269,11 @@ Each segment is mapped using \eqtools, and its length is fractionally added a pr
 Many lines of sight create a linear mapping between the line-integrated measurements and the unknown profiles.
 This inverse problem can be solved using any number of numerical methods.
 
-\TRIPPy and \eqtools have been implemented for Alcator C-Mod and NSTX-U, and has been used to benchmark tomographics systems on those machines \cite{Faust2014}. 
-The grid size in flux space must chosen to be larger than the size of the length discretization in order to properly resolve features in the plasma.
+\TRIPPy and \eqtools have been implemented for the Alcator C-Mod and NSTX-U tokamaks and has been used to benchmark tomographics systems on those machines \cite{Faust2014}. 
+The grid size in flux space must be larger than the size of the length discretization in order to properly resolve features in the plasma.
 Shown in figure~\ref{fig:TRIPPydemo} is an example line of sight using the soft X-ray tomography system on Alcator C-Mod \cite{Granetz1991}.
-Tomographic reconstruction through \TRIPPy can give insight of the emission of radation and temperature of the plasma, while also determining the character of magnetohydrodynamic modes.
-The consistent and extensible design of both \TRIPPy and \eqtools allows for tomographic reconstruction to be implemented for mulitple diagnostics on multiple tokamaks.
-
+Tomographic reconstruction through \TRIPPy can give insight of the emission of radation and the temperature of the plasma while also determining the character of magnetohydrodynamic modes.
+The consistent and extensible design of both \TRIPPy and \eqtools allows for tomographic reconstruction to be implemented for mulitple diagnostics on many tokamaks.
 
 \subsection{Profile fitting}
 Combining data from multiple diagnostics into a consistent, smooth profile is a fundamental task in experimental plasma physics.
