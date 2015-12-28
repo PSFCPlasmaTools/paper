@@ -251,15 +251,27 @@ When combined, the data is used to reconstruct the characteristics within the vo
 A new, Python-based tomography code known as the Toroidal Inversion Radiation Protocol in Python (\TRIPPy) was implented relying on \eqtools.
 The underlying use of \eqtools allows for consistent tomographic reconstruction of various line-integrated data for a number of tokamaks.
 
+\begin{figure}
+	\subfloat[equilibrium with chord view]{
+            	\includegraphics[trim=0in 0in .5in .5in,clip,width=0.36\textwidth]{graphics/XTOMO_3_13_view_1120824019_2.pdf}
+        }
+        	\subfloat[weighting profile versus $\psi_n$]{
+            	\includegraphics[trim=.35in .0in .6in .6in,clip,width=0.64\textwidth]{graphics/XTOMO_3_13_weighting_1120824019.pdf}
+        }
+	\caption{A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma (a), the weight of of the view at various $\psi_n$ is maximized at the location closest to the center of the plasma. The effects of angular harmonics are shown by sinusoidal component weights which can negative. Example uses 150 bins in $\psi_n$ with a $10 \mu$m step size.}
+	\label{fig:TRIPPydemo}
+\end{figure}
+
+
 \TRIPPy solves for the weighting of a line of sight on a flux-based radial coordinate and a Fourier angluar coordinate.
 Each measured line-integral through the plasma is discretized to small finite length segments.
 Each segment is mapped using \eqtools, and its length is fractionally added a predetermined grid in the basis coordinates.
 Many lines of sight create a linear mapping between the line-integrated measurements and the unknown profiles.
-This inverse problem, as shown by equation 5, can be solved using any number of numerical methods.
+This inverse problem can be solved using any number of numerical methods.
 
 \TRIPPy and \eqtools have been implemented for Alcator C-Mod and NSTX-U, and has been used to benchmark tomographics systems on those machines \cite{Faust2014}. 
-The grid size in flux space must chosen to be larger than the length discretization size in order to properly resolve features in the plasma.
-Shown in figure 5 is an example line of sight using the Soft X-ray tomography system on Alcator C-Mod.
+The grid size in flux space must chosen to be larger than the size of the length discretization in order to properly resolve features in the plasma.
+Shown in figure~\ref{fig:TRIPPydemo} is an example line of sight using the Soft X-ray tomography system on Alcator C-Mod.
 Tomographic reconstruction through \TRIPPy can give insight of the emission of radation and temperature of the plasma, while also determining the character of magnetohydrodynamic modes.
 The consistent and extensible design of both \TRIPPy and \eqtools allows for tomographic reconstruction to be implemented for mulitple diagnostics on multiple tokamaks.
 
