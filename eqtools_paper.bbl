@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{21}%
+\begin{thebibliography}{22}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -144,6 +144,13 @@
   {journal} {\bibinfo  {journal} {International Journal of Computational
   Science and Engineering}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo {pages}
   {296} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Faust}()}]{FaustTRIPPy}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
+  {Faust}},\ }\href {https://github.com/icfaust/TRIPPy} {\enquote {\bibinfo
+  {title} {{T}oroidal {R}adiation {I}nversion {P}rotocol ({P}ython)},}\
+  }\bibinfo {howpublished}
+  {\url{https://github.com/icfaust/TRIPPy}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Faust}\ \emph {et~al.}(2014)\citenamefont {Faust},
   \citenamefont {Delgado-Aparicio}, \citenamefont {Bell}, \citenamefont
   {Tritz}, \citenamefont {Diallo}, \citenamefont {Gerhardt}, \citenamefont

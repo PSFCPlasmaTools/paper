@@ -26,6 +26,7 @@
 \newlabel{fig:tspline}{{2}{8}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Verification and Benchmarking}{9}{}}
 \newlabel{sec:benchmark}{{V}{9}{}{}{}}
+\citation{FaustTRIPPy}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different default precisions of IDL versus Python.\relax }}{10}{}}
 \newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{11}{}}
@@ -66,7 +67,7 @@
 \bibcite{eqtools_git}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \bibcite{eqtools_readthedocs}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
 \@writefile{toc}{\appendix }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficents for a regular grid}{16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficients for a regular grid}{16}{}}
 \newlabel{sec:App}{{A}{16}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{16}{}}
 \bibcite{Note1}{{5}{}{{Note1}}{{}}}
@@ -74,16 +75,17 @@
 \bibcite{scipy}{{7}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
 \bibcite{Lekien2005}{{8}{2005}{{Lekien\ and\ Marsden}}{{}}}
 \bibcite{Peterson2009}{{9}{2009}{{Peterson}}{{}}}
-\bibcite{Faust2014}{{10}{2014}{{Faust\ \emph  {et~al.}}}{{Faust, Delgado-Aparicio, Bell, Tritz, Diallo, Gerhardt, LeBlanc, Kozub, Parker,\ and\ Stratton}}}
-\bibcite{Granetz1991}{{11}{1991}{{Granetz\ and\ Wang}}{{}}}
-\bibcite{profiletools_git}{{12}{2015{}}{{Chilenski}}{{}}}
-\bibcite{profiletools_readthedocs}{{12}{2015{}}{{Chilenski}}{{}}}
-\bibcite{gpr_nf}{{13}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
-\bibcite{gptools_git}{{14}{2015{}}{{Chilenski}}{{}}}
-\bibcite{gptools_readthedocs}{{14}{2015{}}{{Chilenski}}{{}}}
-\bibcite{Hughes2003}{{15}{2003}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Zhurovich, DeMaria, Jensen,\ and\ Hubbard}}}
-\bibcite{Hughes2001}{{16}{2001}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Hubbard, Marmar, Johnson,\ and\ Simon}}}
-\bibcite{Basse2007}{{17}{2007}{{Basse\ \emph  {et~al.}}}{{Basse, Dominguez, Edlund, Fiore, Granetz, Hubbard, Hughes, Hutchinson, Irby, LaBombard, Lin, Lin, Lipschultz, Liptac, Marmar, Mossessian, Parker, Porkolab, Rice, Snipes, Tang, Terry, Wolfe, Wukitch, Zhurovich, Bravenec, Phillips, Rowan, Kramer, Schilling, Scott,\ and\ Zweben}}}
+\bibcite{FaustTRIPPy}{{10}{}{{Faust}}{{}}}
+\bibcite{Faust2014}{{11}{2014}{{Faust\ \emph  {et~al.}}}{{Faust, Delgado-Aparicio, Bell, Tritz, Diallo, Gerhardt, LeBlanc, Kozub, Parker,\ and\ Stratton}}}
+\bibcite{Granetz1991}{{12}{1991}{{Granetz\ and\ Wang}}{{}}}
+\bibcite{profiletools_git}{{13}{2015{}}{{Chilenski}}{{}}}
+\bibcite{profiletools_readthedocs}{{13}{2015{}}{{Chilenski}}{{}}}
+\bibcite{gpr_nf}{{14}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
+\bibcite{gptools_git}{{15}{2015{}}{{Chilenski}}{{}}}
+\bibcite{gptools_readthedocs}{{15}{2015{}}{{Chilenski}}{{}}}
+\bibcite{Hughes2003}{{16}{2003}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Zhurovich, DeMaria, Jensen,\ and\ Hubbard}}}
+\bibcite{Hughes2001}{{17}{2001}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Hubbard, Marmar, Johnson,\ and\ Simon}}}
+\bibcite{Basse2007}{{18}{2007}{{Basse\ \emph  {et~al.}}}{{Basse, Dominguez, Edlund, Fiore, Granetz, Hubbard, Hughes, Hutchinson, Irby, LaBombard, Lin, Lin, Lipschultz, Liptac, Marmar, Mossessian, Parker, Porkolab, Rice, Snipes, Tang, Terry, Wolfe, Wukitch, Zhurovich, Bravenec, Phillips, Rowan, Kramer, Schilling, Scott,\ and\ Zweben}}}
 \bibstyle{aipnum4-1}
-\newlabel{LastBibItem}{{17}{18}{}{}{}}
+\newlabel{LastBibItem}{{18}{18}{}{}{}}
 \newlabel{LastPage}{{}{18}{}{}{}}

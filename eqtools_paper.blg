@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: eqtools_paper.aux
 The style file: aipnum4-1.bst
@@ -21,45 +21,46 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 21 entries,
+Warning--empty year in FaustTRIPPy
+You've used 22 entries,
             5918 wiz_defined-function locations,
-            1731 strings with 18850 characters,
-and the built_in function-call counts, 22717 in all, are:
-= -- 1299
-> -- 852
-< -- 140
-+ -- 273
-- -- 225
-* -- 3791
-:= -- 2276
-add.period$ -- 30
-call.type$ -- 21
-change.case$ -- 94
-chr.to.int$ -- 16
-cite$ -- 23
-duplicate$ -- 2011
-empty$ -- 1561
-format.name$ -- 459
-if$ -- 4447
+            1737 strings with 19011 characters,
+and the built_in function-call counts, 23299 in all, are:
+= -- 1345
+> -- 862
+< -- 142
++ -- 278
+- -- 228
+* -- 3872
+:= -- 2352
+add.period$ -- 32
+call.type$ -- 22
+change.case$ -- 99
+chr.to.int$ -- 17
+cite$ -- 25
+duplicate$ -- 2065
+empty$ -- 1603
+format.name$ -- 464
+if$ -- 4552
 int.to.chr$ -- 6
-int.to.str$ -- 30
-missing$ -- 230
-newline$ -- 115
-num.names$ -- 58
-pop$ -- 759
+int.to.str$ -- 31
+missing$ -- 235
+newline$ -- 118
+num.names$ -- 61
+pop$ -- 783
 preamble$ -- 1
-purify$ -- 104
+purify$ -- 108
 quote$ -- 0
-skip$ -- 722
+skip$ -- 743
 stack$ -- 0
-substring$ -- 411
-swap$ -- 2048
-text.length$ -- 97
+substring$ -- 424
+swap$ -- 2092
+text.length$ -- 98
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 327
-warning$ -- 1
-while$ -- 68
+type$ -- 339
+warning$ -- 2
+while$ -- 71
 width$ -- 0
-write$ -- 214
-(There was 1 warning)
+write$ -- 221
+(There were 2 warnings)
