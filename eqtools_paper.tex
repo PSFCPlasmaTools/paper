@@ -256,9 +256,9 @@ The underlying use of \eqtools allows for consistent tomographic reconstruction 
             	\includegraphics[trim=0in 0in .5in .5in,clip,width=0.36\textwidth]{graphics/XTOMO_3_13_view_1120824019_2.pdf}
         }
         	\subfloat[weighting profile versus $\psi_n$]{
-            	\includegraphics[trim=.35in .0in .6in .6in,clip,width=0.64\textwidth]{graphics/XTOMO_3_13_weighting_1120824019.pdf}
+            	\includegraphics[trim=.35in .0in .6in .6in,clip,width=0.64\textwidth]{graphics/XTOMO_3_13_weighting_1120824019_2.pdf}
         }
-	\caption{A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi_n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi_n$ with a $10 \mu$m step size.}
+	\caption{A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi_n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi_n$ with a $10 \mu$m step size.}
 	\label{fig:TRIPPydemo}
 \end{figure}
 
@@ -334,7 +334,7 @@ This material is based upon work supported in part by the U.S.\ Department of En
 
 Significant time savings can be recovered for tricubic interpolation computation when the data grid ($f(x,y,z)$) is regular, which is often the case for sets of magnetic equilibria. 
 Recovering the spline coefficients requires the calculation of a number of derivatives in each dimension, which for a regular grid can be achieved with finite difference matrix $\boldsymbol{B}$. 
-The new \emph{a priori} inclusion of $\boldsymbol{B}$ in the spline calculation matrix $\boldsymbol{A_{inv}}$ removes the necessary derivative generation and reduces total computation by half \textcolor{red}{(denoted $\boldsymbol{A_{inv}^*}$)}\gnote{I don't know where this parenthetical comment belongs, but probably not here.}. 
+The new \emph{a priori} inclusion of $\boldsymbol{B}$ in the spline calculation matrix $\boldsymbol{A_{inv}}$ (defined as $\boldsymbol{A_{inv}^*}$) removes the necessary derivative generation and reduces total computation by half.
 This calculation requires a collection of the nearest $4\times4\times4$ grid of values $\boldsymbol{y}$ to the coordinates of interest $x,y,z$ to extract spline coefficients $\boldsymbol{x}$.
 \begin{equation}
 \boldsymbol{x} = \boldsymbol{A_{inv}} ( \boldsymbol{B} \boldsymbol{y}) = \boldsymbol{A_{inv}^*}\boldsymbol{y}
