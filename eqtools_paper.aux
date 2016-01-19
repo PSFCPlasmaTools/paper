@@ -1,42 +1,46 @@
 \relax 
-\newlabel{FirstPage}{{}{1}{}{}{}}
-\@writefile{toc}{\contentsline {title}{\texttt  {eqtools}\xspace  : Modular, Extensible, Open-Source, Cross-Machine Python Tools for Working with Magnetic Equilibria}{1}{}}
-\@writefile{toc}{\contentsline {abstract}{Abstract}{1}{}}
+\emailauthor{markchil@mit.edu}{M. A. Chilenski\corref {cor1}}
+\emailauthor{faustian@mit.edu}{I. C. Faust}
+\emailauthor{jrwalk@mit.edu}{J. R. Walk}
 \citation{MDSplus}
 \citation{Lao1985}
+\Newlabel{cor1}{1}
+\Newlabel{PSFC}{a}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\newlabel{sec:intro}{{1}{1}}
 \citation{GPL}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
-\citation{Note1}
-\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{2}{}}
-\newlabel{sec:intro}{{I}{2}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Package Design and Use}{3}{}}
-\newlabel{sec:design}{{II}{3}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Package structure for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. Outside the \texttt  {Equilibrium} inheritance structure, the package also provides the \texttt  {PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt  {filewriter} module to produce portable g-files from \texttt  {Equilibrium} objects.\relax }}{4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Package Design and Use}{2}}
+\newlabel{sec:design}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Package structure for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. Outside the \texttt  {Equilibrium} inheritance structure, the package also provides the \texttt  {PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt  {filewriter} module to produce portable g-files from \texttt  {Equilibrium} objects.\relax }}{4}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:flowchart}{{1}{4}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Details of the coordinate mapping routines}{5}{}}
-\newlabel{sec:algo}{{III}{5}{}{}{}}
+\newlabel{fig:flowchart}{{1}{4}}
 \citation{dierckxBook,scipy}
-\newlabel{eq:phipsi}{{2}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Details of the coordinate mapping routines}{5}}
+\newlabel{sec:algo}{{3}{5}}
+\newlabel{eq:phipsi}{{2}{5}}
 \citation{Lekien2005}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Tri-Spline Implementation}{7}{}}
-\newlabel{sec:trispline}{{IV}{7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Tri-Spline Implementation}{6}}
+\newlabel{sec:trispline}{{4}{6}}
 \citation{Peterson2009}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{8}{}}
-\newlabel{fig:tspline}{{2}{8}{}{}{}}
-\citation{Note2}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Verification and Benchmarking}{9}{}}
-\newlabel{sec:benchmark}{{V}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{7}}
+\newlabel{fig:tspline}{{2}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Verification and Benchmarking}{7}}
+\newlabel{sec:benchmark}{{5}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different float precisions used.\relax }}{8}}
+\newlabel{fig:rz2psi_diff}{{3}{8}}
 \citation{FaustTRIPPy}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different float precisions used.\relax }}{10}{}}
-\newlabel{fig:rz2psi_diff}{{3}{10}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{11}{}}
-\newlabel{tab:benchmarkingtests}{{I}{11}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Example Applications}{11}{}}
-\newlabel{sec:examples}{{VI}{11}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Tomographic Reconstruction}{11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{9}}
+\newlabel{tab:benchmarkingtests}{{1}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Example Applications}{9}}
+\newlabel{sec:examples}{{6}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tomographic Reconstruction}{9}}
 \citation{Faust2014}
 \citation{Granetz1991}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi _n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi _n$ with a $10 \mu $m step size.\relax }}{10}}
+\newlabel{fig:TRIPPydemo}{{4}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium with chord view}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {weighting profile versus $\psi _n$}}}{10}}
 \citation{profiletools_git,profiletools_readthedocs}
 \citation{gpr_nf}
 \citation{gptools_git,gptools_readthedocs}
@@ -46,48 +50,38 @@
 \citation{Hughes2003}
 \citation{Hughes2001}
 \citation{Basse2007}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi _n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi _n$ with a $10 \mu $m step size.\relax }}{12}{}}
-\newlabel{fig:TRIPPydemo}{{4}{12}{}{}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium with chord view}}}{12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {weighting profile versus $\psi _n$}}}{12}{}}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
 \citation{Lao1985}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Profile fitting}{13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Summary}{13}{}}
-\newlabel{sec:summary}{{VII}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data include edge \cite  {Hughes2003} and core \cite  {Hughes2001} Thomson Scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane \cite  {Basse2007}. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{14}{}}
-\newlabel{fig:profiledemo}{{5}{14}{}{}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{14}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{14}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{15}{}}
-\bibdata{eqtools_paperNotes,eqtools_paper}
-\bibcite{MDSplus}{{1}{1997}{{Stillerman\ \emph  {et~al.}}}{{Stillerman, Fredian, Klare,\ and\ Manduchi}}}
-\bibcite{Lao1985}{{2}{1985}{{Lao\ \emph  {et~al.}}}{{Lao, {St. John}, Stambaugh, Kellman,\ and\ Pfeiffer}}}
-\bibcite{GPL}{{3}{2007}{{GPL}}{{}}}
-\bibcite{eqtools_pypi}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
-\bibcite{eqtools_git}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
-\bibcite{eqtools_readthedocs}{{4}{2015{}}{{Chilenski, Faust,\ and\ Walk}}{{}}}
-\@writefile{toc}{\appendix }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Generation of tricubic spline coefficients for a regular grid}{16}{}}
-\newlabel{sec:App}{{A}{16}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{16}{}}
-\bibcite{Note1}{{5}{}{{Note1}}{{}}}
-\bibcite{dierckxBook}{{6}{1993}{{Dierckx}}{{}}}
-\bibcite{scipy}{{7}{01 }{{Jones\ \emph  {et~al.}}}{{Jones, Oliphant, Peterson \emph  {et~al.}}}}
-\bibcite{Lekien2005}{{8}{2005}{{Lekien\ and\ Marsden}}{{}}}
-\bibcite{Peterson2009}{{9}{2009}{{Peterson}}{{}}}
-\bibcite{Note2}{{10}{}{{Note2}}{{}}}
-\bibcite{FaustTRIPPy}{{11}{}{{Faust}}{{}}}
-\bibcite{Faust2014}{{12}{2014}{{Faust\ \emph  {et~al.}}}{{Faust, Delgado-Aparicio, Bell, Tritz, Diallo, Gerhardt, LeBlanc, Kozub, Parker,\ and\ Stratton}}}
-\bibcite{Granetz1991}{{13}{1991}{{Granetz\ and\ Wang}}{{}}}
-\bibcite{profiletools_git}{{14}{2015{}}{{Chilenski}}{{}}}
-\bibcite{profiletools_readthedocs}{{14}{2015{}}{{Chilenski}}{{}}}
-\bibcite{gpr_nf}{{15}{2015}{{Chilenski\ \emph  {et~al.}}}{{Chilenski, Greenwald, Marzouk, Howard, White, Rice,\ and\ Walk}}}
-\bibcite{gptools_git}{{16}{2015{}}{{Chilenski}}{{}}}
-\bibcite{gptools_readthedocs}{{16}{2015{}}{{Chilenski}}{{}}}
-\bibcite{Hughes2003}{{17}{2003}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Zhurovich, DeMaria, Jensen,\ and\ Hubbard}}}
-\bibcite{Hughes2001}{{18}{2001}{{Hughes\ \emph  {et~al.}}}{{Hughes, Mossessian, Hubbard, Marmar, Johnson,\ and\ Simon}}}
-\bibcite{Basse2007}{{19}{2007}{{Basse\ \emph  {et~al.}}}{{Basse, Dominguez, Edlund, Fiore, Granetz, Hubbard, Hughes, Hutchinson, Irby, LaBombard, Lin, Lin, Lipschultz, Liptac, Marmar, Mossessian, Parker, Porkolab, Rice, Snipes, Tang, Terry, Wolfe, Wukitch, Zhurovich, Bravenec, Phillips, Rowan, Kramer, Schilling, Scott,\ and\ Zweben}}}
-\bibstyle{aipnum4-1}
-\newlabel{LastBibItem}{{19}{18}{}{}{}}
-\newlabel{LastPage}{{}{18}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Profile fitting}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Summary}{11}}
+\newlabel{sec:summary}{{7}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data include edge \cite  {Hughes2003} and core \cite  {Hughes2001} Thomson Scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane \cite  {Basse2007}. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{12}}
+\newlabel{fig:profiledemo}{{5}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{12}}
+\bibstyle{elsarticle-num}
+\bibdata{eqtools_paper}
+\bibcite{MDSplus}{{1}{}{{}}{{}}}
+\bibcite{Lao1985}{{2}{}{{}}{{}}}
+\bibcite{GPL}{{3}{}{{}}{{}}}
+\bibcite{eqtools_pypi}{{4}{}{{}}{{}}}
+\bibcite{eqtools_git}{{5}{}{{}}{{}}}
+\bibcite{eqtools_readthedocs}{{6}{}{{}}{{}}}
+\bibcite{dierckxBook}{{7}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Generation of tricubic spline coefficients for a regular grid}{14}}
+\newlabel{sec:App}{{Appendix A}{14}}
+\bibcite{scipy}{{8}{}{{}}{{}}}
+\bibcite{Lekien2005}{{9}{}{{}}{{}}}
+\bibcite{Peterson2009}{{10}{}{{}}{{}}}
+\bibcite{FaustTRIPPy}{{11}{}{{}}{{}}}
+\bibcite{Faust2014}{{12}{}{{}}{{}}}
+\bibcite{Granetz1991}{{13}{}{{}}{{}}}
+\bibcite{profiletools_git}{{14}{}{{}}{{}}}
+\bibcite{profiletools_readthedocs}{{15}{}{{}}{{}}}
+\bibcite{gpr_nf}{{16}{}{{}}{{}}}
+\bibcite{gptools_git}{{17}{}{{}}{{}}}
+\bibcite{gptools_readthedocs}{{18}{}{{}}{{}}}
+\bibcite{Hughes2003}{{19}{}{{}}{{}}}
+\bibcite{Hughes2001}{{20}{}{{}}{{}}}
+\bibcite{Basse2007}{{21}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

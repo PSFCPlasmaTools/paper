@@ -1,313 +1,134 @@
-%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
-%Control: key (0)
-%Control: author (8) initials jnrlst
-%Control: editor formatted (1) identically to author
-%Control: production of article title (-1) disabled
-%Control: page (0) single
-%Control: year (1) truncated
-%Control: production of eprint (0) enabled
-\begin{thebibliography}{23}%
-\makeatletter
-\providecommand \@ifxundefined [1]{%
- \@ifx{#1\undefined}
-}%
-\providecommand \@ifnum [1]{%
- \ifnum #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \@ifx [1]{%
- \ifx #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \natexlab [1]{#1}%
-\providecommand \enquote  [1]{``#1''}%
-\providecommand \bibnamefont  [1]{#1}%
-\providecommand \bibfnamefont [1]{#1}%
-\providecommand \citenamefont [1]{#1}%
-\providecommand \href@noop [0]{\@secondoftwo}%
-\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
-\providecommand \@href[1]{\@@startlink{#1}\@@href}%
-\providecommand \@@href[1]{\endgroup#1\@@endlink}%
-\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
-  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
-\providecommand \@@startlink[1]{}%
-\providecommand \@@endlink[0]{}%
-\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
-\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
-\providecommand \urlprefix  [0]{URL }%
-\providecommand \Eprint [0]{\href }%
-\providecommand \doibase [0]{http://dx.doi.org/}%
-\providecommand \selectlanguage [0]{\@gobble}%
-\providecommand \bibinfo  [0]{\@secondoftwo}%
-\providecommand \bibfield  [0]{\@secondoftwo}%
-\providecommand \translation [1]{[#1]}%
-\providecommand \BibitemOpen [0]{}%
-\providecommand \bibitemStop [0]{}%
-\providecommand \bibitemNoStop [0]{.\EOS\space}%
-\providecommand \EOS [0]{\spacefactor3000\relax}%
-\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
-\let\auto@bib@innerbib\@empty
-%</preamble>
-\bibitem [{\citenamefont {Stillerman}\ \emph {et~al.}(1997)\citenamefont
-  {Stillerman}, \citenamefont {Fredian}, \citenamefont {Klare},\ and\
-  \citenamefont {Manduchi}}]{MDSplus}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
-  {Stillerman}}, \bibinfo {author} {\bibfnamefont {T.~W.}\ \bibnamefont
-  {Fredian}}, \bibinfo {author} {\bibfnamefont {K.~A.}\ \bibnamefont {Klare}},
-  \ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Manduchi}},\
-  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Review of
-  Scientific Instruments}\ }\textbf {\bibinfo {volume} {68}},\ \bibinfo {pages}
-  {939} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Lao}\ \emph {et~al.}(1985)\citenamefont {Lao},
-  \citenamefont {{St. John}}, \citenamefont {Stambaugh}, \citenamefont
-  {Kellman},\ and\ \citenamefont {Pfeiffer}}]{Lao1985}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~L.}\ \bibnamefont
-  {Lao}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {{St. John}}},
-  \bibinfo {author} {\bibfnamefont {R.~D.}\ \bibnamefont {Stambaugh}}, \bibinfo
-  {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Kellman}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {W.}~\bibnamefont {Pfeiffer}},\ }\href
-  {http://stacks.iop.org/0029-5515/25/i=11/a=007} {\bibfield  {journal}
-  {\bibinfo  {journal} {Nuclear Fusion}\ }\textbf {\bibinfo {volume} {25}},\
-  \bibinfo {pages} {1611} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
-\bibitem [{GPL(2007)}]{GPL}%
-  \BibitemOpen
-  \href@noop {} {\enquote {\bibinfo {title} {{GNU} general public license,
-  version 3},}\ }\bibinfo {howpublished}
-  {\url{http://www.gnu.org/licenses/gpl.html}} (\bibinfo {year}
-  {2007})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
-  \citenamefont {Walk}(2015{\natexlab{a}})}]{eqtools_pypi}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
-  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
-  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: Python package
-  index ({PyPI} distribution)},}\ }\bibinfo {howpublished}
-  {\url{https://pypi.python.org/pypi/eqtools}} (\bibinfo {year}
-  {2015}{\natexlab{a}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
-  \citenamefont {Walk}(2015{\natexlab{b}})}]{eqtools_git}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
-  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
-  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: {Python} tools
-  for magnetic equilibria in tokamak plasmas (developer page)},}\ }\bibinfo
-  {howpublished} {\url{https://github.com/PSFCPlasmaTools/eqtools}} (\bibinfo
-  {year} {2015}{\natexlab{b}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chilenski}, \citenamefont {Faust},\ and\
-  \citenamefont {Walk}(2015{\natexlab{c}})}]{eqtools_readthedocs}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}}, \bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
-  {Faust}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
-  {Walk}},\ }\href@noop {} {\enquote {\bibinfo {title} {eqtools: tools for
-  interacting with magnetic equilibria (online documentation)},}\ }\bibinfo
-  {howpublished} {\url{eqtools.readthedocs.org/en/latest/}} (\bibinfo {year}
-  {2015}{\natexlab{c}})\BibitemShut {NoStop}%
-\bibitem [{Note1()}]{Note1}%
-  \BibitemOpen
-  \bibinfo {note} {IDL is a registered trademark of Exelis Visual Information
-  Solutions.}\BibitemShut {Stop}%
-\bibitem [{\citenamefont {Dierckx}(1993)}]{dierckxBook}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Dierckx}},\ }\href@noop {} {\emph {\bibinfo {title} {Curve and Surface
-  Fitting with Splines}}}\ (\bibinfo  {publisher} {Oxford University Press},\
-  \bibinfo {year} {1993})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Jones}\ \emph {et~al.}(01  )\citenamefont {Jones},
-  \citenamefont {Oliphant}, \citenamefont {Peterson} \emph {et~al.}}]{scipy}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Jones}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Oliphant}},
-  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Peterson}},  \emph
-  {et~al.},\ }\href {http://www.scipy.org/} {\enquote {\bibinfo {title}
-  {{SciPy}: Open source scientific tools for {Python}},}\ } (\bibinfo {year}
-  {2001--})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Lekien}\ and\ \citenamefont
-  {Marsden}(2005)}]{Lekien2005}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Lekien}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Marsden}},\ }\href {\doibase 10.1002/nme.1296} {\bibfield  {journal}
-  {\bibinfo  {journal} {International Journal for Numerical Methods in
-  Engineering}\ }\textbf {\bibinfo {volume} {63}},\ \bibinfo {pages} {455}
-  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Peterson}(2009)}]{Peterson2009}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Peterson}},\ }\href {\doibase 10.1504/IJCSE.2009.029165} {\bibfield
-  {journal} {\bibinfo  {journal} {International Journal of Computational
-  Science and Engineering}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo {pages}
-  {296} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
-\bibitem [{Note2()}]{Note2}%
-  \BibitemOpen
-  \bibinfo {note} {The data are retrieved from MDSplus in single precision but
-  must be cast to double precision for the Python spline routines to work
-  properly. While IDL can work in double precision, it defaults to single
-  precision when given single precision input data.}\BibitemShut {Stop}%
-\bibitem [{\citenamefont {Faust}()}]{FaustTRIPPy}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~C.}\ \bibnamefont
-  {Faust}},\ }\href {https://github.com/icfaust/TRIPPy} {\enquote {\bibinfo
-  {title} {{T}oroidal {R}adiation {I}nversion {P}rotocol ({P}ython)},}\
-  }\bibinfo {howpublished}
-  {\url{https://github.com/icfaust/TRIPPy}}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Faust}\ \emph {et~al.}(2014)\citenamefont {Faust},
-  \citenamefont {Delgado-Aparicio}, \citenamefont {Bell}, \citenamefont
-  {Tritz}, \citenamefont {Diallo}, \citenamefont {Gerhardt}, \citenamefont
-  {LeBlanc}, \citenamefont {Kozub}, \citenamefont {Parker},\ and\ \citenamefont
-  {Stratton}}]{Faust2014}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
-  {Faust}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
-  {Delgado-Aparicio}}, \bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
-  {Bell}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Tritz}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Diallo}}, \bibinfo
-  {author} {\bibfnamefont {S.~P.}\ \bibnamefont {Gerhardt}}, \bibinfo {author}
-  {\bibfnamefont {B.}~\bibnamefont {LeBlanc}}, \bibinfo {author} {\bibfnamefont
-  {T.~A.}\ \bibnamefont {Kozub}}, \bibinfo {author} {\bibfnamefont {R.~R.}\
-  \bibnamefont {Parker}}, \ and\ \bibinfo {author} {\bibfnamefont {B.~C.}\
-  \bibnamefont {Stratton}},\ }\href {\doibase
-  http://dx.doi.org/10.1063/1.4890254} {\bibfield  {journal} {\bibinfo
-  {journal} {Review of Scientific Instruments}\ }\textbf {\bibinfo {volume}
-  {85}} (\bibinfo {year} {2014}),\
-  http://dx.doi.org/10.1063/1.4890254}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Granetz}\ and\ \citenamefont
-  {Wang}(1991)}]{Granetz1991}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Granetz}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Wang}},\
-  }in\ \href@noop {} {\emph {\bibinfo {booktitle} {International School of
-  Plasma Physics}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor}
-  {\bibfnamefont {P.}~\bibnamefont {Stott}}, \bibinfo {editor} {\bibfnamefont
-  {D.}~\bibnamefont {Akulina}}, \bibinfo {editor} {\bibfnamefont
-  {G.}~\bibnamefont {Gorini}}, \ and\ \bibinfo {editor} {\bibfnamefont
-  {E.}~\bibnamefont {Sindoni}}}\ (\bibinfo  {publisher} {Editrice Compositori
-  Bologna},\ \bibinfo {year} {1991})\ pp.\ \bibinfo {pages}
-  {425--437}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chilenski}(2015{\natexlab{a}})}]{profiletools_git}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}},\ }\href@noop {} {\enquote {\bibinfo {title} {profiletools:
-  Classes for working with profile data of arbitrary dimension},}\ }\bibinfo
-  {howpublished} {\url{https://github.com/markchil/profiletools}} (\bibinfo
-  {year} {2015}{\natexlab{a}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont
-  {Chilenski}(2015{\natexlab{b}})}]{profiletools_readthedocs}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}},\ }\href@noop {} {\enquote {\bibinfo {title} {profiletools:
-  Classes for working with profile data of arbitrary dimension (online
-  documentation)},}\ }\bibinfo {howpublished}
-  {\url{http://profiletools.readthedocs.org/en/latest/}} (\bibinfo {year}
-  {2015}{\natexlab{b}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chilenski}\ \emph {et~al.}(2015)\citenamefont
-  {Chilenski}, \citenamefont {Greenwald}, \citenamefont {Marzouk},
-  \citenamefont {Howard}, \citenamefont {White}, \citenamefont {Rice},\ and\
-  \citenamefont {Walk}}]{gpr_nf}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Greenwald}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Marzouk}},
-  \bibinfo {author} {\bibfnamefont {N.~T.}\ \bibnamefont {Howard}}, \bibinfo
-  {author} {\bibfnamefont {A.~E.}\ \bibnamefont {White}}, \bibinfo {author}
-  {\bibfnamefont {J.~E.}\ \bibnamefont {Rice}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.~R.}\ \bibnamefont {Walk}},\ }\href@noop {} {\bibfield
-  {journal} {\bibinfo  {journal} {Nuclear Fusion}\ }\textbf {\bibinfo {volume}
-  {55}},\ \bibinfo {pages} {023012} (\bibinfo {year} {2015})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Chilenski}(2015{\natexlab{c}})}]{gptools_git}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}},\ }\href@noop {} {\enquote {\bibinfo {title} {gptools: Gaussian
-  processes with arbitrary derivative constraints and predictions},}\ }\bibinfo
-  {howpublished} {\url{https://github.com/markchil/gptools}} (\bibinfo {year}
-  {2015}{\natexlab{c}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont
-  {Chilenski}(2015{\natexlab{d}})}]{gptools_readthedocs}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
-  {Chilenski}},\ }\href@noop {} {\enquote {\bibinfo {title} {gptools: Gaussian
-  processes with arbitrary derivative constraints and predictions},}\ }\bibinfo
-  {howpublished} {\url{http://gptools.readthedocs.org/en/latest/}} (\bibinfo
-  {year} {2015}{\natexlab{d}})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(2003)\citenamefont {Hughes},
-  \citenamefont {Mossessian}, \citenamefont {Zhurovich}, \citenamefont
-  {DeMaria}, \citenamefont {Jensen},\ and\ \citenamefont
-  {Hubbard}}]{Hughes2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
-  {Hughes}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mossessian}},
-  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Zhurovich}}, \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {DeMaria}}, \bibinfo {author}
-  {\bibfnamefont {K.}~\bibnamefont {Jensen}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {Hubbard}},\ }\href {\doibase
-  10.1063/1.1532764} {\bibfield  {journal} {\bibinfo  {journal} {Review of
-  Scientific Instruments}\ }\textbf {\bibinfo {volume} {74}},\ \bibinfo {pages}
-  {1667} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Hughes}\ \emph {et~al.}(2001)\citenamefont {Hughes},
-  \citenamefont {Mossessian}, \citenamefont {Hubbard}, \citenamefont {Marmar},
-  \citenamefont {Johnson},\ and\ \citenamefont {Simon}}]{Hughes2001}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
-  {Hughes}}, \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
-  {Mossessian}}, \bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont
-  {Hubbard}}, \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Marmar}},
-  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Johnson}}, \ and\
-  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Simon}},\ }\href
-  {\doibase 10.1063/1.1319367} {\bibfield  {journal} {\bibinfo  {journal}
-  {Review of Scientific Instruments}\ }\textbf {\bibinfo {volume} {72}},\
-  \bibinfo {pages} {1107} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Basse}\ \emph {et~al.}(2007)\citenamefont {Basse},
-  \citenamefont {Dominguez}, \citenamefont {Edlund}, \citenamefont {Fiore},
-  \citenamefont {Granetz}, \citenamefont {Hubbard}, \citenamefont {Hughes},
-  \citenamefont {Hutchinson}, \citenamefont {Irby}, \citenamefont {LaBombard},
-  \citenamefont {Lin}, \citenamefont {Lin}, \citenamefont {Lipschultz},
-  \citenamefont {Liptac}, \citenamefont {Marmar}, \citenamefont {Mossessian},
-  \citenamefont {Parker}, \citenamefont {Porkolab}, \citenamefont {Rice},
-  \citenamefont {Snipes}, \citenamefont {Tang}, \citenamefont {Terry},
-  \citenamefont {Wolfe}, \citenamefont {Wukitch}, \citenamefont {Zhurovich},
-  \citenamefont {Bravenec}, \citenamefont {Phillips}, \citenamefont {Rowan},
-  \citenamefont {Kramer}, \citenamefont {Schilling}, \citenamefont {Scott},\
-  and\ \citenamefont {Zweben}}]{Basse2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Basse}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dominguez}},
-  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Edlund}}, \bibinfo
-  {author} {\bibfnamefont {C.}~\bibnamefont {Fiore}}, \bibinfo {author}
-  {\bibfnamefont {R.~S.}\ \bibnamefont {Granetz}}, \bibinfo {author}
-  {\bibfnamefont {A.~E.}\ \bibnamefont {Hubbard}}, \bibinfo {author}
-  {\bibfnamefont {J.~W.}\ \bibnamefont {Hughes}}, \bibinfo {author}
-  {\bibfnamefont {I.~H.}\ \bibnamefont {Hutchinson}}, \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Irby}}, \bibinfo {author} {\bibfnamefont
-  {B.}~\bibnamefont {LaBombard}}, \bibinfo {author} {\bibfnamefont
-  {L.}~\bibnamefont {Lin}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Lin}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Lipschultz}},
-  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Liptac}}, \bibinfo
-  {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Marmar}}, \bibinfo {author}
-  {\bibfnamefont {D.~A.}\ \bibnamefont {Mossessian}}, \bibinfo {author}
-  {\bibfnamefont {R.~R.}\ \bibnamefont {Parker}}, \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Porkolab}}, \bibinfo {author}
-  {\bibfnamefont {J.~E.}\ \bibnamefont {Rice}}, \bibinfo {author}
-  {\bibfnamefont {J.~A.}\ \bibnamefont {Snipes}}, \bibinfo {author}
-  {\bibfnamefont {V.}~\bibnamefont {Tang}}, \bibinfo {author} {\bibfnamefont
-  {J.~L.}\ \bibnamefont {Terry}}, \bibinfo {author} {\bibfnamefont {S.~M.}\
-  \bibnamefont {Wolfe}}, \bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont
-  {Wukitch}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Zhurovich}},
-  \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Bravenec}}, \bibinfo
-  {author} {\bibfnamefont {P.~E.}\ \bibnamefont {Phillips}}, \bibinfo {author}
-  {\bibfnamefont {W.~L.}\ \bibnamefont {Rowan}}, \bibinfo {author}
-  {\bibfnamefont {G.~J.}\ \bibnamefont {Kramer}}, \bibinfo {author}
-  {\bibfnamefont {G.}~\bibnamefont {Schilling}}, \bibinfo {author}
-  {\bibfnamefont {S.~D.}\ \bibnamefont {Scott}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {S.~J.}\ \bibnamefont {Zweben}},\ }\href
-  {http://www.ans.org/pubs/journals/fst/a_1434} {\bibfield  {journal} {\bibinfo
-   {journal} {Fusion Science and Technology}\ }\textbf {\bibinfo {volume}
-  {51}},\ \bibinfo {pages} {476} (\bibinfo {year} {2007})}\BibitemShut
-  {NoStop}%
-\end{thebibliography}%
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{MDSplus}
+J.~A. Stillerman, T.~W. Fredian, K.~A. Klare, G.~Manduchi, {MDSplus} data
+  acquisition system, Review of Scientific Instruments 68~(1) (1997) 939--942.
+
+\bibitem{Lao1985}
+L.~L. Lao, H.~{St. John}, R.~D. Stambaugh, A.~G. Kellman, W.~Pfeiffer,
+  \href{http://stacks.iop.org/0029-5515/25/i=11/a=007}{Reconstruction of
+  current profile parameters and plasma shapes in tokamaks}, Nuclear Fusion
+  25~(11) (1985) 1611.
+\newline\urlprefix\url{http://stacks.iop.org/0029-5515/25/i=11/a=007}
+
+\bibitem{GPL}
+{GNU} general public license, version 3,
+  \url{http://www.gnu.org/licenses/gpl.html} (June 2007).
+
+\bibitem{eqtools_pypi}
+M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: Python package index ({PyPI}
+  distribution), \url{https://pypi.python.org/pypi/eqtools} (2015).
+
+\bibitem{eqtools_git}
+M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: {Python} tools for magnetic
+  equilibria in tokamak plasmas (developer page),
+  \url{https://github.com/PSFCPlasmaTools/eqtools} (2015).
+
+\bibitem{eqtools_readthedocs}
+M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: tools for interacting with
+  magnetic equilibria (online documentation),
+  \url{eqtools.readthedocs.org/en/latest/} (2015).
+
+\bibitem{dierckxBook}
+P.~Dierckx, Curve and Surface Fitting with Splines, Oxford University Press,
+  1993.
+
+\bibitem{scipy}
+E.~Jones, T.~Oliphant, P.~Peterson, et~al.,
+  \href{http://www.scipy.org/}{{SciPy}: Open source scientific tools for
+  {Python}} (2001--).
+\newline\urlprefix\url{http://www.scipy.org/}
+
+\bibitem{Lekien2005}
+F.~Lekien, J.~Marsden, \href{http://dx.doi.org/10.1002/nme.1296}{Tricubic
+  interpolation in three dimensions}, International Journal for Numerical
+  Methods in Engineering 63~(3) (2005) 455--471.
+\newblock \href {http://dx.doi.org/10.1002/nme.1296}
+  {\path{doi:10.1002/nme.1296}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1002/nme.1296}
+
+\bibitem{Peterson2009}
+P.~Peterson, F2py: a tool for connecting fortan and python programs,
+  International Journal of Computational Science and Engineering 4~(4) (2009)
+  296--305.
+\newblock \href {http://dx.doi.org/10.1504/IJCSE.2009.029165}
+  {\path{doi:10.1504/IJCSE.2009.029165}}.
+
+\bibitem{FaustTRIPPy}
+I.~C. Faust, \href{https://github.com/icfaust/TRIPPy}{{T}oroidal {R}adiation
+  {I}nversion {P}rotocol ({P}ython)}, \url{https://github.com/icfaust/TRIPPy}.
+\newline\urlprefix\url{https://github.com/icfaust/TRIPPy}
+
+\bibitem{Faust2014}
+I.~Faust, L.~Delgado-Aparicio, R.~E. Bell, K.~Tritz, A.~Diallo, S.~P. Gerhardt,
+  B.~LeBlanc, T.~A. Kozub, R.~R. Parker, B.~C. Stratton, Two-dimensional
+  axuv-based radiated power density diagnostics on nstx-ua), Review of
+  Scientific Instruments 85~(11).
+\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4890254}
+  {\path{doi:http://dx.doi.org/10.1063/1.4890254}}.
+
+\bibitem{Granetz1991}
+R.~Granetz, L.~Wang, Design of the x-ray tomography system on alcator c-mod,
+  in: P.~Stott, D.~Akulina, G.~Gorini, E.~Sindoni (Eds.), International School
+  of Plasma Physics, Editrice Compositori Bologna, 1991, pp. 425--437.
+
+\bibitem{profiletools_git}
+M.~A. Chilenski, profiletools: Classes for working with profile data of
+  arbitrary dimension, \url{https://github.com/markchil/profiletools} (2015).
+
+\bibitem{profiletools_readthedocs}
+M.~A. Chilenski, profiletools: Classes for working with profile data of
+  arbitrary dimension (online documentation),
+  \url{http://profiletools.readthedocs.org/en/latest/} (2015).
+
+\bibitem{gpr_nf}
+M.~A. Chilenski, M.~Greenwald, Y.~Marzouk, N.~T. Howard, A.~E. White, J.~E.
+  Rice, J.~R. Walk, Improved profile fitting and quantification of uncertainty
+  in experimental measurements of impurity transport coefficients using
+  gaussian process regression, Nuclear Fusion 55~(2) (2015) 023012.
+
+\bibitem{gptools_git}
+M.~A. Chilenski, gptools: Gaussian processes with arbitrary derivative
+  constraints and predictions, \url{https://github.com/markchil/gptools}
+  (2015).
+
+\bibitem{gptools_readthedocs}
+M.~A. Chilenski, gptools: Gaussian processes with arbitrary derivative
+  constraints and predictions, \url{http://gptools.readthedocs.org/en/latest/}
+  (2015).
+
+\bibitem{Hughes2003}
+J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen, A.~Hubbard,
+  \href{http://link.aip.org/link/?RSI/74/1667/1}{{Thomson} scattering upgrades
+  on {Alcator C-Mod}}, Review of Scientific Instruments 74~(3) (2003)
+  1667--1670.
+\newblock \href {http://dx.doi.org/10.1063/1.1532764}
+  {\path{doi:10.1063/1.1532764}}.
+\newline\urlprefix\url{http://link.aip.org/link/?RSI/74/1667/1}
+
+\bibitem{Hughes2001}
+J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, E.~S. Marmar, D.~Johnson,
+  D.~Simon, \href{http://link.aip.org/link/?RSI/72/1107/1}{High-resolution edge
+  {Thomson} scattering measurements on the {Alcator C-Mod} tokamak}, Review of
+  Scientific Instruments 72~(1) (2001) 1107--1110.
+\newblock \href {http://dx.doi.org/10.1063/1.1319367}
+  {\path{doi:10.1063/1.1319367}}.
+\newline\urlprefix\url{http://link.aip.org/link/?RSI/72/1107/1}
+
+\bibitem{Basse2007}
+N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz, A.~E. Hubbard,
+  J.~W. Hughes, I.~H. Hutchinson, J.~Irby, B.~LaBombard, L.~Lin, Y.~Lin,
+  B.~Lipschultz, J.~E. Liptac, E.~S. Marmar, D.~A. Mossessian, R.~R. Parker,
+  M.~Porkolab, J.~E. Rice, J.~A. Snipes, V.~Tang, J.~L. Terry, S.~M. Wolfe,
+  S.~J. Wukitch, K.~Zhurovich, R.~V. Bravenec, P.~E. Phillips, W.~L. Rowan,
+  G.~J. Kramer, G.~Schilling, S.~D. Scott, S.~J. Zweben,
+  \href{http://www.ans.org/pubs/journals/fst/a\_1434}{Diagnostic systems on
+  {Alcator C-Mod}}, Fusion Science and Technology 51~(3) (2007) 476--507.
+\newline\urlprefix\url{http://www.ans.org/pubs/journals/fst/a\_1434}
+
+\end{thebibliography}

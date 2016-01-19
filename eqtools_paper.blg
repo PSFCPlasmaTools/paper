@@ -1,66 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: eqtools_paper.aux
-The style file: aipnum4-1.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Database file #1: eqtools_paperNotes.bib
-Database file #2: eqtools_paper.bib
-Warning--jnrlst (dependency: not reversed) set 1
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
-Control: key (0) 
-Control: author (8) initials jnrlst
-Control: editor formatted (1) identically to author
-Control: production of article title (-1) disabled
-Control: page (0) single
-Control: year (1) truncated
-Control: production of eprint (0) enabled
-Warning--empty year in FaustTRIPPy
-You've used 23 entries,
-            5918 wiz_defined-function locations,
-            1740 strings with 19274 characters,
-and the built_in function-call counts, 23556 in all, are:
-= -- 1376
-> -- 862
-< -- 142
-+ -- 280
-- -- 228
-* -- 3905
-:= -- 2385
-add.period$ -- 33
-call.type$ -- 23
-change.case$ -- 104
-chr.to.int$ -- 18
-cite$ -- 26
-duplicate$ -- 2082
-empty$ -- 1618
-format.name$ -- 464
-if$ -- 4599
-int.to.chr$ -- 6
-int.to.str$ -- 32
-missing$ -- 236
-newline$ -- 121
-num.names$ -- 61
-pop$ -- 792
+The style file: elsarticle-num.bst
+Database file #1: eqtools_paper.bib
+You've used 21 entries,
+            2937 wiz_defined-function locations,
+            799 strings with 9387 characters,
+and the built_in function-call counts, 6261 in all, are:
+= -- 532
+> -- 316
+< -- 1
++ -- 119
+- -- 98
+* -- 469
+:= -- 915
+add.period$ -- 26
+call.type$ -- 21
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 176
+empty$ -- 675
+format.name$ -- 112
+if$ -- 1597
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 12
+newline$ -- 83
+num.names$ -- 22
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 112
+purify$ -- 0
 quote$ -- 0
-skip$ -- 753
+skip$ -- 377
 stack$ -- 0
-substring$ -- 438
-swap$ -- 2105
-text.length$ -- 98
+substring$ -- 204
+swap$ -- 43
+text.length$ -- 1
 text.prefix$ -- 0
-top$ -- 8
-type$ -- 350
-warning$ -- 2
-while$ -- 71
-width$ -- 0
-write$ -- 225
-(There were 2 warnings)
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 33
+width$ -- 23
+write$ -- 189

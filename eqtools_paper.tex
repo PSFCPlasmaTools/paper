@@ -1,4 +1,5 @@
-\documentclass[12pt,floatfix,showpacs]{revtex4-1}
+%\documentclass[12pt,floatfix,showpacs]{revtex4-1}
+\documentclass{elsarticle}
 
 \usepackage{amssymb,amsmath,amsfonts}
 \usepackage{graphicx}
@@ -30,15 +31,18 @@
 
 \title{\eqtools: Modular, Extensible, Open-Source, Cross-Machine Python Tools for Working with Magnetic Equilibria}
 
-\author{M. A. Chilenski}
-\email[]{markchil@mit.edu}
-\affiliation{MIT Plasma Science and Fusion Center}
+\author[PSFC]{M. A. Chilenski\corref{cor1}}
+\ead{markchil@mit.edu}
 
-\author{I. C. Faust}
-\affiliation{MIT Plasma Science and Fusion Center}
+\author[PSFC]{I. C. Faust}
+\ead{faustian@mit.edu}
 
-\author{J. R. Walk}
-\affiliation{MIT Plasma Science and Fusion Center}
+\author[PSFC]{J. R. Walk}
+\ead{jrwalk@mit.edu}
+
+\cortext[cor1]{Corresponding author}
+
+\address[PSFC]{Plasma Science and Fusion Center, Massachusetts Institute of Technology, Cambridge, MA, 02139, USA}
 
 \date{\today}
 
@@ -52,7 +56,7 @@ In this paper, we introduce the design of the \eqtools package and detail the wo
 Finally, verification and benchmarking for accuracy and speed against existing tools are detailed. Wider deployment of these tools will enable efficient sharing of data and software between institutions and machines as well as self-consistent analysis of the shared data.
 \end{abstract}
 
-\pacs{52.55.Fa, 07.05.Kf, 52.70.Ds}
+%\pacs{52.55.Fa, 07.05.Kf, 52.70.Ds}
 
 \maketitle
 
@@ -69,9 +73,9 @@ Best design practices call for the vagaries of data source and storage implement
 The new \eqtools package provides a modular, extensible, cross-machine toolkit developed in the Python programming language for handling magnetic equilibrium data.  
 The \eqtools package provides a consistent and straightforward interface to the researcher for both coordinate mapping routines (historically handled in separate standalone routines) and access to derived quantities (often handled with manual hooks into data storage).  
 Moreover, \eqtools is constructed with a modular, object-oriented design, such that the package is easily extensible to handle data from different experiments and reconstruction codes, giving the researcher a single unified interface for data from any machine or code.  
-The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via PyPI \cite{eqtools_pypi,*eqtools_git,*eqtools_readthedocs}.
+The implementation of reconstructed-equilibrium handling in the Python language removes a substantial barrier to the adoption of Python as a day-to-day analysis language for tokamak research, which offers numerous advantages in ease of use, computational speed, user/developer base, and free and open-source implementations compared to current common working languages for fusion research.  The \eqtools package is open-source and licensed under the GNU General Public License \cite{GPL}, and distributed via PyPI \cite{eqtools_pypi,eqtools_git,eqtools_readthedocs}.
 
-This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), presents runtime and accuracy benchmarks against the current IDL \footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}), and shows examples of the code in use (section \ref{sec:examples}).
+This paper details the design and implementation of \eqtools, particularly the paradigm for extension to new machines (section \ref{sec:design}), describes the basic algorithms used to convert between coordinate systems (section \ref{sec:algo}), describes the implementation of a novel trivariate spline method for improved interpolation in the time dimension (section \ref{sec:trispline}), presents runtime and accuracy benchmarks against the current IDL\footnote{IDL is a registered trademark of Exelis Visual Information Solutions.} implementation at Alcator C-Mod (section \ref{sec:benchmark}), and shows examples of the code in use (section \ref{sec:examples}).
 
 \section{Package Design and Use}\label{sec:design}
 
@@ -92,7 +96,7 @@ The \eqtools package is designed to present a consistent, human-readable interfa
 %Notice that the \eqtools approach requires fewer lines and that the cryptic six letter EFIT tag name ``simagx'' is replaced with the more descriptive ``getFluxAxis.''
 For example, accessing the calculated value for the poloidal flux on-axis, $\psi_0$, is simply \verb|eq.getFluxAxis()| -- this replaces arrangements that may involve cumbersome manual hooks into the data system and interaction with opaque internal EFIT variable names.
 Similarly, mapping routines are handled internally in the \verb|eq| object -- mapping from $(R, Z)$ coordinates to normalized poloidal flux $\psi_{\text{n}}$, for example, is simply \verb|eq.rz2psinorm(R,Z,t,...)|.  
-One notable consequence of this is that intermediate spline calculations for the mapping routines are stored in the persistent object -- compared to typical standalone mapping routines (which must start from scratch for each function call) this allows substantial speed gains for subsequent mapping calculations with the same equilibrium object, as is illustrated in section~\ref{sec:benchmark}.
+One notable consequence of this object-oriented approach is that intermediate spline calculations for the mapping routines are stored in the persistent object -- compared to typical standalone mapping routines (which must start from scratch for each function call) this allows substantial speed gains for subsequent mapping calculations with the same equilibrium object, as is illustrated in section~\ref{sec:benchmark}.
 
 The \eqtools package is structured such that the user-facing methods (for data access and coordinate mapping) are consistent for different machines or reconstruction codes.
 Moreover, adding support for new machines or codes requires minimal new code development.  
@@ -196,8 +200,9 @@ The C code is compartmentalized and can accept arbitrary three dimensional data,
 \section{Verification and Benchmarking}\label{sec:benchmark}
 \eqtools has been verified against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
 Figure~\ref{fig:rz2psi_diff} shows the discrepancy between the IDL routines and \eqtools for the conversion of $(R, Z)$ to $\psi$.
-The differences are small (of order \SI{e-7}{Wb/rad}, compared to a signal of order $\pm\SI{0.5}{Wb/rad}$), and are consistent with the fact that Python used double precision whereas IDL used single precision for the test \footnote{The data are retrieved from MDSplus in single precision but must be cast to double precision for the Python spline routines to work properly. While IDL can work in double precision, it defaults to single precision when given single precision input data.}.
+The differences are small (of order \SI{e-7}{Wb/rad}, compared to a signal of order $\pm\SI{0.5}{Wb/rad}$), and are consistent with the fact that Python used double precision whereas IDL used single precision for the test.\footnote{The data are retrieved from MDSplus in single precision but must be cast to double precision for the Python spline routines to work properly. While IDL can work in double precision, it defaults to single precision when given single precision input data.}
 \begin{figure}
+	\centering
 	\includegraphics[width=0.6\textwidth]{graphics/absolute_compare}
 	\caption{Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi$ for \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \SI{e-7}{Wb/rad} are typical (the value of $\psi$ is in the range $\pm\SI{0.5}{Wb/rad}$), and are consistent with the different float precisions used.}
 	\label{fig:rz2psi_diff}
@@ -277,13 +282,13 @@ The consistent and extensible design of both \TRIPPy and \eqtools allows for tom
 
 \subsection{Profile fitting}
 Combining data from multiple diagnostics into a consistent, smooth profile is a fundamental task in experimental plasma physics.
-\profiletools \cite{profiletools_git,*profiletools_readthedocs} is a Python package which aims to simplify this task by presenting a uniform interface to load, time-average, combine and fit data from different diagnostics.
+\profiletools \cite{profiletools_git,profiletools_readthedocs} is a Python package which aims to simplify this task by presenting a uniform interface to load, time-average, combine and fit data from different diagnostics.
 \eqtools is used internally by \profiletools both to map diagnostics to a consistent grid and to output the smooth fit in the desired coordinates.
 In line with the \eqtools philosophy of shielding the user from obtuse calls to the underlying data system (be it MDSplus or some other system), for each diagnostic supported, \profiletools provides a function to fetch the data (and the accompanying error bars).
 These quantities are returned in a \verb|BivariatePlasmaProfile| object, where ``bivariate'' refers to the fact that the data are, in general, a function of space and time.
 The coordinates the measurement locations are stored in can be converted using the \verb|convert_abscissa(...)| method.
 Multiple \verb|BivariatePlasmaProfile| instances from different diagnostics or even different shots can be combined as necessary using the \verb|add_profile| method.
-The combined data set can then be used to predict a smoothed profile using Gaussian process regression \cite{gpr_nf} through integration with the \gptools Python package \cite{gptools_git,*gptools_readthedocs}.
+The combined data set can then be used to predict a smoothed profile using Gaussian process regression \cite{gpr_nf} through integration with the \gptools Python package \cite{gptools_git,gptools_readthedocs}.
 An example of this sensor fusion task is shown in Figure~\ref{fig:profiledemo}.
 \begin{figure}
 	\subfloat[equilibrium]{
@@ -300,7 +305,7 @@ The use of \eqtools to provide consistent coordinate transformations and a consi
 \section{Summary}\label{sec:summary}
 
 The \eqtools package provides a modular, extensible framework for handling the basic tasks associated with magnetic equilibrium reconstructions for tokamaks -- namely, accessing derived quantities and mapping between real-space and flux coordinate systems for experimental data.
-This package, developed in the open-source Python programming language and freely available from Github and PyPI \cite{eqtools_pypi,*eqtools_git,*eqtools_readthedocs}, presents a consistent, user-friendly interface independent of data source or storage method.
+This package, developed in the open-source Python programming language and freely available from Github and PyPI \cite{eqtools_pypi,eqtools_git,eqtools_readthedocs}, presents a consistent, user-friendly interface independent of data source or storage method.
 \eqtools replaces machine- and storage-specific methods which are often nonintuitive to use and which use a static code structure that can be difficult to extend for experimental data from multiple machines, storage methods, or reconstruction codes.
 Moreover, the \eqtools package is designed with a modular, object-oriented construction, such that the package is easily extended to include new experiments, reconstruction codes, and data storage methods.
 In the current distribution version, EFIT reconstructions \cite{Lao1985} in MDSplus-based data storage from NSTX, C-Mod, and DIII-D are implemented, along with a class to read the portable \emph{eqdsk} datafile.  
@@ -320,14 +325,12 @@ Additionally, \eqtools allows for substantially more straightforward implementat
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{acknowledgements}
+\section*{Acknowledgements}
 The authors would like to acknowledge their thanks for the work S.~Wolfe performed in writing the original IDL coordinate mapping routines for Alcator C-Mod.
 
 This material is based upon work conducted using the Alcator C-Mod tokamak, a DOE Office of Science user facility.
 This material is based upon work supported by the U.S.\ Department of Energy, Office of Science, Office of Fusion Energy Sciences under Award Number DE-FC02-99ER54512.
 This material is based upon work supported in part by the U.S.\ Department of Energy Office of Science Graduate Research Fellowship Program (DOE SCGF), made possible in part by the American Recovery and Reinvestment Act of 2009, administered by ORISE-ORAU under contract number DE-AC05-06OR23100.
-
-\end{acknowledgements}
 
 \appendix
 \section{Generation of tricubic spline coefficients for a regular grid}\label{sec:App}
@@ -345,8 +348,8 @@ Where
 \end{equation}
  $\boldsymbol{y}$ comprises the values of the grid necessary for calculating the derivatives at the corners of the voxel $f$, and must be made into a form which is appropriate for $A_{inv}$. $A_{inv}$ expects the values of $f$ at each voxel corners then $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}, \frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}, \frac{\partial^3 f}{\partial x \partial y \partial z}$ in the same manner. $\boldsymbol{B}$ converts the points into these derivatives, through first order finite difference matrices for $\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}$, second order finite difference matrices for $\frac{\partial^2 f}{\partial x \partial y}, \frac{\partial^2 f}{\partial y \partial z}, \frac{\partial^2 f}{\partial x \partial z}$, and a third-order for $\frac{\partial^3 f}{\partial x \partial y \partial z}$. The form of $\boldsymbol{B}$ is dependent on the form of $\boldsymbol{y}$ for the formation of the finite differences.
 
-
-\bibliographystyle{aipnum4-1}
+\section*{References}
+\bibliographystyle{elsarticle-num}
 \bibliography{eqtools_paper}
 
 \end{document}
