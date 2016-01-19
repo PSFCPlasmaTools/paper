@@ -22,45 +22,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--empty year in FaustTRIPPy
-You've used 22 entries,
+You've used 23 entries,
             5918 wiz_defined-function locations,
-            1737 strings with 19011 characters,
-and the built_in function-call counts, 23299 in all, are:
-= -- 1345
+            1740 strings with 19274 characters,
+and the built_in function-call counts, 23556 in all, are:
+= -- 1376
 > -- 862
 < -- 142
-+ -- 278
++ -- 280
 - -- 228
-* -- 3872
-:= -- 2352
-add.period$ -- 32
-call.type$ -- 22
-change.case$ -- 99
-chr.to.int$ -- 17
-cite$ -- 25
-duplicate$ -- 2065
-empty$ -- 1603
+* -- 3905
+:= -- 2385
+add.period$ -- 33
+call.type$ -- 23
+change.case$ -- 104
+chr.to.int$ -- 18
+cite$ -- 26
+duplicate$ -- 2082
+empty$ -- 1618
 format.name$ -- 464
-if$ -- 4552
+if$ -- 4599
 int.to.chr$ -- 6
-int.to.str$ -- 31
-missing$ -- 235
-newline$ -- 118
+int.to.str$ -- 32
+missing$ -- 236
+newline$ -- 121
 num.names$ -- 61
-pop$ -- 783
+pop$ -- 792
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 112
 quote$ -- 0
-skip$ -- 743
+skip$ -- 753
 stack$ -- 0
-substring$ -- 424
-swap$ -- 2092
+substring$ -- 438
+swap$ -- 2105
 text.length$ -- 98
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 339
+type$ -- 350
 warning$ -- 2
 while$ -- 71
 width$ -- 0
-write$ -- 221
+write$ -- 225
 (There were 2 warnings)

@@ -101,7 +101,7 @@ The base level of the inheritance structure (shown in blue in figure \ref{fig:fl
 The methods therein are sufficiently general to be used by any grid-based equilibrium reconstruction.
 
 \begin{figure}[p]
- \includegraphics[width=\textwidth]{graphics/flowchart.pdf}
+ \includegraphics[width=\textwidth]{graphics/flowchart_new.pdf}
  \caption{Package structure for the \eqtools package.  The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines.  Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided.  User-facing classes (green) handle the details of machine-specific implementations.  Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction.  The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction.  The \texttt{EqdskReader} class, which directly handles \emph{eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class.  Outside the \texttt{Equilibrium} inheritance structure, the package also provides the \texttt{PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt{filewriter} module to produce portable g-files from \texttt{Equilibrium} objects.}
  \label{fig:flowchart}
 \end{figure}
@@ -178,7 +178,7 @@ Variants on these basic routines are then used to map between other pairs of coo
 Typically, coordinates are determined via nearest-neighbor interpolation to the reconstruction timebase.
 When the timebase of the equilibrium reconstruction is coarser than and/or offset from the desired timebase this can induce aliasing and discontinuities (as can be seen in figure~\ref{fig:tspline}). 
 These limit the nearest-neighbor approach when considering fast timescale behaviors with comparatively slow reconstructions.  
-When reconstruction achieves the Nyquist frequency for variations of interest, an additional interpolation in time can accurately remove aliasing errors induced by this timebase mismatch. 
+When reconstruction achieves the Nyquist frequency, an additional interpolation in time can accurately remove aliasing errors induced by this timebase mismatch. 
 The additional temporal dimension requires the use of higher-dimensional interpolators, for which a fast tricubic interpolation scheme has been developed. 
 
 A tricubic interpolating spline \cite{Lekien2005} is used to evaluate the three-dimensional flux grid as a function of $R$, $Z$ and $t$. 
@@ -196,10 +196,10 @@ The C code is compartmentalized and can accept arbitrary three dimensional data,
 \section{Verification and Benchmarking}\label{sec:benchmark}
 \eqtools has been verified against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
 Figure~\ref{fig:rz2psi_diff} shows the discrepancy between the IDL routines and \eqtools for the conversion of $(R, Z)$ to $\psi$.
-The differences are small (of order \SI{e-7}{Wb/rad}, compared to a signal of order $\pm\SI{0.5}{Wb/rad}$), and are consistent with the fact that Python defaults to double precision whereas IDL defaults to single precision.
+The differences are small (of order \SI{e-7}{Wb/rad}, compared to a signal of order $\pm\SI{0.5}{Wb/rad}$), and are consistent with the fact that Python used double precision whereas IDL used single precision for the test \footnote{The data are retrieved from MDSplus in single precision but must be cast to double precision for the Python spline routines to work properly. While IDL can work in double precision, it defaults to single precision when given single precision input data.}.
 \begin{figure}
 	\includegraphics[width=0.6\textwidth]{graphics/absolute_compare}
-	\caption{Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi$ for \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \SI{e-7}{Wb/rad} are typical (the value of $\psi$ is in the range $\pm\SI{0.5}{Wb/rad}$), and are consistent with the different default precisions of IDL versus Python.}
+	\caption{Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi$ for \eqtools and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium.  Relative differences of order \SI{e-7}{Wb/rad} are typical (the value of $\psi$ is in the range $\pm\SI{0.5}{Wb/rad}$), and are consistent with the different float precisions used.}
 	\label{fig:rz2psi_diff}
 \end{figure}
 Timing tests were conducted by converting a $66\times66$ element $(R, Z)$ grid (double the density of the grid EFIT provides the flux on) into each of the coordinates supported.
