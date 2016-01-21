@@ -6,41 +6,41 @@
 \citation{Lao1985}
 \Newlabel{cor1}{1}
 \Newlabel{PSFC}{a}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
-\newlabel{sec:intro}{{1}{1}}
 \citation{GPL}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Package Design and Use}{2}}
-\newlabel{sec:design}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
+\newlabel{sec:intro}{{1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Package Design and Use}{3}}
+\newlabel{sec:design}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Package structure for the \texttt  {eqtools}\xspace  package. The base abstract class (blue) provides a prototypical structure for the derived-data handlers, as well as providing the complete set of coordinate-mapping routines. Intermediate abstract classes (yellow) prescribe the handling for data storage systems and codes -- at present the relatively-ubiquitous EFIT reconstruction stored in MDSplus tree structures is provided. User-facing classes (green) handle the details of machine-specific implementations. Dashed lines denote classes that have not yet been implemented, but which can be introduced into the package in a straightforward manner due to its modular construction. The user interface is consistent, as it is provided by the parent classes -- code migration between machines requires only changing which child class is called for the reconstruction. The \texttt  {EqdskReader} class, which directly handles \emph  {eqdsk} text files from EFIT, inherits directly from the base class as it is sufficiently unique to not warrant an intermediate abstract class. Outside the \texttt  {Equilibrium} inheritance structure, the package also provides the \texttt  {PFileReader} class to handle the ``p-file'' plasma profile data associated with EFIT, as well as the \texttt  {filewriter} module to produce portable g-files from \texttt  {Equilibrium} objects.\relax }}{4}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:flowchart}{{1}{4}}
 \citation{dierckxBook,scipy}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Details of the coordinate mapping routines}{5}}
 \newlabel{sec:algo}{{3}{5}}
-\newlabel{eq:phipsi}{{2}{5}}
-\citation{Lekien2005}
+\newlabel{eq:phipsi}{{2}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Tri-Spline Implementation}{6}}
 \newlabel{sec:trispline}{{4}{6}}
+\citation{Lekien2005}
 \citation{Peterson2009}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{7}}
 \newlabel{fig:tspline}{{2}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Verification and Benchmarking}{7}}
-\newlabel{sec:benchmark}{{5}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different float precisions used.\relax }}{8}}
-\newlabel{fig:rz2psi_diff}{{3}{8}}
-\citation{FaustTRIPPy}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Verification and Benchmarking}{8}}
+\newlabel{sec:benchmark}{{5}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different float precisions used.\relax }}{9}}
+\newlabel{fig:rz2psi_diff}{{3}{9}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{9}}
 \newlabel{tab:benchmarkingtests}{{1}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Example Applications}{9}}
-\newlabel{sec:examples}{{6}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tomographic Reconstruction}{9}}
-\citation{Faust2014}
-\citation{Granetz1991}
+\citation{FaustTRIPPy}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi _n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi _n$ with a $10 \mu $m step size.\relax }}{10}}
 \newlabel{fig:TRIPPydemo}{{4}{10}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium with chord view}}}{10}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {weighting profile versus $\psi _n$}}}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Example Applications}{10}}
+\newlabel{sec:examples}{{6}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tomographic Reconstruction}{10}}
+\citation{Faust2014}
+\citation{Granetz1991}
 \citation{profiletools_git,profiletools_readthedocs}
 \citation{gpr_nf}
 \citation{gptools_git,gptools_readthedocs}
@@ -64,12 +64,12 @@
 \bibcite{MDSplus}{{1}{}{{}}{{}}}
 \bibcite{Lao1985}{{2}{}{{}}{{}}}
 \bibcite{GPL}{{3}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Generation of tricubic spline coefficients for a regular grid}{14}}
+\newlabel{sec:App}{{Appendix A}{14}}
 \bibcite{eqtools_pypi}{{4}{}{{}}{{}}}
 \bibcite{eqtools_git}{{5}{}{{}}{{}}}
 \bibcite{eqtools_readthedocs}{{6}{}{{}}{{}}}
 \bibcite{dierckxBook}{{7}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Generation of tricubic spline coefficients for a regular grid}{14}}
-\newlabel{sec:App}{{Appendix A}{14}}
 \bibcite{scipy}{{8}{}{{}}{{}}}
 \bibcite{Lekien2005}{{9}{}{{}}{{}}}
 \bibcite{Peterson2009}{{10}{}{{}}{{}}}
