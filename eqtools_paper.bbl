@@ -21,11 +21,11 @@ L.~L. Lao, H.~{St. John}, R.~D. Stambaugh, A.~G. Kellman, W.~Pfeiffer,
   \url{http://www.gnu.org/licenses/gpl.html} (June 2007).
 
 \bibitem{eqtools_pypi}
-M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: Python package index ({PyPI}
-  distribution), \url{https://pypi.python.org/pypi/eqtools} (2015).
+M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: {P}ython {P}ackage {I}ndex
+  ({PyPI} distribution), \url{https://pypi.python.org/pypi/eqtools} (2015).
 
 \bibitem{eqtools_git}
-M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: {Python} tools for magnetic
+M.~A. Chilenski, I.~C. Faust, J.~R. Walk, eqtools: {P}ython tools for magnetic
   equilibria in tokamak plasmas (developer page),
   \url{https://github.com/PSFCPlasmaTools/eqtools} (2015).
 
@@ -40,8 +40,8 @@ P.~Dierckx, Curve and Surface Fitting with Splines, Oxford University Press,
 
 \bibitem{scipy}
 E.~Jones, T.~Oliphant, P.~Peterson, et~al.,
-  \href{http://www.scipy.org/}{{SciPy}: Open source scientific tools for
-  {Python}} (2001--).
+  \href{http://www.scipy.org/}{{S}ci{P}y: Open source scientific tools for
+  {P}ython} (2001--).
 \newline\urlprefix\url{http://www.scipy.org/}
 
 \bibitem{Lekien2005}
@@ -53,7 +53,7 @@ F.~Lekien, J.~Marsden, \href{http://dx.doi.org/10.1002/nme.1296}{Tricubic
 \newline\urlprefix\url{http://dx.doi.org/10.1002/nme.1296}
 
 \bibitem{Peterson2009}
-P.~Peterson, F2py: a tool for connecting fortan and python programs,
+P.~Peterson, {F2PY}: a tool for connecting {F}ortan and {P}ython programs,
   International Journal of Computational Science and Engineering 4~(4) (2009)
   296--305.
 \newblock \href {http://dx.doi.org/10.1504/IJCSE.2009.029165}
@@ -67,15 +67,16 @@ I.~C. Faust, \href{https://github.com/icfaust/TRIPPy}{{T}oroidal {R}adiation
 \bibitem{Faust2014}
 I.~Faust, L.~Delgado-Aparicio, R.~E. Bell, K.~Tritz, A.~Diallo, S.~P. Gerhardt,
   B.~LeBlanc, T.~A. Kozub, R.~R. Parker, B.~C. Stratton, Two-dimensional
-  axuv-based radiated power density diagnostics on nstx-ua), Review of
+  {AXUV}-based radiated power density diagnostics on {NSTX-U}, Review of
   Scientific Instruments 85~(11).
 \newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4890254}
   {\path{doi:http://dx.doi.org/10.1063/1.4890254}}.
 
 \bibitem{Granetz1991}
-R.~Granetz, L.~Wang, Design of the x-ray tomography system on alcator c-mod,
-  in: P.~Stott, D.~Akulina, G.~Gorini, E.~Sindoni (Eds.), International School
-  of Plasma Physics, Editrice Compositori Bologna, 1991, pp. 425--437.
+R.~Granetz, L.~Wang, Design of the x-ray tomography system on {A}lcator
+  {C}-{M}od, in: P.~Stott, D.~Akulina, G.~Gorini, E.~Sindoni (Eds.),
+  International School of Plasma Physics, Editrice Compositori Bologna, 1991,
+  pp. 425--437.
 
 \bibitem{profiletools_git}
 M.~A. Chilenski, profiletools: Classes for working with profile data of
@@ -90,22 +91,22 @@ M.~A. Chilenski, profiletools: Classes for working with profile data of
 M.~A. Chilenski, M.~Greenwald, Y.~Marzouk, N.~T. Howard, A.~E. White, J.~E.
   Rice, J.~R. Walk, Improved profile fitting and quantification of uncertainty
   in experimental measurements of impurity transport coefficients using
-  gaussian process regression, Nuclear Fusion 55~(2) (2015) 023012.
+  {G}aussian process regression, Nuclear Fusion 55~(2) (2015) 023012.
 
 \bibitem{gptools_git}
-M.~A. Chilenski, gptools: Gaussian processes with arbitrary derivative
+M.~A. Chilenski, gptools: {G}aussian processes with arbitrary derivative
   constraints and predictions, \url{https://github.com/markchil/gptools}
   (2015).
 
 \bibitem{gptools_readthedocs}
-M.~A. Chilenski, gptools: Gaussian processes with arbitrary derivative
+M.~A. Chilenski, gptools: {G}aussian processes with arbitrary derivative
   constraints and predictions, \url{http://gptools.readthedocs.org/en/latest/}
   (2015).
 
 \bibitem{Hughes2003}
 J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen, A.~Hubbard,
-  \href{http://link.aip.org/link/?RSI/74/1667/1}{{Thomson} scattering upgrades
-  on {Alcator C-Mod}}, Review of Scientific Instruments 74~(3) (2003)
+  \href{http://link.aip.org/link/?RSI/74/1667/1}{{T}homson scattering upgrades
+  on {A}lcator {C}-{M}od}, Review of Scientific Instruments 74~(3) (2003)
   1667--1670.
 \newblock \href {http://dx.doi.org/10.1063/1.1532764}
   {\path{doi:10.1063/1.1532764}}.
@@ -114,8 +115,8 @@ J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen, A.~Hubbard,
 \bibitem{Hughes2001}
 J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, E.~S. Marmar, D.~Johnson,
   D.~Simon, \href{http://link.aip.org/link/?RSI/72/1107/1}{High-resolution edge
-  {Thomson} scattering measurements on the {Alcator C-Mod} tokamak}, Review of
-  Scientific Instruments 72~(1) (2001) 1107--1110.
+  {T}homson scattering measurements on the {A}lcator {C}-{M}od tokamak}, Review
+  of Scientific Instruments 72~(1) (2001) 1107--1110.
 \newblock \href {http://dx.doi.org/10.1063/1.1319367}
   {\path{doi:10.1063/1.1319367}}.
 \newline\urlprefix\url{http://link.aip.org/link/?RSI/72/1107/1}
@@ -128,7 +129,7 @@ N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz, A.~E. Hubbard,
   S.~J. Wukitch, K.~Zhurovich, R.~V. Bravenec, P.~E. Phillips, W.~L. Rowan,
   G.~J. Kramer, G.~Schilling, S.~D. Scott, S.~J. Zweben,
   \href{http://www.ans.org/pubs/journals/fst/a\_1434}{Diagnostic systems on
-  {Alcator C-Mod}}, Fusion Science and Technology 51~(3) (2007) 476--507.
+  {A}lcator {C}-{M}od}, Fusion Science and Technology 51~(3) (2007) 476--507.
 \newline\urlprefix\url{http://www.ans.org/pubs/journals/fst/a\_1434}
 
 \end{thebibliography}

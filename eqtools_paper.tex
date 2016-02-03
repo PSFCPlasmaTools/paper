@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{epstopdf}
+\usepackage{url}
 
 \newcommand{\eg}{\emph{e.g., }}
 \newcommand{\ie}{\emph{i.e., }}
@@ -27,7 +28,29 @@
 
 \usepackage{siunitx}
 
+%% This list environment is used for the references in the
+%% Program Summary
+%%
+\newcounter{bla}
+\newenvironment{refnummer}{%
+\list{[\arabic{bla}]}%
+{\usecounter{bla}%
+ \setlength{\itemindent}{0pt}%
+ \setlength{\topsep}{0pt}%
+ \setlength{\itemsep}{0pt}%
+ \setlength{\labelsep}{2pt}%
+ \setlength{\listparindent}{0pt}%
+ \settowidth{\labelwidth}{[9]}%
+ \setlength{\leftmargin}{\labelwidth}%
+ \addtolength{\leftmargin}{\labelsep}%
+ \setlength{\rightmargin}{0pt}}}
+ {\endlist}
+
+\journal{Computer Physics Communications}
+
 \begin{document}
+
+%\begin{frontmatter}
 
 \title{\eqtools: Modular, Extensible, Open-Source, Cross-Machine Python Tools for Working with Magnetic Equilibria}
 
@@ -62,6 +85,86 @@ plasma physics \sep tokamaks \sep magnetic equilibrium reconstruction \sep data 
 \end{keyword}
 
 \maketitle
+
+%\end{frontmatter}
+
+% Computer program descriptions should contain the following
+% PROGRAM SUMMARY.
+
+{\bf PROGRAM SUMMARY}
+  %Delete as appropriate.
+
+\begin{small}
+\noindent
+{\em Manuscript Title:}                                       \eqtools: Modular, Extensible, Open-Source, Cross-Machine Python Tools for Working with Magnetic Equilibria\\
+{\em Authors:}                                                M. A. Chilenski, I. C. Faust, J. R. Walk\\
+{\em Program Title:}                                          \eqtools\\
+{\em Journal Reference:}                                      \\
+  %Leave blank, supplied by Elsevier.
+{\em Catalogue identifier:}                                   \\
+  %Leave blank, supplied by Elsevier.
+{\em Licensing provisions:}                                   GNU General Public License Version 3\\
+  %enter "none" if CPC non-profit use license is sufficient.
+{\em Programming language:}                                   Python, C\\
+{\em Computer:}                                               PCs\\
+  %Computer(s) for which program has been designed.
+{\em Operating system:}                                       Linux, Macintosh OS X, Microsoft Windows\\
+  %Operating system(s) for which program has been designed.
+{\em RAM:}                                              Several megabytes, depends on resolution of data\\
+  %RAM in bytes required to execute program with typical data.
+{\em Number of processors used:}                              1\\
+  %If more than one processor.
+{\em Keywords:} plasma physics, tokamaks, magnetic equilibrium reconstruction, data analysis  \\
+  % Please give some freely chosen keywords that we can use in a
+  % cumulative keyword index.
+{\em Classification:}                 19.4                        \\
+  %Classify using CPC Program Library Subject Index, see (
+  % http://cpc.cs.qub.ac.uk/subjectIndex/SUBJECT_index.html)
+  %e.g. 4.4 Feynman diagrams, 5 Computer Algebra.
+{\em External routines/libraries:}             F2PY [1], matplotlib [2], MDSplus [3], NumPy [4], SciPy~[5]              \\
+  % Fill in if necessary, otherwise leave out.
+%{\em Subprograms used:}                                       \\
+  %Fill in if necessary, otherwise leave out.
+%{\em Catalogue identifier of previous version:}*              \\
+  %Only required for a New Version summary, otherwise leave out.
+%{\em Journal reference of previous version:}*                  \\
+  %Only required for a New Version summary, otherwise leave out.
+%{\em Does the new version supersede the previous version?:}*   \\
+  %Only required for a New Version summary, otherwise leave out.
+{\em Nature of problem:} Access to results from magnetic equilibrium reconstruction code, conversion between various coordinate systems tied to the magnetic equilibrium.\\
+{\em Solution method:} Data are stored in an object-oriented data structure with human-readable getter methods. Coordinates are converted using bivariate or trivariate splines.\\
+%{\em Reasons for the new version:}*\\
+  %Only required for a New Version summary, otherwise leave out.
+%   \\
+%{\em Summary of revisions:}*\\
+  %Only required for a New Version summary, otherwise leave out.
+%   \\
+%{\em Restrictions:}\\
+  %Describe any restrictions on the complexity of the problem here.
+%   \\
+%{\em Unusual features:}\\
+  %Describe any unusual features of the program/problem here.
+%   \\
+%{\em Additional comments:}\\
+  %Provide any additional comments here.
+%   \\
+{\em Running time:} Coordinate transformations on a $66\times 66$ point spatial grid take between 1 and 5 milliseconds per time slice, depending on the transformation used and how many intermediate results have been stored.
+
+\begin{thebibliography}{0}
+\bibitem{1} P.~Peterson, {F2PY}: a tool for connecting {F}ortan and {P}ython programs,
+  International Journal of Computational Science and Engineering 4~(4) (2009)
+  296--305.
+\bibitem{2} J. D. Hunter, Matplotlib: A 2{D} graphics environment, Computing in Science \& Engineering, 9~(3) (2007) 90--95.
+\bibitem{3} J.~A. Stillerman, T.~W. Fredian, K.~A. Klare, G.~Manduchi, {MDSplus} data
+  acquisition system, Review of Scientific Instruments 68~(1) (1997) 939--942.
+\bibitem{4} S.~van der Walt, S. C. Colbert and G.~Varoquaux, The {N}um{P}y array: a structure for efficient numerical computation, Computing in Science \& Engineering 13~(2) (2011) 22--30.
+\bibitem{5} E.~Jones, T.~Oliphant, P.~Peterson, et~al.,
+  {{S}ci{P}y: Open source scientific tools for
+  {P}ython} (2001--).
+                               % This list is different from the bibliography at the end of 
+                               % the Long Write-Up.
+\end{thebibliography}
+\end{small}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
