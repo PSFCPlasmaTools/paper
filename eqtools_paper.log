@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.8.11)  31 AUG 2016 14:09
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.8.11)  31 AUG 2016 14:18
  restricted system commands enabled.
  file:line:error style messages enabled.
 **eqtools_paper.tex
@@ -627,13 +627,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.01274pt too wide) in paragraph at lines 98--152
+Overfull \hbox (2.01274pt too wide) in paragraph at lines 99--153
 \OT1/cmr/m/it/9 Manuscript Ti-tle: \OT1/cmtt/m/n/9 eqtools\OT1/cmr/m/n/9 : Mod-
 u-lar, Ex-ten-si-ble, Open-Source, Cross-Machine Python
  []
 
 
-Overfull \hbox (2.69736pt too wide) in paragraph at lines 98--152
+Overfull \hbox (2.69736pt too wide) in paragraph at lines 99--153
 \OT1/cmr/m/it/9 External rou-tines/li-braries: \OT1/cmr/m/n/9 F2PY [1], mat-plo
 tlib [2], MD-Splus [3], NumPy [4], SciPy [5] 
  []
@@ -642,7 +642,7 @@ tlib [2], MD-Splus [3], NumPy [4], SciPy [5]
 File: graphics/flowchart_new.pdf Graphic file (type pdf)
 
 <use graphics/flowchart_new.pdf>
-Package luatex.def Info: graphics/flowchart_new.pdf used on input line 213.
+Package luatex.def Info: graphics/flowchart_new.pdf used on input line 214.
 (luatex.def)             Requested size: 345.0pt x 213.06073pt.
  [4] [5<./graphics/flowchart_new.pdf>] [6]
 Package epstopdf Info: Source file: <graphics/tspline_merge.eps>
@@ -654,7 +654,7 @@ Package epstopdf Info: Source file: <graphics/tspline_merge.eps>
 (epstopdf)                    size: 256868 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/tspline_merge-eps-
 converted-to.pdf graphics/tspline_merge.eps>
-(epstopdf)             \includegraphics on input line 281.
+(epstopdf)             \includegraphics on input line 282.
 Package epstopdf Info: Output file is already uptodate.
 
 <graphics/tspline_merge-eps-converted-to.pdf, id=71, 1401.235pt x 774.895pt>
@@ -662,17 +662,17 @@ File: graphics/tspline_merge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use graphics/tspline_merge-eps-converted-to.pdf>
 Package luatex.def Info: graphics/tspline_merge-eps-converted-to.pdf used on inp
-ut line 281.
+ut line 282.
 (luatex.def)             Requested size: 345.0pt x 190.77911pt.
  [7<./graphics/tspline_merge-eps-converted-to.pdf>] [8]
 <graphics/absolute_compare.pdf, id=88, 583.58028pt x 729.92702pt>
 File: graphics/absolute_compare.pdf Graphic file (type pdf)
 
 <use graphics/absolute_compare.pdf>
-Package luatex.def Info: graphics/absolute_compare.pdf used on input line 317.
+Package luatex.def Info: graphics/absolute_compare.pdf used on input line 318.
 (luatex.def)             Requested size: 207.0021pt x 258.9087pt.
 
-Overfull \hbox (49.11064pt too wide) in paragraph at lines 330--345
+Overfull \hbox (49.11064pt too wide) in paragraph at lines 331--346
 [][] 
  []
 
@@ -682,7 +682,7 @@ File: graphics/XTOMO_3_13_view_1120824019_2.pdf Graphic file (type pdf)
 
 <use graphics/XTOMO_3_13_view_1120824019_2.pdf>
 Package luatex.def Info: graphics/XTOMO_3_13_view_1120824019_2.pdf used on input
- line 373.
+ line 374.
 (luatex.def)             Requested size: 124.20021pt x 189.7535pt.
 
 <graphics/XTOMO_3_13_weighting_1120824019_2.pdf, id=2812, 587.19376pt x 442.653
@@ -690,10 +690,10 @@ Package luatex.def Info: graphics/XTOMO_3_13_view_1120824019_2.pdf used on input
 File: graphics/XTOMO_3_13_weighting_1120824019_2.pdf Graphic file (type pdf)
  <use graphics/XTOMO_3_13_weighting_1120824019_2.pdf>
 Package luatex.def Info: graphics/XTOMO_3_13_weighting_1120824019_2.pdf used on 
-input line 376.
+input line 377.
 (luatex.def)             Requested size: 220.79979pt x 170.0225pt.
 
-Overfull \hbox (13.33331pt too wide) in paragraph at lines 373--377
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 374--378
 [][][] 
  []
 
@@ -702,21 +702,21 @@ _1120824019_2.pdf>] <graphics/eq.pdf, id=2881, 382.93062pt x 616.3025pt>
 File: graphics/eq.pdf Graphic file (type pdf)
 
 <use graphics/eq.pdf>
-Package luatex.def Info: graphics/eq.pdf used on input line 407.
+Package luatex.def Info: graphics/eq.pdf used on input line 408.
 (luatex.def)             Requested size: 120.7521pt x 194.3432pt.
  <graphics/prof.pdf, id=2882, 518.93875pt x 409.04819pt>
 File: graphics/prof.pdf Graphic file (type pdf)
 
 <use graphics/prof.pdf>
-Package luatex.def Info: graphics/prof.pdf used on input line 410.
+Package luatex.def Info: graphics/prof.pdf used on input line 411.
 (luatex.def)             Requested size: 224.2479pt x 176.76111pt.
 
-Overfull \hbox (13.33331pt too wide) in paragraph at lines 407--411
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 408--412
 [][][] 
  []
 
 [12] [13<./graphics/eq.pdf><./graphics/prof.pdf>]
-Overfull \hbox (1.66693pt too wide) in paragraph at lines 429--433
+Overfull \hbox (1.66693pt too wide) in paragraph at lines 430--434
 []\OT1/cmr/m/n/10 The map-ping rou-tines in \OT1/cmtt/m/n/10 eqtools \OT1/cmr/m
 /n/10 have been thor-oughly bench-marked against
  []
@@ -732,20 +732,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--70
 cmr/m/n/10 (Jan-
  []
 
-[16]) [17] (./eqtools_paper.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-)
+[16]) [17] (./eqtools_paper.aux))
 
 Here is how much of LuaTeX's memory you used:
- 13930 strings out of 495118
+ 13931 strings out of 495118
  125034,319454 words of node,token memory allocated
  3649 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 457 glue, 1 kern, 58 glue_spec, 1 write nodes
    avail lists: 1:1,2:148,3:213,4:51,5:315,6:4718,7:1204,8:147,9:508,10:28,11:41
 9
- 17038 multiletter control sequences out of 65536+600000
+ 17039 multiletter control sequences out of 65536+600000
  79 fonts using 3276263 bytes
  44i,14n,50p,1489b,859s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.p
@@ -778,7 +774,7 @@ cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmtt12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 9.pfb>
-Output written on eqtools_paper.pdf (17 pages, 2357926 bytes).
+Output written on eqtools_paper.pdf (17 pages, 2358936 bytes).
 
 PDF statistics: 3032 PDF objects out of 3580 (max. 8388607)
  234 compressed objects within 3 object streams
