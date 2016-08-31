@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: eqtools_paper.aux
-The style file: elsarticle-num.bst
+The style file: elsarticle-num-no-title.bst
 Database file #1: eqtools_paper.bib
-You've used 21 entries,
-            2937 wiz_defined-function locations,
-            799 strings with 9425 characters,
-and the built_in function-call counts, 6261 in all, are:
-= -- 532
-> -- 316
+You've used 24 entries,
+            2927 wiz_defined-function locations,
+            822 strings with 10163 characters,
+and the built_in function-call counts, 6661 in all, are:
+= -- 567
+> -- 334
 < -- 1
-+ -- 119
-- -- 98
-* -- 469
-:= -- 915
-add.period$ -- 26
-call.type$ -- 21
-change.case$ -- 20
++ -- 127
+- -- 103
+* -- 457
+:= -- 980
+add.period$ -- 30
+call.type$ -- 24
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 176
-empty$ -- 675
-format.name$ -- 112
-if$ -- 1597
+cite$ -- 24
+duplicate$ -- 188
+empty$ -- 725
+format.name$ -- 118
+if$ -- 1718
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 12
-newline$ -- 83
-num.names$ -- 22
-pop$ -- 154
+int.to.str$ -- 24
+missing$ -- 13
+newline$ -- 88
+num.names$ -- 25
+pop$ -- 175
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 377
+skip$ -- 406
 stack$ -- 0
-substring$ -- 204
-swap$ -- 43
+substring$ -- 219
+swap$ -- 37
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 33
-width$ -- 23
-write$ -- 189
+while$ -- 37
+width$ -- 26
+write$ -- 200

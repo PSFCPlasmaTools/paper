@@ -6,15 +6,13 @@
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
 \bibitem{MDSplus}
-J.~A. Stillerman, T.~W. Fredian, K.~A. Klare, G.~Manduchi, {MDSplus} data
-  acquisition system, Review of Scientific Instruments 68~(1) (1997) 939--942.
+J.~A. Stillerman, T.~W. Fredian, K.~A. Klare, G.~Manduchi, Review of Scientific
+  Instruments 68~(1) (1997) 939--942.
 
 \bibitem{Lao1985}
 L.~L. Lao, H.~{St. John}, R.~D. Stambaugh, A.~G. Kellman, W.~Pfeiffer,
-  \href{http://stacks.iop.org/0029-5515/25/i=11/a=007}{Reconstruction of
-  current profile parameters and plasma shapes in tokamaks}, Nuclear Fusion
-  25~(11) (1985) 1611.
-\newline\urlprefix\url{http://stacks.iop.org/0029-5515/25/i=11/a=007}
+  \href{http://stacks.iop.org/0029-5515/25/i=11/a=007}{Nuclear Fusion} 25~(11)
+  (1985) 1611.
 
 \bibitem{GPL}
 {GNU} general public license, version 3,
@@ -45,19 +43,30 @@ E.~Jones, T.~Oliphant, P.~Peterson, et~al.,
 \newline\urlprefix\url{http://www.scipy.org/}
 
 \bibitem{Lekien2005}
-F.~Lekien, J.~Marsden, \href{http://dx.doi.org/10.1002/nme.1296}{Tricubic
-  interpolation in three dimensions}, International Journal for Numerical
-  Methods in Engineering 63~(3) (2005) 455--471.
-\newblock \href {http://dx.doi.org/10.1002/nme.1296}
-  {\path{doi:10.1002/nme.1296}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1002/nme.1296}
+F.~Lekien, J.~Marsden, \href{http://dx.doi.org/10.1002/nme.1296}{International
+  Journal for Numerical Methods in Engineering} 63~(3) (2005) 455--471.
+\newblock
 
 \bibitem{Peterson2009}
-P.~Peterson, {F2PY}: a tool for connecting {F}ortan and {P}ython programs,
-  International Journal of Computational Science and Engineering 4~(4) (2009)
-  296--305.
-\newblock \href {http://dx.doi.org/10.1504/IJCSE.2009.029165}
-  {\path{doi:10.1504/IJCSE.2009.029165}}.
+P.~Peterson, International Journal of Computational Science and Engineering
+  4~(4) (2009) 296--305.
+\newblock
+
+\bibitem{vanderWaltCSE2011}
+S.~van~der Walt, S.~C. Colbert, G.~Varoquaux,
+  \href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5725236}{Computing
+  in Science and Engineering} 13~(2) (2011) 22--30.
+\newblock
+
+\bibitem{NASA2009}
+J.~Kouatchou, Comparing {P}ython, {N}um{P}y, {M}atlab, {F}ortran, etc.,
+  \url{https://modelingguru.nasa.gov/docs/DOC-1762} (November 2009).
+
+\bibitem{IBM2016}
+J.~F. Puget, A speed comparison of {C}, {J}ulia, {P}ython, {N}umba, and
+  {C}ython on {LU} factorization,
+  \url{https://www.ibm.com/developerworks/community/blogs/jfp/entry/A_Comparison_Of_C_Julia_Python_Numba_Cython_Scipy_and_BLAS_on_LU_Factorization?lang=en}
+  (January 2016).
 
 \bibitem{FaustTRIPPy}
 I.~C. Faust, \href{https://github.com/icfaust/TRIPPy}{{T}oroidal {R}adiation
@@ -66,11 +75,9 @@ I.~C. Faust, \href{https://github.com/icfaust/TRIPPy}{{T}oroidal {R}adiation
 
 \bibitem{Faust2014}
 I.~Faust, L.~Delgado-Aparicio, R.~E. Bell, K.~Tritz, A.~Diallo, S.~P. Gerhardt,
-  B.~LeBlanc, T.~A. Kozub, R.~R. Parker, B.~C. Stratton, Two-dimensional
-  {AXUV}-based radiated power density diagnostics on {NSTX-U}, Review of
-  Scientific Instruments 85~(11).
-\newblock \href {http://dx.doi.org/http://dx.doi.org/10.1063/1.4890254}
-  {\path{doi:http://dx.doi.org/10.1063/1.4890254}}.
+  B.~LeBlanc, T.~A. Kozub, R.~R. Parker, B.~C. Stratton, Review of Scientific
+  Instruments 85~(11).
+\newblock
 
 \bibitem{Granetz1991}
 R.~Granetz, L.~Wang, Design of the x-ray tomography system on {A}lcator
@@ -89,9 +96,7 @@ M.~A. Chilenski, profiletools: Classes for working with profile data of
 
 \bibitem{gpr_nf}
 M.~A. Chilenski, M.~Greenwald, Y.~Marzouk, N.~T. Howard, A.~E. White, J.~E.
-  Rice, J.~R. Walk, Improved profile fitting and quantification of uncertainty
-  in experimental measurements of impurity transport coefficients using
-  {G}aussian process regression, Nuclear Fusion 55~(2) (2015) 023012.
+  Rice, J.~R. Walk, Nuclear Fusion 55~(2) (2015) 023012.
 
 \bibitem{gptools_git}
 M.~A. Chilenski, gptools: {G}aussian processes with arbitrary derivative
@@ -105,21 +110,15 @@ M.~A. Chilenski, gptools: {G}aussian processes with arbitrary derivative
 
 \bibitem{Hughes2003}
 J.~W. Hughes, D.~Mossessian, K.~Zhurovich, M.~DeMaria, K.~Jensen, A.~Hubbard,
-  \href{http://link.aip.org/link/?RSI/74/1667/1}{{T}homson scattering upgrades
-  on {A}lcator {C}-{M}od}, Review of Scientific Instruments 74~(3) (2003)
-  1667--1670.
-\newblock \href {http://dx.doi.org/10.1063/1.1532764}
-  {\path{doi:10.1063/1.1532764}}.
-\newline\urlprefix\url{http://link.aip.org/link/?RSI/74/1667/1}
+  \href{http://link.aip.org/link/?RSI/74/1667/1}{Review of Scientific
+  Instruments} 74~(3) (2003) 1667--1670.
+\newblock
 
 \bibitem{Hughes2001}
 J.~W. Hughes, D.~A. Mossessian, A.~E. Hubbard, E.~S. Marmar, D.~Johnson,
-  D.~Simon, \href{http://link.aip.org/link/?RSI/72/1107/1}{High-resolution edge
-  {T}homson scattering measurements on the {A}lcator {C}-{M}od tokamak}, Review
-  of Scientific Instruments 72~(1) (2001) 1107--1110.
-\newblock \href {http://dx.doi.org/10.1063/1.1319367}
-  {\path{doi:10.1063/1.1319367}}.
-\newline\urlprefix\url{http://link.aip.org/link/?RSI/72/1107/1}
+  D.~Simon, \href{http://link.aip.org/link/?RSI/72/1107/1}{Review of Scientific
+  Instruments} 72~(1) (2001) 1107--1110.
+\newblock
 
 \bibitem{Basse2007}
 N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz, A.~E. Hubbard,
@@ -128,8 +127,7 @@ N.~Basse, A.~Dominguez, E.~Edlund, C.~Fiore, R.~S. Granetz, A.~E. Hubbard,
   M.~Porkolab, J.~E. Rice, J.~A. Snipes, V.~Tang, J.~L. Terry, S.~M. Wolfe,
   S.~J. Wukitch, K.~Zhurovich, R.~V. Bravenec, P.~E. Phillips, W.~L. Rowan,
   G.~J. Kramer, G.~Schilling, S.~D. Scott, S.~J. Zweben,
-  \href{http://www.ans.org/pubs/journals/fst/a\_1434}{Diagnostic systems on
-  {A}lcator {C}-{M}od}, Fusion Science and Technology 51~(3) (2007) 476--507.
-\newline\urlprefix\url{http://www.ans.org/pubs/journals/fst/a\_1434}
+  \href{http://www.ans.org/pubs/journals/fst/a\_1434}{Fusion Science and
+  Technology} 51~(3) (2007) 476--507.
 
 \end{thebibliography}

@@ -24,12 +24,15 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Details of the coordinate mapping routines}{6}}
 \newlabel{sec:algo}{{3}{6}}
 \newlabel{eq:phipsi}{{2}{6}}
-\citation{Lekien2005}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Tri-Spline Implementation}{7}}
 \newlabel{sec:trispline}{{4}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{7}}
+\newlabel{fig:tspline}{{2}{7}}
+\citation{Lekien2005}
 \citation{Peterson2009}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Flux surface reconstruction in time of an Alcator C-Mod discharge using nearest-neighbor time interpolation (a) and a tricubic spline interpolation (b). Aliasing behavior is removed by the use of a spline in the time-dimension. \relax }}{8}}
-\newlabel{fig:tspline}{{2}{8}}
+\citation{vanderWaltCSE2011}
+\citation{scipy,dierckxBook}
+\citation{NASA2009,IBM2016}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Verification and Benchmarking}{8}}
 \newlabel{sec:benchmark}{{5}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Absolute difference between calculations of a mapping between the $(R, Z)$ grid and poloidal flux $\psi $ for \texttt  {eqtools}\xspace  and the current IDL implementation of the mapping routine for an example Alcator C-Mod reconstructed equilibrium. Relative differences of order \SI {e-7}{Wb/rad} are typical (the value of $\psi $ is in the range $\pm \SI {0.5}{Wb/rad}$), and are consistent with the different float precisions used.\relax }}{9}}
@@ -37,11 +40,15 @@
 \citation{FaustTRIPPy}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Time to convert all 180 time slices in milliseconds. ``All'' refers to passing all points to the routine at once, whereas ``loop'' refers to calling the routine in a loop over time points. ``First'' refers to the first call to the routine when data are collected from the server and spline coefficients are computed, ``second'' refers to the second call once the data and spline coefficients have been cached.\relax }}{10}}
 \newlabel{tab:benchmarkingtests}{{1}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Example Applications}{10}}
-\newlabel{sec:examples}{{6}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tomographic Reconstruction}{10}}
 \citation{Faust2014}
 \citation{Granetz1991}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi _n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi _n$ with a $10 \mu $m step size.\relax }}{11}}
+\newlabel{fig:TRIPPydemo}{{4}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium with chord view}}}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {weighting profile versus $\psi _n$}}}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Example Applications}{11}}
+\newlabel{sec:examples}{{6}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tomographic Reconstruction}{11}}
 \citation{profiletools_git,profiletools_readthedocs}
 \citation{gpr_nf}
 \citation{gptools_git,gptools_readthedocs}
@@ -51,42 +58,41 @@
 \citation{Hughes2003}
 \citation{Hughes2001}
 \citation{Basse2007}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A viewing chord of the soft X-ray tomography system (XTOMO) is shown on an example plasma in blue (a), the view weight is maximized at the location closest to the center of the plasma (in $\psi _n$). The effects of angular harmonics are shown by sinusoidal component weights which can negative. This example uses 150 bins in $\psi _n$ with a $10 \mu $m step size.\relax }}{11}}
-\newlabel{fig:TRIPPydemo}{{4}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium with chord view}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {weighting profile versus $\psi _n$}}}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data include edge \cite  {Hughes2003} and core \cite  {Hughes2001} Thomson Scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane \cite  {Basse2007}. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{12}}
-\newlabel{fig:profiledemo}{{5}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Profile fitting}{12}}
 \citation{eqtools_pypi,eqtools_git,eqtools_readthedocs}
 \citation{Lao1985}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Summary}{13}}
-\newlabel{sec:summary}{{7}{13}}
-\bibstyle{elsarticle-num}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Profile fitting}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Summary}{12}}
+\newlabel{sec:summary}{{7}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Equilibrium with diagnostic locations (a) and individual measurements with smoothed electron temperature profile (b). The data include edge \cite  {Hughes2003} and core \cite  {Hughes2001} Thomson Scattering systems (ETS, CTS) which measure the local temperature along a vertical chord and two electron cyclotron emission systems (GPC, GPC2) which measure the temperature at the midplane \cite  {Basse2007}. The symbols are the same between the two figures. The fit and its 1- and 3-sigma error envelopes were computed using Gaussian process regression with the maximum a posteriori estimate for the hyperparameters.\relax }}{13}}
+\newlabel{fig:profiledemo}{{5}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {equilibrium}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {data and smoothed profile}}}{13}}
+\bibstyle{elsarticle-num-no-title}
 \bibdata{eqtools_paper}
 \bibcite{MDSplus}{{1}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Generation of tricubic spline coefficients for a regular grid}{14}}
-\newlabel{sec:App}{{Appendix A}{14}}
 \bibcite{Lao1985}{{2}{}{{}}{{}}}
 \bibcite{GPL}{{3}{}{{}}{{}}}
 \bibcite{eqtools_pypi}{{4}{}{{}}{{}}}
 \bibcite{eqtools_git}{{5}{}{{}}{{}}}
 \bibcite{eqtools_readthedocs}{{6}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Generation of tricubic spline coefficients for a regular grid}{15}}
+\newlabel{sec:App}{{Appendix A}{15}}
 \bibcite{dierckxBook}{{7}{}{{}}{{}}}
 \bibcite{scipy}{{8}{}{{}}{{}}}
 \bibcite{Lekien2005}{{9}{}{{}}{{}}}
 \bibcite{Peterson2009}{{10}{}{{}}{{}}}
-\bibcite{FaustTRIPPy}{{11}{}{{}}{{}}}
-\bibcite{Faust2014}{{12}{}{{}}{{}}}
-\bibcite{Granetz1991}{{13}{}{{}}{{}}}
-\bibcite{profiletools_git}{{14}{}{{}}{{}}}
-\bibcite{profiletools_readthedocs}{{15}{}{{}}{{}}}
-\bibcite{gpr_nf}{{16}{}{{}}{{}}}
-\bibcite{gptools_git}{{17}{}{{}}{{}}}
-\bibcite{gptools_readthedocs}{{18}{}{{}}{{}}}
-\bibcite{Hughes2003}{{19}{}{{}}{{}}}
-\bibcite{Hughes2001}{{20}{}{{}}{{}}}
-\bibcite{Basse2007}{{21}{}{{}}{{}}}
+\bibcite{vanderWaltCSE2011}{{11}{}{{}}{{}}}
+\bibcite{NASA2009}{{12}{}{{}}{{}}}
+\bibcite{IBM2016}{{13}{}{{}}{{}}}
+\bibcite{FaustTRIPPy}{{14}{}{{}}{{}}}
+\bibcite{Faust2014}{{15}{}{{}}{{}}}
+\bibcite{Granetz1991}{{16}{}{{}}{{}}}
+\bibcite{profiletools_git}{{17}{}{{}}{{}}}
+\bibcite{profiletools_readthedocs}{{18}{}{{}}{{}}}
+\bibcite{gpr_nf}{{19}{}{{}}{{}}}
+\bibcite{gptools_git}{{20}{}{{}}{{}}}
+\bibcite{gptools_readthedocs}{{21}{}{{}}{{}}}
+\bibcite{Hughes2003}{{22}{}{{}}{{}}}
+\bibcite{Hughes2001}{{23}{}{{}}{{}}}
+\bibcite{Basse2007}{{24}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
