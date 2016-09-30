@@ -307,7 +307,7 @@ In other cases, the derivatives in the necessary directions and orders are calcu
 
 \section{Verification and Benchmarking}\label{sec:benchmark}
 \eqtools was implemented using the vectorized array operations provided by NumPy \cite{vanderWaltCSE2011}, adhering to the general rule of thumb that any operation requiring a large number of for-loops should be re-cast as a vectorized operation or implemented directly in C (as was done for the tricubic spline interpolation routine).
-Most of the computational effort is expended in the Fortan spline routines provided by SciPy \cite{scipy,dierckxBook}, which means that the overhead contributed by the fact that Python is an interpreted language is minimal.
+Most of the computational effort is expended in the Fortran spline routines provided by SciPy \cite{scipy,dierckxBook}, which means that the overhead contributed by the fact that Python is an interpreted language is minimal.
 The performance differences between pure Python, NumPy and compiled languages have been explored elsewhere \cite{NASA2009,IBM2016}, and the slight performance decrease compared to what might be expected from a pure C or Fortran implementation is felt to be more than acceptable because it dramatically increases the user-friendliness and expandability of the code.
 
 \eqtools has been verified against the existing, thoroughly-tested IDL routines presently in use for handling coordinate mapping at Alcator C-Mod.
